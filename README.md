@@ -10,6 +10,8 @@ Mihael Kožul | mkozul@foi.hr | 0016141878 | mihakozul
 Tomislava Cafuk | tcafuk@foi.hr | 0016142716 | tcafuk
 
 ## Opis domene
+U ovom projektu izrađujemo softversko rješenje za olakšavanje dokumentiranja specijalističkog usavršavanja doktora medicine. Doktori na specijalističkom usavršavanju (dalje specijalizanti) trenutno moraju svakodnevno ispunjavati dva dokumenta: Dnevnik rada doktora medicine na specijalističkom usavršavanju i Knjižica o specijalističkom usavršavanju doktora medicine. Naše softversko rješenje fokusira se na dnevnik rada doktora medicine na specijalističkom usavršavanju, softversko rješenje dalje zovemo e-Dnevnik. Osim ispunjavanja dnevnika specijalist mora i dobivati potvrde od mentora i glavnog mentora kroz cijeli tok specijalizacije koja traje do **5** godina. To sakupljanje potvrda koje dolaze u obliku potpisa i pečata odvlači specijalizante od stjecanja novih vještina i tjera ih da traže mentore i gube vrijeme umjesto da se fokusiraju na stjecanje novih vještina. Naša softverska solucija će riješiti taj problem tako da omogući popunjavanje dnevnika preko računala kao i potvrđivanje radnji sa strane mentora i glavnih mentora. Pretvaranje dnevnika u digitalni oblik će kroz intuitivno sučelje pojednostaviti sve dokumentiranje specijalističkog usavršavanja doktora.
+
 Umjesto ovih uputa opišite domenu ili problem koji pokrivate vašim  projektom. Domena može biti proizvoljna, ali obratite pozornost da sukladno ishodima učenja, domena omogući primjenu zahtijevanih koncepata kako je to navedeno u sljedećem poglavlju. Priložite odgovarajuće skice gdje je to prikladno.
 
 ## Specifikacija projekta

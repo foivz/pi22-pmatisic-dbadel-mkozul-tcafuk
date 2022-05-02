@@ -21,4 +21,12 @@ F01 | Login | Za pristup dnevniku potrebna je autentikacija korisnika pomoću lo
 F02 | Pregled dnevnika | .... | ...
 
 ## Tehnologije i oprema
-Umjesto ovih uputa jasno popišite sve tehnologije, alate i opremu koju ćete koristiti pri implementaciji vašeg rješenja. Ne zaboravite planirati korištenje tehnologija u aktivnostima kao što su projektni menadžment ili priprema dokumentacije. Tehnologije koje ćete koristiti bi trebale biti javno dostupne, a ako ih ne budemo obrađivali na vježbama u vašoj dokumentaciji ćete morati navesti način preuzimanja, instaliranja i korištenja onih tehnologija koje su neopbodne kako bi se vaš programski proizvod preveo i pokrenuo. Pazite da svi alati koje ćete koristiti moraju imati odgovarajuću licencu.
+1. Programski jezik: C#
+2. Baza podataka: MySQL, Microsoft SQL Server
+3. IDE: Microsoft Visual Studio 2019/2022, MySQL Workbench 8.0 CE, SQL Server Management Studio (SSMS) 18.11
+4. Verzioniranje: git (shell), Sourcetree
+5. Uredski alati: Visual Paradigm Community, LaTeX, Microsoft Project
+6. Prototip: Figma
+
+## Status projekta
+- Novi projekt

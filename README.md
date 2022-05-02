@@ -17,8 +17,19 @@ Umjesto ovih uputa opišite zahtjeve za funkcionalnošću programskog proizvoda.
 
 Oznaka | Naziv | Kratki opis | Odgovorni član tima
 ------ | ----- | ----------- | -------------------
-F01 | Login | Za pristup dnevniku potrebna je autentikacija korisnika pomoću login funkcionalnosti. Korisnik se logira s podacima koji su mu dodijeljeni prilikom ... | Zlatko Stapić
-F02 | Pregled dnevnika | .... | ...
+F01 | **Početna** | Lorem Ipsum je jednostavno probni tekst koji se koristi u tiskarskoj i slovoslagarskoj industriji. | Ime Prezime
+F02 | **Registracija** | Lorem Ipsum je jednostavno probni tekst koji se koristi u tiskarskoj i slovoslagarskoj industriji. | Ime Prezime
+F03 | **Prijava u sustav** | Lorem Ipsum je jednostavno probni tekst koji se koristi u tiskarskoj i slovoslagarskoj industriji. | Ime Prezime
+F04 | **Pregled korisničkog računa** | Lorem Ipsum je jednostavno probni tekst koji se koristi u tiskarskoj i slovoslagarskoj industriji. | Ime Prezime
+F05 | **Forma za pregled svih korisničkih računa** | Lorem Ipsum je jednostavno probni tekst koji se koristi u tiskarskoj i slovoslagarskoj industriji. | Ime Prezime
+F06 | **Forma za slanje zahtjeva** | Lorem Ipsum je jednostavno probni tekst koji se koristi u tiskarskoj i slovoslagarskoj industriji. | Ime Prezime
+F07 | **Forma za pregled zahtjeva** | Lorem Ipsum je jednostavno probni tekst koji se koristi u tiskarskoj i slovoslagarskoj industriji. | Ime Prezime
+F08 | **Forma za prikaz izvješća** | Lorem Ipsum je jednostavno probni tekst koji se koristi u tiskarskoj i slovoslagarskoj industriji. | Ime Prezime
+F09 | **Forma za pretragu letova** | Lorem Ipsum je jednostavno probni tekst koji se koristi u tiskarskoj i slovoslagarskoj industriji. | Ime Prezime
+F010 | **Forma za rezervaciju leta** | Lorem Ipsum je jednostavno probni tekst koji se koristi u tiskarskoj i slovoslagarskoj industriji. | Ime Prezime
+F011 | **Forma za pregled rezervacija** | Lorem Ipsum je jednostavno probni tekst koji se koristi u tiskarskoj i slovoslagarskoj industriji. | Ime Prezime
+F012 | **Forma za plaćanje** | Lorem Ipsum je jednostavno probni tekst koji se koristi u tiskarskoj i slovoslagarskoj industriji. | Ime Prezime
+F013 | **Forma za dodavanje leta** | Lorem Ipsum je jednostavno probni tekst koji se koristi u tiskarskoj i slovoslagarskoj industriji. | Ime Prezime
 
 ## Tehnologije i oprema
 1. Programski jezik: C#

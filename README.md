@@ -43,6 +43,7 @@ Petar Matišić | 3
 Dorian Badel | 4
 Mihael Kožul | 3
 Tomislava Cafuk | 3
+
 Graf ispod uzima u obziro koliko koji član tima mora napraviti funkcionalnosti ali uzima i u obzir težinu izrade pojedine funkcionalnosti kao i odgovornosti izvan poput dokumentiranje, izrada baze podataka i sl.
 **graf za odgovornosti**
 

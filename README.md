@@ -33,7 +33,9 @@ FZ-12 - Sustav omoguˇcava postavljanje i aˇzuriranje ishoda uˇcenja i odrediv
 koje kompetencije su vezane uz koju specijalizaciju
 
 **Arhitektura softverskog rješenja**
+
 ![Arhitektura softverskog rješenja](https://user-images.githubusercontent.com/101052235/167015149-c0dd2f4e-f658-488c-a28e-82893dd77465.png)
+
 Slika opisuje buduču arhitekturu programskog proizvoda. Buduča arhitektura programskog proizvoda biti če sastavljena na najapstraktnijoj razini od 3 dijela. Mi realiziramo komponentu 2- sučelje za rad sa bazom i 3- baza podataka. 1. komponenta je sam korisnik koji če imati interakciju s softverskim rješenjem.
 
 **Podjela odgovornosti** 

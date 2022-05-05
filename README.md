@@ -32,11 +32,14 @@ FZ-11 - Sustav omogu´cava pregled svih mentora za koje je zaduˇzen glavni ment
 FZ-12 - Sustav omoguˇcava postavljanje i aˇzuriranje ishoda uˇcenja i odredivanje
 koje kompetencije su vezane uz koju specijalizaciju
 
-**Dodati skicu** // opisuje buducu arhitekturu programskog proizvoda
-Buduča arhitektura programskog proizvoda biti če sastavljena na najapstraktnijoj razini od 3 dijela. Mi realiziramo komponentu 2- sučelje za rad sa bazom i 3- baza podataka. 1. komponenta je sam korisnik koji če imati interakciju s softverskim rješenjem.
+**Arhitektura softverskog rješenja**
+![Arhitektura softverskog rješenja](https://user-images.githubusercontent.com/101052235/167015149-c0dd2f4e-f658-488c-a28e-82893dd77465.png)
+Slika opisuje buduču arhitekturu programskog proizvoda. Buduča arhitektura programskog proizvoda biti če sastavljena na najapstraktnijoj razini od 3 dijela. Mi realiziramo komponentu 2- sučelje za rad sa bazom i 3- baza podataka. 1. komponenta je sam korisnik koji če imati interakciju s softverskim rješenjem.
 
-**Podjela odgovornosti** //
+**Podjela odgovornosti** 
+
 Odgovornosti smo podijelili po dogovoru. 
+
 Član tima | Broj funkcionalnosti za koje je odgovoran
 --------- | -----------------------------------------
 Petar Matišić | 3
@@ -45,7 +48,8 @@ Mihael Kožul | 3
 Tomislava Cafuk | 3
 
 Graf ispod uzima u obziro koliko koji član tima mora napraviti funkcionalnosti ali uzima i u obzir težinu izrade pojedine funkcionalnosti kao i odgovornosti izvan poput dokumentiranje, izrada baze podataka i sl.
-**graf za odgovornosti**
+
+![Podjela odgovornosti](https://user-images.githubusercontent.com/101052235/167015682-cc48c130-504d-4501-8ec0-74034c52150f.png)
 
 Tablica ispod detaljno opisuje o kojim se funkcionalnostima radi.
 

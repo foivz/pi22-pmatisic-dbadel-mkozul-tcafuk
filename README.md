@@ -66,9 +66,9 @@ F06 | **Forma za evidenciju dnevnih aktivnosti** | Prikazuje i omogučava dodava
 F07 | **Pregled profila** | Pristupanje i pregled osobnih i tuđih javnih informacija | Petar Matišić
 F08 | **Forma za pregled mentora** | Glavni mentor može vidjeti sve mentore za koje je odgovoran | Dorian Badel
 F09 | **Pregled događaja** | Mentori i glavni mentori mogu vidjeti i potvrditi sve aktivnosti, slučajeve bolesnika, provjera usvojenih znanja koje trebaju provjeriti ili ocijeniti za sve specijalizante | Dorian Badel
-F010 | **Forma za provjere znanja** | Glavni mentori mogu postaviti provjere znanja kao i pregledati sve obavljene provjere i ocijeniti ih | Mihael Kožul
-F012 | **Forma za unos podataka o programu specijalizacije** | Služi za postavljanje minimalnih uvjeta i ishoda učenja za polaganje specijalizacije pojedinog programa | Petar Matišić
-F013 | **Forma za predaju zahtjeva polaganja ispita** | Pristupnici sa ostvarenim uvjetima mogu zatražiti polaganje ispita | Mihael Kožul
+F10 | **Forma za provjere znanja** | Glavni mentori mogu postaviti provjere znanja kao i pregledati sve obavljene provjere i ocijeniti ih | Mihael Kožul
+F11 | **Forma za unos podataka o programu specijalizacije** | Služi za postavljanje minimalnih uvjeta i ishoda učenja za polaganje specijalizacije pojedinog programa | Petar Matišić
+F12 | **Forma za predaju zahtjeva polaganja ispita** | Pristupnici sa ostvarenim uvjetima mogu zatražiti polaganje ispita | Mihael Kožul
 
 ## Tehnologije i oprema
 1. Programski jezik: C#

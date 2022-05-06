@@ -45,7 +45,7 @@ Odgovornosti smo podijelili po dogovoru.
 Član tima | Broj funkcionalnosti za koje je odgovoran
 --------- | -----------------------------------------
 Petar Matišić | 3
-Dorian Badel | 4
+Dorian Badel | 3
 Mihael Kožul | 3
 Tomislava Cafuk | 3
 
@@ -59,17 +59,16 @@ Oznaka | Naziv | Kratki opis | Odgovorni član tima
 ------ | ----- | ----------- | -------------------
 F01 | **Prijava** | Za pristupiti aplikaciji potrebno je imati autoriziranu korisničke podatke koji su dani od ministarstva zdravsta | Petar Matišić
 F02 | **Forma za pregled svih mogučnosti** | Forma koja služi za pregled svih mogučnosti koje korisnici mogu odabrati | Dorian Badel
-F03 | **Forma za pisanje bilješki** | Prikazuje i omogučava zapisivanje bilješki | Mihael Kožul
+F03 | **Ispis dnevnika** | Omogučava ispis cijelog dnevnika u formatu kako bi izgledao inače u papirnatom obliku| Mihael Kožul
 F04 | **Forma za evidenciju stručnih radova iz područja specijalizacije** | Prikazuje i omogučava dodavanje novih stručnih radova | Tomislava Cafuk
 F05 | **Forma za evidencija prikaza slučaja bolesnika** | Prikazuje i omogučava dodavanje novih slučaja bolesnika. Mentor i glavni mentor također mogu odobriti slučajeve | Tomislava Cafuk
 F06 | **Forma za evidenciju dnevnih aktivnosti** | Prikazuje i omogučava dodavanje novih aktivnosti. Mentor i glavni mentor također mogu odobriti aktivnosti  | Tomislava Cafuk
 F07 | **Pregled profila** | Pristupanje i pregled osobnih i tuđih javnih informacija | Petar Matišić
 F08 | **Forma za pregled mentora** | Glavni mentor može vidjeti sve mentore za koje je odgovoran | Dorian Badel
-F09 | **Forma za pregled nepotvrđenih događaja** | Mentori i glavni mentori mogu vidjeti sve aktivnosti i slučajeve bolesnika koje trebaju provjeriti za sve specijalizante | Dorian Badel
+F09 | **Pregled događaja** | Mentori i glavni mentori mogu vidjeti i potvrditi sve aktivnosti, slučajeve bolesnika, provjera usvojenih znanja koje trebaju provjeriti ili ocijeniti za sve specijalizante | Dorian Badel
 F010 | **Forma za provjere znanja** | Glavni mentori mogu postaviti provjere znanja kao i pregledati sve obavljene provjere i ocijeniti ih | Mihael Kožul
-F011 | **Forma za odobranje događaja** | Prikazuje sve stavke događaja i omogučava odobrenje tog događaja | Mihael Kožul
 F012 | **Forma za unos podataka o programu specijalizacije** | Služi za postavljanje minimalnih uvjeta i ishoda učenja za polaganje specijalizacije pojedinog programa | Petar Matišić
-F013 | **Forma za predaju zahtjeva polaganja ispita** | Pristupnici sa ostvarenim uvjetima mogu zatražiti polaganje ispita | Dorian Badel
+F013 | **Forma za predaju zahtjeva polaganja ispita** | Pristupnici sa ostvarenim uvjetima mogu zatražiti polaganje ispita | Mihael Kožul
 
 ## Tehnologije i oprema
 1. Programski jezik: C#

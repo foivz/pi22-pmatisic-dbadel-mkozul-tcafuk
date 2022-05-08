@@ -60,7 +60,7 @@ F04 | **Prikaz evidencije stručnih radova iz područja specijalizacije** | Prik
 F05 | **Prikaz evidencije prikaza slučaja bolesnika** | Prikazuje i omogućava dodavanje novih slučaja bolesnika. Mentor i glavni mentor također mogu odobriti slučajeve | Tomislava Cafuk
 F06 | **Prikaz evidencije dnevnih aktivnosti** | Prikazuje i omogućava dodavanje novih aktivnosti. Mentor i glavni mentor također mogu odobriti aktivnosti  | Tomislava Cafuk
 F07 | **Pregled profila** | Pristupanje i pregled osobnih i tuđih javnih informacija | Petar Matišić
-F08 | **Pregled mentora** | Glavni mentor može vidjeti sve mentore za koje je odgovoran | Dorian Badel
+F08 | **Pregled mentora i specijalizanata** | Glavni mentor može vidjeti sve mentore za koje je odgovoran | Dorian Badel
 F09 | **Pregled događaja** | Mentori i glavni mentori mogu vidjeti i potvrditi sve aktivnosti, slučajeve bolesnika, provjera usvojenih znanja koje trebaju provjeriti ili ocijeniti za sve specijalizante | Dorian Badel
 F10 | **Prikaz evidencije provjera znanja** | Glavni mentori mogu postaviti provjere znanja kao i pregledati sve obavljene provjere i ocijeniti ih | Mihael Kožul
 F11 | **Podatci programa specijalizacije** | Služi za postavljanje minimalnih uvjeta i ishoda učenja za polaganje specijalizacije pojedinog programa | Petar Matišić

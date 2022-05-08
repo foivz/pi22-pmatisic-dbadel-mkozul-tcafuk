@@ -14,29 +14,25 @@ U ovom projektu izrađujemo softversko rješenje za olakšavanje dokumentiranja 
 
 ## Specifikacija projekta
  
-FZ-1 - Sustav ´ce omogu´citi pristup samo autentificiranim korisnicima.
-FZ-2 - Sustav ´ce omogu´citi uvoz podataka o odobrenim specijalizantima iz datoteke izvezene iz sustava Ministarstva zdravstva Republike Hrvatske.
-FZ-3 - Sustav ´ce omogu´citi ruˇcni unos podataka o Programu specijalizacije iz
-datoteke Pravilnika o specijalistiˇckom usavrˇsavanju doktora medicine.
-FZ-4 - Sustav ´ce omogu´citi ispunjavanje evidencije dnevnika aktivnosti specijalizantima.
-FZ-5 - Sustav ´ce mentorima i glavnim mentorima omogu´citi odobravanje unosa u
-dnevnik aktivnosti i prikaza sluˇcaja bolesnika specijalizanata (ako specijalizacija
-to zahtjeva).
-FZ-6 - Sustav ´ce omogu´citi ispunjavanje evidencije prikaza sluˇcaja bolesnika specijalizantima (ako specijalizacija to zahtjeva).
-FZ-7 - Sustav ´ce omogu´citi ispunjavanje evidencije struˇcnih radova specijalizantima.
-FZ-8 - Sustav ´ce omogu´citi evidentiranje i ocjenjivanje provjera znanja glavnim
-mentorima.
-FZ-9 - Sustav ´ce za svakog specijalizanta mo´ci prikazati profil s osnovnim informacijama o samom specijalizantu i programu koji pohada.
-FZ-10 - Sustav mora omogu´citi specijalistu da preda zahtjev za polaganje ispita.
-FZ-11 - Sustav omogu´cava pregled svih mentora za koje je zaduˇzen glavni mentor.
-FZ-12 - Sustav omoguˇcava postavljanje i aˇzuriranje ishoda uˇcenja i odredivanje
-koje kompetencije su vezane uz koju specijalizaciju
+FZ-1 - Sustav će omogućiti pristup samo autentificiranim korisnicima.  
+FZ-2 - Sustav će omogućiti uvoz podataka o odobrenim specijalizantima iz datoteke izvezene iz sustava Ministarstva zdravstva Republike Hrvatske.  
+FZ-3 - Sustav će omogućiti ručni unos podataka o Programu specijalizacije iz datoteke Pravilnika o specijalističkom usavršavanju doktora medicine.  
+FZ-4 - Sustav će omogućiti ispunjavanje evidencije dnevnika aktivnosti specijalizantima.  
+FZ-5 - Sustav će mentorima i glavnim mentorima omogućiti odobravanje unosa u dnevnik aktivnosti i prikaza sluˇcaja bolesnika specijalizanata (ako specijalizacija
+to zahtjeva).  
+FZ-6 - Sustav će omogućiti ispunjavanje evidencije prikaza slučaja bolesnika specijalizantima (ako specijalizacija to zahtjeva).  
+FZ-7 - Sustav će omogućiti ispunjavanje evidencije stručnih radova specijalizantima.  
+FZ-8 - Sustav će omogućiti evidentiranje i ocjenjivanje provjera znanja glavnim mentorima.  
+FZ-9 - Sustav će za svakog specijalizanta moći prikazati profil s osnovnim informacijama o samom specijalizantu i programu koji pohađa.  
+FZ-10 - Sustav mora omogućiti specijalistu da preda zahtjev za polaganje ispita.  
+FZ-11 - Sustav omogućava pregled svih mentora za koje je zadužen glavni mentor.  
+FZ-12 - Sustav omogućava postavljanje i ažuriranje ishoda učenja i određivanje koje kompetencije su vezane uz koju specijalizaciju.  
 
 **Arhitektura softverskog rješenja**
 
 ![Arhitektura softverskog rješenja](https://user-images.githubusercontent.com/101052235/167015149-c0dd2f4e-f658-488c-a28e-82893dd77465.png)
 
-Slika opisuje buduču arhitekturu programskog proizvoda. Buduča arhitektura programskog proizvoda biti če sastavljena na najapstraktnijoj razini od 3 dijela. Mi realiziramo komponentu 2- sučelje za rad sa bazom i 3- baza podataka. 1. komponenta je sam korisnik koji če imati interakciju s softverskim rješenjem.
+Slika opisuje buduću arhitekturu programskog proizvoda. Buduća arhitektura programskog proizvoda bit će sastavljena na najapstraktnijoj razini od 3 dijela. Mi realiziramo komponentu 2 - sučelje za rad s bazom i 3 - baza podataka. Prva komponenta je sam korisnik koji će imati interakciju sa softverskim rješenjem.
 
 **Podjela odgovornosti** 
 
@@ -46,10 +42,10 @@ Odgovornosti smo podijelili po dogovoru.
 --------- | -----------------------------------------
 Petar Matišić | 3
 Dorian Badel | 3
-Mihael Kožul | 3
+Mihael Kožul | 4
 Tomislava Cafuk | 3
 
-Graf ispod uzima u obziro koliko koji član tima mora napraviti funkcionalnosti ali uzima i u obzir težinu izrade pojedine funkcionalnosti kao i odgovornosti izvan poput dokumentiranje, izrada baze podataka i sl.
+Graf ispod uzima u obzir koliko koji član tima mora napraviti funkcionalnosti, ali uzima i u obzir težinu izrade pojedine funkcionalnosti kao i odgovornosti izvan poput dokumentiranje, izrada baze podataka i sl.
 
 ![Podjela odgovornosti](https://user-images.githubusercontent.com/101052235/167015682-cc48c130-504d-4501-8ec0-74034c52150f.png)
 
@@ -57,21 +53,22 @@ Tablica ispod detaljno opisuje o kojim se funkcionalnostima radi.
 
 Oznaka | Naziv | Kratki opis | Odgovorni član tima
 ------ | ----- | ----------- | -------------------
-F01 | **Prijava** | Za pristupiti aplikaciji potrebno je imati autoriziranu korisničke podatke koji su dani od ministarstva zdravsta | Petar Matišić
-F02 | **Forma za pregled svih mogučnosti** | Forma koja služi za pregled svih mogučnosti koje korisnici mogu odabrati | Dorian Badel
-F03 | **Ispis dnevnika** | Omogučava ispis cijelog dnevnika u formatu kako bi izgledao inače u papirnatom obliku| Mihael Kožul
-F04 | **Forma za evidenciju stručnih radova iz područja specijalizacije** | Prikazuje i omogučava dodavanje novih stručnih radova | Tomislava Cafuk
-F05 | **Forma za evidencija prikaza slučaja bolesnika** | Prikazuje i omogučava dodavanje novih slučaja bolesnika. Mentor i glavni mentor također mogu odobriti slučajeve | Tomislava Cafuk
-F06 | **Forma za evidenciju dnevnih aktivnosti** | Prikazuje i omogučava dodavanje novih aktivnosti. Mentor i glavni mentor također mogu odobriti aktivnosti  | Tomislava Cafuk
+F01 | **Prijava** | Za pristupiti aplikaciji potrebno je imati autorizirane korisničke podatke koji su dani od ministarstva zdravsta | Petar Matišić
+F02 | **Prikaz početnog zaslona** | Forma koja služi za pregled svih mogućnosti koje korisnici mogu odabrati | Dorian Badel
+F03 | **Mogućnost ispisa dnevnika** | Omogućava ispis cijelog dnevnika u formatu kako bi izgledao inače u papirnatom obliku | Mihael Kožul
+F04 | **Prikaz evidencije stručnih radova iz područja specijalizacije** | Prikazuje i omogućava dodavanje novih stručnih radova | Tomislava Cafuk
+F05 | **Prikaz evidencije prikaza slučaja bolesnika** | Prikazuje i omogućava dodavanje novih slučaja bolesnika. Mentor i glavni mentor također mogu odobriti slučajeve | Tomislava Cafuk
+F06 | **Prikaz evidencije dnevnih aktivnosti** | Prikazuje i omogućava dodavanje novih aktivnosti. Mentor i glavni mentor također mogu odobriti aktivnosti  | Tomislava Cafuk
 F07 | **Pregled profila** | Pristupanje i pregled osobnih i tuđih javnih informacija | Petar Matišić
-F08 | **Forma za pregled mentora** | Glavni mentor može vidjeti sve mentore za koje je odgovoran | Dorian Badel
+F08 | **Pregled mentora** | Glavni mentor može vidjeti sve mentore za koje je odgovoran | Dorian Badel
 F09 | **Pregled događaja** | Mentori i glavni mentori mogu vidjeti i potvrditi sve aktivnosti, slučajeve bolesnika, provjera usvojenih znanja koje trebaju provjeriti ili ocijeniti za sve specijalizante | Dorian Badel
-F10 | **Forma za provjere znanja** | Glavni mentori mogu postaviti provjere znanja kao i pregledati sve obavljene provjere i ocijeniti ih | Mihael Kožul
+F10 | **Prikaz evidencije provjera znanja** | Glavni mentori mogu postaviti provjere znanja kao i pregledati sve obavljene provjere i ocijeniti ih | Mihael Kožul
 F11 | **Podatci programa specijalizacije** | Služi za postavljanje minimalnih uvjeta i ishoda učenja za polaganje specijalizacije pojedinog programa | Petar Matišić
-F12 | **Forma za predaju zahtjeva polaganja ispita** | Pristupnici sa ostvarenim uvjetima mogu zatražiti polaganje ispita | Mihael Kožul
+F12 | **Mogućnost predaje zahtjeva polaganja ispita** | Pristupnici sa ostvarenim uvjetima mogu zatražiti polaganje ispita | Mihael Kožul
+F13 | **Prikaz evidencije bilješki** | Prikazuje i omogućava pregled i unos bilješki | Mihael Kožul
 
 ## Tehnologije i oprema
-1. Programski jezik: C#
+1. Programski jezici: C#, SQL
 2. Baza podataka: MySQL, Microsoft SQL Server
 3. IDE: Microsoft Visual Studio 2019/2022, MySQL Workbench 8.0 CE, SQL Server Management Studio (SSMS) 18.11
 4. Verzioniranje: git (shell), Sourcetree
@@ -79,4 +76,4 @@ F12 | **Forma za predaju zahtjeva polaganja ispita** | Pristupnici sa ostvarenim
 6. Prototip: Figma
 
 ## Status projekta
-- Novi projekt
+- Prva faza projekta u potpunosti gotova

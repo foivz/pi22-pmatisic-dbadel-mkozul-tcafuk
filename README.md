@@ -67,7 +67,7 @@ F07 | **Pregled profila** | Pristupanje i pregled osobnih i tuđih javnih inform
 F08 | **Forma za pregled mentora** | Glavni mentor može vidjeti sve mentore za koje je odgovoran | Dorian Badel
 F09 | **Pregled događaja** | Mentori i glavni mentori mogu vidjeti i potvrditi sve aktivnosti, slučajeve bolesnika, provjera usvojenih znanja koje trebaju provjeriti ili ocijeniti za sve specijalizante | Dorian Badel
 F10 | **Forma za provjere znanja** | Glavni mentori mogu postaviti provjere znanja kao i pregledati sve obavljene provjere i ocijeniti ih | Mihael Kožul
-F11 | **Forma za unos podataka o programu specijalizacije** | Služi za postavljanje minimalnih uvjeta i ishoda učenja za polaganje specijalizacije pojedinog programa | Petar Matišić
+F11 | **Podatci programa specijalizacije** | Služi za postavljanje minimalnih uvjeta i ishoda učenja za polaganje specijalizacije pojedinog programa | Petar Matišić
 F12 | **Forma za predaju zahtjeva polaganja ispita** | Pristupnici sa ostvarenim uvjetima mogu zatražiti polaganje ispita | Mihael Kožul
 
 ## Tehnologije i oprema

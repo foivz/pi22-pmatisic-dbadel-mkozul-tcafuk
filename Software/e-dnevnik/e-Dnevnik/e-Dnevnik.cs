@@ -110,5 +110,15 @@ namespace e_Dnevnik
             openForm.Close();
             
         }
+
+        private void btnPocetnDnevnik_Click(object sender, EventArgs e)
+        {
+            ucitajFormu(new frmDnevnikAktivnosti());
+        }
+
+        private void btnProfilDnevnik2_Click(object sender, EventArgs e)
+        {
+            ucitajFormu(new frmDnevnikAktivnosti());
+        }
     }
 }

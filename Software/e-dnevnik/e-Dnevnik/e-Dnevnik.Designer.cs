@@ -28,10 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmEDnevnik));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
+            this.panelSideBar = new System.Windows.Forms.Panel();
+            this.panelBody = new System.Windows.Forms.Panel();
             this.btnOdjava = new System.Windows.Forms.Button();
             this.btnProfil = new System.Windows.Forms.Button();
             this.btnBiljeske = new System.Windows.Forms.Button();
@@ -41,13 +42,14 @@
             this.btnStrucniRadovi = new System.Windows.Forms.Button();
             this.btnZatvori = new System.Windows.Forms.Button();
             this.btnMinimize = new System.Windows.Forms.Button();
-            this.pboxResize = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnHome = new System.Windows.Forms.Button();
+            this.timerZatvoriMeni = new System.Windows.Forms.Timer(this.components);
+            this.pboxResize = new System.Windows.Forms.PictureBox();
+            this.pboxHamburger = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
+            this.panelSideBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pboxResize)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pboxHamburger)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -57,27 +59,27 @@
             this.panel1.Controls.Add(this.pboxResize);
             this.panel1.Controls.Add(this.btnMinimize);
             this.panel1.Controls.Add(this.btnZatvori);
-            this.panel1.Controls.Add(this.pictureBox1);
+            this.panel1.Controls.Add(this.pboxHamburger);
             resources.ApplyResources(this.panel1, "panel1");
             this.panel1.Name = "panel1";
             // 
-            // panel2
+            // panelSideBar
             // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(37)))), ((int)(((byte)(44)))));
-            this.panel2.Controls.Add(this.btnStrucniRadovi);
-            this.panel2.Controls.Add(this.btnProvjereZnanja);
-            this.panel2.Controls.Add(this.bntSlucajeviBolesnika);
-            this.panel2.Controls.Add(this.btnDnevnikAktivnosti);
-            this.panel2.Controls.Add(this.btnBiljeske);
-            this.panel2.Controls.Add(this.btnProfil);
-            this.panel2.Controls.Add(this.btnOdjava);
-            resources.ApplyResources(this.panel2, "panel2");
-            this.panel2.Name = "panel2";
+            this.panelSideBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(37)))), ((int)(((byte)(44)))));
+            this.panelSideBar.Controls.Add(this.btnStrucniRadovi);
+            this.panelSideBar.Controls.Add(this.btnProvjereZnanja);
+            this.panelSideBar.Controls.Add(this.bntSlucajeviBolesnika);
+            this.panelSideBar.Controls.Add(this.btnDnevnikAktivnosti);
+            this.panelSideBar.Controls.Add(this.btnBiljeske);
+            this.panelSideBar.Controls.Add(this.btnProfil);
+            this.panelSideBar.Controls.Add(this.btnOdjava);
+            resources.ApplyResources(this.panelSideBar, "panelSideBar");
+            this.panelSideBar.Name = "panelSideBar";
             // 
-            // panel3
+            // panelBody
             // 
-            resources.ApplyResources(this.panel3, "panel3");
-            this.panel3.Name = "panel3";
+            resources.ApplyResources(this.panelBody, "panelBody");
+            this.panelBody.Name = "panelBody";
             // 
             // btnOdjava
             // 
@@ -110,6 +112,7 @@
             this.btnDnevnikAktivnosti.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(53)))), ((int)(((byte)(53)))));
             this.btnDnevnikAktivnosti.Name = "btnDnevnikAktivnosti";
             this.btnDnevnikAktivnosti.UseVisualStyleBackColor = true;
+            this.btnDnevnikAktivnosti.Click += new System.EventHandler(this.btnDnevnikAktivnosti_Click);
             // 
             // bntSlucajeviBolesnika
             // 
@@ -155,6 +158,20 @@
             this.btnMinimize.UseVisualStyleBackColor = false;
             this.btnMinimize.Click += new System.EventHandler(this.btnMinimize_Click);
             // 
+            // btnHome
+            // 
+            this.btnHome.FlatAppearance.BorderSize = 0;
+            resources.ApplyResources(this.btnHome, "btnHome");
+            this.btnHome.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(53)))), ((int)(((byte)(53)))));
+            this.btnHome.Name = "btnHome";
+            this.btnHome.UseVisualStyleBackColor = true;
+            this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
+            // 
+            // timerZatvoriMeni
+            // 
+            this.timerZatvoriMeni.Interval = 5;
+            this.timerZatvoriMeni.Tick += new System.EventHandler(this.timerZatvoriMeni_Tick);
+            // 
             // pboxResize
             // 
             resources.ApplyResources(this.pboxResize, "pboxResize");
@@ -164,20 +181,13 @@
             this.pboxResize.TabStop = false;
             this.pboxResize.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
-            // pictureBox1
+            // pboxHamburger
             // 
-            this.pictureBox1.Image = global::e_Dnevnik.Properties.Resources.menu_regular_24;
-            resources.ApplyResources(this.pictureBox1, "pictureBox1");
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.TabStop = false;
-            // 
-            // btnHome
-            // 
-            this.btnHome.FlatAppearance.BorderSize = 0;
-            resources.ApplyResources(this.btnHome, "btnHome");
-            this.btnHome.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(53)))), ((int)(((byte)(53)))));
-            this.btnHome.Name = "btnHome";
-            this.btnHome.UseVisualStyleBackColor = true;
+            this.pboxHamburger.Image = global::e_Dnevnik.Properties.Resources.menu_regular_24;
+            resources.ApplyResources(this.pboxHamburger, "pboxHamburger");
+            this.pboxHamburger.Name = "pboxHamburger";
+            this.pboxHamburger.TabStop = false;
+            this.pboxHamburger.Click += new System.EventHandler(this.pboxHamburger_Click);
             // 
             // frmEDnevnik
             // 
@@ -185,25 +195,24 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ControlBox = false;
-            this.Controls.Add(this.panel3);
-            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.panelBody);
+            this.Controls.Add(this.panelSideBar);
             this.Controls.Add(this.panel1);
             this.HelpButton = true;
             this.Name = "frmEDnevnik";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.Load += new System.EventHandler(this.frmEDnevnik_Load);
             this.panel1.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
+            this.panelSideBar.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pboxResize)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pboxHamburger)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel panelSideBar;
+        private System.Windows.Forms.Panel panelBody;
         private System.Windows.Forms.Button bntSlucajeviBolesnika;
         private System.Windows.Forms.Button btnDnevnikAktivnosti;
         private System.Windows.Forms.Button btnBiljeske;
@@ -211,11 +220,12 @@
         private System.Windows.Forms.Button btnOdjava;
         private System.Windows.Forms.Button btnStrucniRadovi;
         private System.Windows.Forms.Button btnProvjereZnanja;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pboxHamburger;
         private System.Windows.Forms.Button btnZatvori;
         private System.Windows.Forms.Button btnMinimize;
         private System.Windows.Forms.PictureBox pboxResize;
         private System.Windows.Forms.Button btnHome;
+        private System.Windows.Forms.Timer timerZatvoriMeni;
     }
 }
 

@@ -120,5 +120,16 @@ namespace e_Dnevnik
         {
             ucitajFormu(new frmDnevnikAktivnosti());
         }
+
+        private void frmEDnevnik_Load(object sender, EventArgs e)
+        {
+            ucitajFormu(new frmPocetnaModerator());
+
+        }
+
+        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

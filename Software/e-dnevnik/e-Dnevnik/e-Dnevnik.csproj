@@ -58,6 +58,12 @@
     <Compile Include="frmDnevnikAktivnosti.Designer.cs">
       <DependentUpon>frmDnevnikAktivnosti.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmPocetnaModerator.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPocetnaModerator.Designer.cs">
+      <DependentUpon>frmPocetnaModerator.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="e-Dnevnik.resx">
@@ -65,6 +71,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmDnevnikAktivnosti.resx">
       <DependentUpon>frmDnevnikAktivnosti.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPocetnaModerator.resx">
+      <DependentUpon>frmPocetnaModerator.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

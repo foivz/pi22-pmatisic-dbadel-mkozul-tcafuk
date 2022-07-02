@@ -199,8 +199,8 @@
             // 
             // panelBody
             // 
-            resources.ApplyResources(this.panelBody, "panelBody");
             this.panelBody.Controls.Add(this.tableLayoutPanel1);
+            resources.ApplyResources(this.panelBody, "panelBody");
             this.panelBody.Name = "panelBody";
             // 
             // tableLayoutPanel1
@@ -355,7 +355,7 @@
             // 
             // timerZatvoriMeni
             // 
-            this.timerZatvoriMeni.Interval = 5;
+            this.timerZatvoriMeni.Interval = 10;
             this.timerZatvoriMeni.Tick += new System.EventHandler(this.timerZatvoriMeni_Tick);
             // 
             // pboxResize

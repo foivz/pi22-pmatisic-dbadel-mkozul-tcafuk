@@ -16,11 +16,21 @@ namespace e_Dnevnik
         int sideBarWidth;
 
         Form openForm = null;
+
+        public enum uloge{
+            specijalizant,
+            mentor,
+            glavni_mentor
+        }
+
+        public uloge uloga;
+
         public frmEDnevnik()
         {
             InitializeComponent();
             pboxResize.Image = Properties.Resources.window_decrease;
             sideBarWidth = panelSideBar.Width;
+            uloga = uloge.glavni_mentor;
         }
 
         private void btnZatvori_Click(object sender, EventArgs e)
@@ -98,6 +108,20 @@ namespace e_Dnevnik
 
         }
 
+        //Razlicit poziv jer se pocetna mijenja ovino o tipu korisnika
+
+        public void ucitajPocetnu()
+        {
+            if(uloga == uloge.specijalizant)
+            {
+                if(openForm != null) openForm.Close();
+            }
+            else
+            {
+                ucitajFormu(new frmPocetnaModerator(uloga));
+            }
+        }
+
         //Ostatak koda
 
         private void btnDnevnikAktivnosti_Click(object sender, EventArgs e)
@@ -107,7 +131,7 @@ namespace e_Dnevnik
 
         private void btnHome_Click(object sender, EventArgs e)
         {
-            openForm.Close();
+            ucitajPocetnu();
             
         }
 
@@ -123,8 +147,7 @@ namespace e_Dnevnik
 
         private void frmEDnevnik_Load(object sender, EventArgs e)
         {
-            ucitajFormu(new frmPocetnaModerator());
-
+            ucitajPocetnu();
         }
 
         private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)

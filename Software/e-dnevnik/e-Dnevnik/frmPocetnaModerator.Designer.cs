@@ -34,7 +34,7 @@
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
+            this.lblMentori = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
@@ -66,6 +66,7 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1525, 789);
             this.panel1.TabIndex = 0;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // dgvPocetnaAktivnosti
             // 
@@ -129,24 +130,24 @@
             // panel7
             // 
             this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(37)))), ((int)(((byte)(44)))));
-            this.panel7.Controls.Add(this.label3);
+            this.panel7.Controls.Add(this.lblMentori);
             this.panel7.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel7.Location = new System.Drawing.Point(0, 66);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(456, 69);
             this.panel7.TabIndex = 0;
             // 
-            // label3
+            // lblMentori
             // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label3.Location = new System.Drawing.Point(20, 22);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(227, 25);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "Specijalizanti i mentori";
+            this.lblMentori.AutoSize = true;
+            this.lblMentori.BackColor = System.Drawing.Color.Transparent;
+            this.lblMentori.ForeColor = System.Drawing.Color.White;
+            this.lblMentori.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.lblMentori.Location = new System.Drawing.Point(20, 22);
+            this.lblMentori.Name = "lblMentori";
+            this.lblMentori.Size = new System.Drawing.Size(227, 25);
+            this.lblMentori.TabIndex = 0;
+            this.lblMentori.Text = "Specijalizanti i mentori";
             // 
             // panel4
             // 
@@ -280,7 +281,7 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Panel panel7;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lblMentori;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Label label2;

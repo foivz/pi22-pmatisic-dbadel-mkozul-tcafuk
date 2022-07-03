@@ -14,13 +14,17 @@ namespace e_Dnevnik
     {
         bool isOpen = false;
         int sideBarWidth;
+        MainForm mainForm;
 
-        Form openForm = null;
         public frmEDnevnik()
         {
             InitializeComponent();
+            mainForm = new MainForm();
+
             pboxResize.Image = Properties.Resources.window_decrease;
             sideBarWidth = panelSideBar.Width;
+            mainForm.uloga = MainForm.uloge.specijalizant;
+            mainForm.panelBody = panelBody;
         }
 
         private void btnZatvori_Click(object sender, EventArgs e)
@@ -80,35 +84,51 @@ namespace e_Dnevnik
             }
         }
 
-        //Ucitavnje formi
-        public void ucitajFormu(Form newForm)
-        {
-            if (openForm != null)
-            {
-                openForm.Close();
-            }
-            openForm = newForm;
-            newForm.TopLevel = false;
-            newForm.FormBorderStyle = FormBorderStyle.None;
-            newForm.Dock = DockStyle.Fill;
-            panelBody.Controls.Add(newForm);
-            panelBody.Tag = newForm;
-            newForm.BringToFront();
-            newForm.Show();
+        //Razlicit poziv jer se pocetna mijenja ovisno o tipu korisnika
 
+        public void ucitajPocetnu()
+        {
+            if(mainForm.uloga == MainForm.uloge.specijalizant)
+            {
+                if(mainForm.openForm != null) mainForm.openForm.Close();
+            }
+            else
+            {
+                mainForm.ucitajFormu(new frmPocetnaModerator(mainForm));
+            }
         }
 
         //Ostatak koda
 
         private void btnDnevnikAktivnosti_Click(object sender, EventArgs e)
         {
-            ucitajFormu(new frmDnevnikAktivnosti());
+            mainForm.ucitajFormu(new frmDnevnikAktivnosti());
         }
 
         private void btnHome_Click(object sender, EventArgs e)
         {
-            openForm.Close();
+            ucitajPocetnu();
             
+        }
+
+        private void btnPocetnDnevnik_Click(object sender, EventArgs e)
+        {
+            mainForm.ucitajFormu(new frmDnevnikAktivnosti());
+        }
+
+        private void btnProfilDnevnik2_Click(object sender, EventArgs e)
+        {
+            mainForm.ucitajFormu(new frmDnevnikAktivnosti());
+        }
+
+        private void frmEDnevnik_Load(object sender, EventArgs e)
+        {
+            ucitajPocetnu();
+        }
+
+        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

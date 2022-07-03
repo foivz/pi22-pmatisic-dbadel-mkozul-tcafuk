@@ -63,6 +63,16 @@ namespace e_Dnevnik.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap logo_ednevnik {
+            get {
+                object obj = ResourceManager.GetObject("logo-ednevnik", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap menu_regular_24 {
             get {
                 object obj = ResourceManager.GetObject("menu-regular-24", resourceCulture);

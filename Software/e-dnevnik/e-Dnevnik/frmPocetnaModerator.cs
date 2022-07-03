@@ -41,7 +41,7 @@ namespace e_Dnevnik
 
         private void btnMentoriSpecijalizant_click(object sender, EventArgs e)
         {
-
+            mainFrm.ucitajFormu(new frmMentorSpecijalizant(mainFrm));
         }
     }
 }

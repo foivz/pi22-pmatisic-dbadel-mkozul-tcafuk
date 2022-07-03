@@ -64,6 +64,12 @@
     <Compile Include="frmDogadaji.Designer.cs">
       <DependentUpon>frmDogadaji.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmMentorSpecijalizant.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMentorSpecijalizant.Designer.cs">
+      <DependentUpon>frmMentorSpecijalizant.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmPocetnaModerator.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -81,6 +87,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmDogadaji.resx">
       <DependentUpon>frmDogadaji.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMentorSpecijalizant.resx">
+      <DependentUpon>frmMentorSpecijalizant.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmPocetnaModerator.resx">
       <DependentUpon>frmPocetnaModerator.cs</DependentUpon>
@@ -115,6 +124,7 @@
     <None Include="Resources\window_decrease.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\logo-ednevnik.png" />
     <Content Include="Resources\window_increase1.png" />
     <Content Include="Resources\window_increase.png" />
   </ItemGroup>

@@ -13,11 +13,12 @@ namespace e_Dnevnik
 {
     public partial class frmPocetnaModerator : Form
     {
-        public int a = 1;
-        public frmPocetnaModerator(uloge uloga)
+        private MainForm mainFrm;
+        public frmPocetnaModerator(MainForm mainForm)
         {
+            this.mainFrm = mainForm;
             InitializeComponent();
-            if (uloga == uloge.mentor)
+            if (mainFrm.uloga == MainForm.uloge.mentor)
             {
                 lblMentori.Text = "Specijalizanti";
             }
@@ -26,6 +27,16 @@ namespace e_Dnevnik
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void frmPocetnaModerator_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnPocetnDnevnik_Click(object sender, EventArgs e)
+        {
+            mainFrm.ucitajFormu(new frmDogadaji());
         }
     }
 }

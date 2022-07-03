@@ -14,23 +14,17 @@ namespace e_Dnevnik
     {
         bool isOpen = false;
         int sideBarWidth;
-
-        Form openForm = null;
-
-        public enum uloge{
-            specijalizant,
-            mentor,
-            glavni_mentor
-        }
-
-        public uloge uloga;
+        MainForm mainForm;
 
         public frmEDnevnik()
         {
             InitializeComponent();
+            mainForm = new MainForm();
+
             pboxResize.Image = Properties.Resources.window_decrease;
             sideBarWidth = panelSideBar.Width;
-            uloga = uloge.glavni_mentor;
+            mainForm.uloga = MainForm.uloge.specijalizant;
+            mainForm.panelBody = panelBody;
         }
 
         private void btnZatvori_Click(object sender, EventArgs e)
@@ -90,35 +84,17 @@ namespace e_Dnevnik
             }
         }
 
-        //Ucitavnje formi
-        public void ucitajFormu(Form newForm)
-        {
-            if (openForm != null)
-            {
-                openForm.Close();
-            }
-            openForm = newForm;
-            newForm.TopLevel = false;
-            newForm.FormBorderStyle = FormBorderStyle.None;
-            newForm.Dock = DockStyle.Fill;
-            panelBody.Controls.Add(newForm);
-            panelBody.Tag = newForm;
-            newForm.BringToFront();
-            newForm.Show();
-
-        }
-
-        //Razlicit poziv jer se pocetna mijenja ovino o tipu korisnika
+        //Razlicit poziv jer se pocetna mijenja ovisno o tipu korisnika
 
         public void ucitajPocetnu()
         {
-            if(uloga == uloge.specijalizant)
+            if(mainForm.uloga == MainForm.uloge.specijalizant)
             {
-                if(openForm != null) openForm.Close();
+                if(mainForm.openForm != null) mainForm.openForm.Close();
             }
             else
             {
-                ucitajFormu(new frmPocetnaModerator(uloga));
+                mainForm.ucitajFormu(new frmPocetnaModerator(mainForm));
             }
         }
 
@@ -126,7 +102,7 @@ namespace e_Dnevnik
 
         private void btnDnevnikAktivnosti_Click(object sender, EventArgs e)
         {
-            ucitajFormu(new frmDnevnikAktivnosti());
+            mainForm.ucitajFormu(new frmDnevnikAktivnosti());
         }
 
         private void btnHome_Click(object sender, EventArgs e)
@@ -137,12 +113,12 @@ namespace e_Dnevnik
 
         private void btnPocetnDnevnik_Click(object sender, EventArgs e)
         {
-            ucitajFormu(new frmDnevnikAktivnosti());
+            mainForm.ucitajFormu(new frmDnevnikAktivnosti());
         }
 
         private void btnProfilDnevnik2_Click(object sender, EventArgs e)
         {
-            ucitajFormu(new frmDnevnikAktivnosti());
+            mainForm.ucitajFormu(new frmDnevnikAktivnosti());
         }
 
         private void frmEDnevnik_Load(object sender, EventArgs e)

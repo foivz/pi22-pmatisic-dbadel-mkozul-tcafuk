@@ -29,8 +29,7 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.dgvPocetnaAktivnosti = new System.Windows.Forms.DataGridView();
-            this.btnDodaj = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
@@ -39,13 +38,13 @@
             this.panel5 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.btnPocetnDnevnik = new System.Windows.Forms.Button();
+            this.btnPocetnDogdaji = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.btnProfilDnevnik2 = new System.Windows.Forms.Button();
-            this.label4 = new System.Windows.Forms.Label();
+            this.btnDodaj = new System.Windows.Forms.Button();
+            this.dgvPocetnaAktivnosti = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvPocetnaAktivnosti)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel7.SuspendLayout();
@@ -53,6 +52,7 @@
             this.panel5.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPocetnaAktivnosti)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -68,35 +68,14 @@
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
-            // dgvPocetnaAktivnosti
+            // label4
             // 
-            this.dgvPocetnaAktivnosti.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dgvPocetnaAktivnosti.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(37)))), ((int)(((byte)(44)))));
-            this.dgvPocetnaAktivnosti.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvPocetnaAktivnosti.Location = new System.Drawing.Point(137, 70);
-            this.dgvPocetnaAktivnosti.Name = "dgvPocetnaAktivnosti";
-            this.dgvPocetnaAktivnosti.RowHeadersWidth = 82;
-            this.dgvPocetnaAktivnosti.RowTemplate.Height = 33;
-            this.dgvPocetnaAktivnosti.Size = new System.Drawing.Size(1230, 439);
-            this.dgvPocetnaAktivnosti.TabIndex = 0;
-            // 
-            // btnDodaj
-            // 
-            this.btnDodaj.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnDodaj.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(101)))), ((int)(((byte)(101)))));
-            this.btnDodaj.FlatAppearance.BorderSize = 0;
-            this.btnDodaj.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDodaj.Font = new System.Drawing.Font("Mongolian Baiti", 13F);
-            this.btnDodaj.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(37)))), ((int)(((byte)(44)))));
-            this.btnDodaj.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnDodaj.Location = new System.Drawing.Point(1197, 515);
-            this.btnDodaj.Name = "btnDodaj";
-            this.btnDodaj.Size = new System.Drawing.Size(170, 40);
-            this.btnDodaj.TabIndex = 16;
-            this.btnDodaj.Text = "Otvori";
-            this.btnDodaj.UseVisualStyleBackColor = false;
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(132, 28);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(216, 25);
+            this.label4.TabIndex = 18;
+            this.label4.Text = "Nepotvrđeni događaji";
             // 
             // tableLayoutPanel1
             // 
@@ -183,7 +162,7 @@
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.btnPocetnDnevnik);
+            this.panel2.Controls.Add(this.btnPocetnDogdaji);
             this.panel2.Controls.Add(this.panel3);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(33, 33);
@@ -192,17 +171,18 @@
             this.panel2.Size = new System.Drawing.Size(455, 135);
             this.panel2.TabIndex = 0;
             // 
-            // btnPocetnDnevnik
+            // btnPocetnDogdaji
             // 
-            this.btnPocetnDnevnik.BackColor = System.Drawing.Color.Silver;
-            this.btnPocetnDnevnik.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnPocetnDnevnik.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPocetnDnevnik.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnPocetnDnevnik.Location = new System.Drawing.Point(0, 0);
-            this.btnPocetnDnevnik.Name = "btnPocetnDnevnik";
-            this.btnPocetnDnevnik.Size = new System.Drawing.Size(455, 66);
-            this.btnPocetnDnevnik.TabIndex = 1;
-            this.btnPocetnDnevnik.UseVisualStyleBackColor = false;
+            this.btnPocetnDogdaji.BackColor = System.Drawing.Color.Silver;
+            this.btnPocetnDogdaji.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnPocetnDogdaji.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPocetnDogdaji.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.btnPocetnDogdaji.Location = new System.Drawing.Point(0, 0);
+            this.btnPocetnDogdaji.Name = "btnPocetnDogdaji";
+            this.btnPocetnDogdaji.Size = new System.Drawing.Size(455, 66);
+            this.btnPocetnDogdaji.TabIndex = 1;
+            this.btnPocetnDogdaji.UseVisualStyleBackColor = false;
+            this.btnPocetnDogdaji.Click += new System.EventHandler(this.btnPocetnDnevnik_Click);
             // 
             // panel3
             // 
@@ -239,14 +219,35 @@
             this.btnProfilDnevnik2.TabIndex = 2;
             this.btnProfilDnevnik2.UseVisualStyleBackColor = false;
             // 
-            // label4
+            // btnDodaj
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(132, 28);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(216, 25);
-            this.label4.TabIndex = 18;
-            this.label4.Text = "Nepotvrđeni događaji";
+            this.btnDodaj.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnDodaj.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(101)))), ((int)(((byte)(101)))));
+            this.btnDodaj.FlatAppearance.BorderSize = 0;
+            this.btnDodaj.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDodaj.Font = new System.Drawing.Font("Mongolian Baiti", 13F);
+            this.btnDodaj.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(37)))), ((int)(((byte)(44)))));
+            this.btnDodaj.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.btnDodaj.Location = new System.Drawing.Point(1197, 515);
+            this.btnDodaj.Name = "btnDodaj";
+            this.btnDodaj.Size = new System.Drawing.Size(170, 40);
+            this.btnDodaj.TabIndex = 16;
+            this.btnDodaj.Text = "Otvori";
+            this.btnDodaj.UseVisualStyleBackColor = false;
+            // 
+            // dgvPocetnaAktivnosti
+            // 
+            this.dgvPocetnaAktivnosti.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvPocetnaAktivnosti.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(37)))), ((int)(((byte)(44)))));
+            this.dgvPocetnaAktivnosti.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvPocetnaAktivnosti.Location = new System.Drawing.Point(137, 70);
+            this.dgvPocetnaAktivnosti.Name = "dgvPocetnaAktivnosti";
+            this.dgvPocetnaAktivnosti.RowHeadersWidth = 82;
+            this.dgvPocetnaAktivnosti.RowTemplate.Height = 33;
+            this.dgvPocetnaAktivnosti.Size = new System.Drawing.Size(1230, 439);
+            this.dgvPocetnaAktivnosti.TabIndex = 0;
             // 
             // frmPocetnaModerator
             // 
@@ -256,9 +257,9 @@
             this.Controls.Add(this.panel1);
             this.Name = "frmPocetnaModerator";
             this.Text = "frmPocetnaModerator";
+            this.Load += new System.EventHandler(this.frmPocetnaModerator_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvPocetnaAktivnosti)).EndInit();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
             this.panel7.ResumeLayout(false);
@@ -269,6 +270,7 @@
             this.panel2.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPocetnaAktivnosti)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -286,7 +288,7 @@
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Button btnPocetnDnevnik;
+        private System.Windows.Forms.Button btnPocetnDogdaji;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnProfilDnevnik2;

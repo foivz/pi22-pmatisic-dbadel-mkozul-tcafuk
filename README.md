@@ -54,7 +54,7 @@ Tablica ispod detaljno opisuje o kojim se funkcionalnostima radi.
 Oznaka | Naziv | Kratki opis | Odgovorni član tima
 ------ | ----- | ----------- | -------------------
 F01 | **Prijava** | Za pristupiti aplikaciji potrebno je imati autorizirane korisničke podatke koji su dani od ministarstva zdravsta | Petar Matišić
-F02 | **Prikaz početnog zaslona** | Forma koja služi za pregled svih mogućnosti koje korisnici mogu odabrati | Dorian Badel
+F02 | **Korisničko sučelje** | Omogućava navigaciju kroz cijelu aplikaciju uz sučelje koje je uvijek na ekranu i dodatno sučelje na početnom prikazu  | Dorian Badel
 F03 | **Mogućnost ispisa dnevnika** | Omogućava ispis cijelog dnevnika u formatu kako bi izgledao inače u papirnatom obliku | Mihael Kožul
 F04 | **Prikaz evidencije stručnih radova iz područja specijalizacije** | Prikazuje i omogućava dodavanje novih stručnih radova | Tomislava Cafuk
 F05 | **Prikaz evidencije prikaza slučaja bolesnika** | Prikazuje i omogućava dodavanje novih slučaja bolesnika. Mentor i glavni mentor također mogu odobriti slučajeve | Tomislava Cafuk

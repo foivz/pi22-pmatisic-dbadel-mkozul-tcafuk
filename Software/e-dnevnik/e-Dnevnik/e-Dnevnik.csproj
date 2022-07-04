@@ -33,8 +33,17 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -46,11 +55,35 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Biljeske.cs">
+      <DependentUpon>EDnevnikModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DnevnaAktivnost.cs">
+      <DependentUpon>EDnevnikModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Dogadjaj.cs">
+      <DependentUpon>EDnevnikModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="e-Dnevnik.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="e-Dnevnik.Designer.cs">
       <DependentUpon>e-Dnevnik.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EDnevnikModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EDnevnikModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EDnevnikModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EDnevnikModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EDnevnikModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EDnevnikModel.edmx</DependentUpon>
     </Compile>
     <Compile Include="frmDnevnikAktivnosti.cs">
       <SubType>Form</SubType>
@@ -64,15 +97,48 @@
     <Compile Include="frmDogadaji.Designer.cs">
       <DependentUpon>frmDogadaji.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmMentorSpecijalizant.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMentorSpecijalizant.Designer.cs">
+      <DependentUpon>frmMentorSpecijalizant.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmPocetnaModerator.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmPocetnaModerator.Designer.cs">
       <DependentUpon>frmPocetnaModerator.cs</DependentUpon>
     </Compile>
+    <Compile Include="Korisnik.cs">
+      <DependentUpon>EDnevnikModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="MainForm.cs" />
+    <Compile Include="PrijavaIspita.cs">
+      <DependentUpon>EDnevnikModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
+    <Compile Include="ProgramSpecijalizacije.cs">
+      <DependentUpon>EDnevnikModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ProvjeraZnanja.cs">
+      <DependentUpon>EDnevnikModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SlucajBolesnika.cs">
+      <DependentUpon>EDnevnikModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="StrucniRad.cs">
+      <DependentUpon>EDnevnikModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sysdiagrams.cs">
+      <DependentUpon>EDnevnikModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TipDogadjaja.cs">
+      <DependentUpon>EDnevnikModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Uloga.cs">
+      <DependentUpon>EDnevnikModel.tt</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="e-Dnevnik.resx">
       <DependentUpon>e-Dnevnik.cs</DependentUpon>
     </EmbeddedResource>
@@ -81,6 +147,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmDogadaji.resx">
       <DependentUpon>frmDogadaji.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMentorSpecijalizant.resx">
+      <DependentUpon>frmMentorSpecijalizant.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmPocetnaModerator.resx">
       <DependentUpon>frmPocetnaModerator.cs</DependentUpon>
@@ -95,6 +164,14 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EntityDeploy Include="EDnevnikModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>EDnevnikModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="EDnevnikModel.edmx.diagram">
+      <DependentUpon>EDnevnikModel.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -115,8 +192,32 @@
     <None Include="Resources\window_decrease.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\logo-ednevnik.png" />
+    <None Include="Resources\dnevnik-aktivnosti-img.png" />
+    <None Include="Resources\slucaj-bolesnika.jpg" />
+    <None Include="Resources\provjere-znanja.jpg" />
+    <None Include="Resources\strucni-radovi.jpg" />
+    <None Include="Resources\biljeske.jpg" />
+    <None Include="Resources\profile.jpg" />
+    <None Include="Resources\dogadaji-img.jpg" />
+    <None Include="Resources\provjere-znanja-img.jpg" />
+    <None Include="Resources\specijalizani.jpg" />
+    <None Include="Resources\specijalizani-img.jpg" />
+    <Content Include="EDnevnikModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>EDnevnikModel.Context.cs</LastGenOutput>
+      <DependentUpon>EDnevnikModel.edmx</DependentUpon>
+    </Content>
+    <Content Include="EDnevnikModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>EDnevnikModel.edmx</DependentUpon>
+      <LastGenOutput>EDnevnikModel.cs</LastGenOutput>
+    </Content>
     <Content Include="Resources\window_increase1.png" />
     <Content Include="Resources\window_increase.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

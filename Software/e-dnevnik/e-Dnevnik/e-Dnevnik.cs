@@ -96,12 +96,9 @@ namespace e_Dnevnik
                 btnDnevnikAktivnosti.Visible = true;
                 btnStrucniRadovi.Visible = true;
                 bntSlucajeviBolesnika.Visible = true;
+                btnIspisDnevnika.Visible = true;
                 btnPregledDogadaja.Visible = false;
                 btnSpecijalizantiMentori.Visible = false;
-                btnProvjereZnanja.Location = new Point(
-                 btnProvjereZnanja.Location.X,
-                 btnProvjereZnanja.Location.Y -15
-                );
             }
             else
             {
@@ -111,12 +108,9 @@ namespace e_Dnevnik
                 btnDnevnikAktivnosti.Visible = false;
                 btnStrucniRadovi.Visible = false;
                 bntSlucajeviBolesnika.Visible = false;
+                btnIspisDnevnika.Visible = false;
                 btnPregledDogadaja.Visible = true;
                 btnSpecijalizantiMentori.Visible = true;
-                btnProvjereZnanja.Location = new Point(
-                 btnProvjereZnanja.Location.X,
-                 btnProvjereZnanja.Location.Y
-                );
             }
         }
 
@@ -153,6 +147,21 @@ namespace e_Dnevnik
         private void btnDnevnikAktivnosti_click(object sender, EventArgs e)
         {
             mainForm.ucitajFormu(new frmDnevnikAktivnosti());
+        }
+
+        private void btnSpecijalizantiMentori_Click(object sender, EventArgs e)
+        {
+            mainForm.ucitajFormu(new frmMentorSpecijalizant(mainForm));
+        }
+
+        private void btnHome_Click_1(object sender, EventArgs e)
+        {
+            ucitajPocetnu();
+        }
+
+        private void btnProvjereZnanja_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

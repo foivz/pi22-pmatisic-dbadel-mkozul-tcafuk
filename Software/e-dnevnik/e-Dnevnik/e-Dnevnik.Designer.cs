@@ -35,7 +35,6 @@
             this.btnZatvori = new System.Windows.Forms.Button();
             this.panelSideBar = new System.Windows.Forms.Panel();
             this.btnSpecijalizantiMentori = new System.Windows.Forms.Button();
-            this.btnPregledDogadaja = new System.Windows.Forms.Button();
             this.btnStrucniRadovi = new System.Windows.Forms.Button();
             this.btnProvjereZnanja = new System.Windows.Forms.Button();
             this.bntSlucajeviBolesnika = new System.Windows.Forms.Button();
@@ -64,9 +63,16 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.timerZatvoriMeni = new System.Windows.Forms.Timer(this.components);
+            this.btnPregledDogadaja = new System.Windows.Forms.Button();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnHome = new System.Windows.Forms.PictureBox();
             this.pboxResize = new System.Windows.Forms.PictureBox();
             this.pboxHamburger = new System.Windows.Forms.PictureBox();
-            this.btnHome = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.panelSideBar.SuspendLayout();
             this.panelBody.SuspendLayout();
@@ -83,9 +89,15 @@
             this.panel5.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnHome)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pboxResize)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pboxHamburger)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnHome)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -142,15 +154,6 @@
             this.btnSpecijalizantiMentori.Name = "btnSpecijalizantiMentori";
             this.btnSpecijalizantiMentori.UseVisualStyleBackColor = true;
             this.btnSpecijalizantiMentori.Click += new System.EventHandler(this.btnSpecijalizantiMentori_Click);
-            // 
-            // btnPregledDogadaja
-            // 
-            this.btnPregledDogadaja.FlatAppearance.BorderSize = 0;
-            resources.ApplyResources(this.btnPregledDogadaja, "btnPregledDogadaja");
-            this.btnPregledDogadaja.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(53)))), ((int)(((byte)(53)))));
-            this.btnPregledDogadaja.Name = "btnPregledDogadaja";
-            this.btnPregledDogadaja.UseVisualStyleBackColor = true;
-            this.btnPregledDogadaja.Click += new System.EventHandler(this.btnPregledDogadaja_Click);
             // 
             // btnStrucniRadovi
             // 
@@ -229,6 +232,7 @@
             // 
             // panel12
             // 
+            this.panel12.Controls.Add(this.pictureBox6);
             this.panel12.Controls.Add(this.panel13);
             resources.ApplyResources(this.panel12, "panel12");
             this.panel12.Name = "panel12";
@@ -249,6 +253,7 @@
             // 
             // panel10
             // 
+            this.panel10.Controls.Add(this.pictureBox5);
             this.panel10.Controls.Add(this.panel11);
             resources.ApplyResources(this.panel10, "panel10");
             this.panel10.Name = "panel10";
@@ -269,6 +274,7 @@
             // 
             // panel8
             // 
+            this.panel8.Controls.Add(this.pictureBox4);
             this.panel8.Controls.Add(this.panel9);
             resources.ApplyResources(this.panel8, "panel8");
             this.panel8.Name = "panel8";
@@ -289,6 +295,7 @@
             // 
             // panel6
             // 
+            this.panel6.Controls.Add(this.pictureBox3);
             this.panel6.Controls.Add(this.panel7);
             resources.ApplyResources(this.panel6, "panel6");
             this.panel6.Name = "panel6";
@@ -309,6 +316,7 @@
             // 
             // panel4
             // 
+            this.panel4.Controls.Add(this.pictureBox2);
             this.panel4.Controls.Add(this.panel5);
             resources.ApplyResources(this.panel4, "panel4");
             this.panel4.Name = "panel4";
@@ -329,6 +337,7 @@
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.pictureBox1);
             this.panel2.Controls.Add(this.panel3);
             resources.ApplyResources(this.panel2, "panel2");
             this.panel2.Name = "panel2";
@@ -355,6 +364,66 @@
             this.timerZatvoriMeni.Interval = 10;
             this.timerZatvoriMeni.Tick += new System.EventHandler(this.timerZatvoriMeni_Tick);
             // 
+            // btnPregledDogadaja
+            // 
+            this.btnPregledDogadaja.FlatAppearance.BorderSize = 0;
+            resources.ApplyResources(this.btnPregledDogadaja, "btnPregledDogadaja");
+            this.btnPregledDogadaja.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(53)))), ((int)(((byte)(53)))));
+            this.btnPregledDogadaja.Name = "btnPregledDogadaja";
+            this.btnPregledDogadaja.UseVisualStyleBackColor = true;
+            this.btnPregledDogadaja.Click += new System.EventHandler(this.btnPregledDogadaja_Click);
+            // 
+            // pictureBox6
+            // 
+            resources.ApplyResources(this.pictureBox6, "pictureBox6");
+            this.pictureBox6.Image = global::e_Dnevnik.Properties.Resources.profile;
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.TabStop = false;
+            // 
+            // pictureBox5
+            // 
+            resources.ApplyResources(this.pictureBox5, "pictureBox5");
+            this.pictureBox5.Image = global::e_Dnevnik.Properties.Resources.biljeske;
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.TabStop = false;
+            // 
+            // pictureBox4
+            // 
+            resources.ApplyResources(this.pictureBox4, "pictureBox4");
+            this.pictureBox4.Image = global::e_Dnevnik.Properties.Resources.strucni_radovi;
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            resources.ApplyResources(this.pictureBox3, "pictureBox3");
+            this.pictureBox3.Image = global::e_Dnevnik.Properties.Resources.provjere_znanja;
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            resources.ApplyResources(this.pictureBox2, "pictureBox2");
+            this.pictureBox2.Image = global::e_Dnevnik.Properties.Resources.slucaj_bolesnika;
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            resources.ApplyResources(this.pictureBox1, "pictureBox1");
+            this.pictureBox1.Image = global::e_Dnevnik.Properties.Resources.dnevnik_aktivnosti_img;
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.btnDnevnikAktivnosti_click);
+            // 
+            // btnHome
+            // 
+            this.btnHome.Image = global::e_Dnevnik.Properties.Resources.logo_ednevnik;
+            resources.ApplyResources(this.btnHome, "btnHome");
+            this.btnHome.Name = "btnHome";
+            this.btnHome.TabStop = false;
+            this.btnHome.Click += new System.EventHandler(this.btnHome_Click_1);
+            // 
             // pboxResize
             // 
             resources.ApplyResources(this.pboxResize, "pboxResize");
@@ -371,14 +440,6 @@
             this.pboxHamburger.Name = "pboxHamburger";
             this.pboxHamburger.TabStop = false;
             this.pboxHamburger.Click += new System.EventHandler(this.pboxHamburger_Click);
-            // 
-            // btnHome
-            // 
-            this.btnHome.Image = global::e_Dnevnik.Properties.Resources.logo_ednevnik;
-            resources.ApplyResources(this.btnHome, "btnHome");
-            this.btnHome.Name = "btnHome";
-            this.btnHome.TabStop = false;
-            this.btnHome.Click += new System.EventHandler(this.btnHome_Click_1);
             // 
             // frmEDnevnik
             // 
@@ -404,20 +465,30 @@
             this.panel11.ResumeLayout(false);
             this.panel11.PerformLayout();
             this.panel8.ResumeLayout(false);
+            this.panel8.PerformLayout();
             this.panel9.ResumeLayout(false);
             this.panel9.PerformLayout();
             this.panel6.ResumeLayout(false);
+            this.panel6.PerformLayout();
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
             this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
             this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnHome)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pboxResize)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pboxHamburger)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnHome)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -460,6 +531,12 @@
         private System.Windows.Forms.Button btnPregledDogadaja;
         private System.Windows.Forms.Button btnSpecijalizantiMentori;
         private System.Windows.Forms.PictureBox btnHome;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox pictureBox6;
+        private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.PictureBox pictureBox3;
     }
 }
 

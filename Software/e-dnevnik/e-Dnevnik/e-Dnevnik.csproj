@@ -125,6 +125,16 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\logo-ednevnik.png" />
+    <None Include="Resources\dnevnik-aktivnosti-img.png" />
+    <None Include="Resources\slucaj-bolesnika.jpg" />
+    <None Include="Resources\provjere-znanja.jpg" />
+    <None Include="Resources\strucni-radovi.jpg" />
+    <None Include="Resources\biljeske.jpg" />
+    <None Include="Resources\profile.jpg" />
+    <None Include="Resources\dogadaji-img.jpg" />
+    <None Include="Resources\provjere-znanja-img.jpg" />
+    <None Include="Resources\specijalizani.jpg" />
+    <None Include="Resources\specijalizani-img.jpg" />
     <Content Include="Resources\window_increase1.png" />
     <Content Include="Resources\window_increase.png" />
   </ItemGroup>

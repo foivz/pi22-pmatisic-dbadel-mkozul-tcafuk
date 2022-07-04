@@ -180,6 +180,7 @@
             this.btnIspisDnevnika.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(53)))), ((int)(((byte)(53)))));
             this.btnIspisDnevnika.Name = "btnIspisDnevnika";
             this.btnIspisDnevnika.UseVisualStyleBackColor = true;
+            this.btnIspisDnevnika.Click += new System.EventHandler(this.btnIspisDnevnika_Click);
             // 
             // btnSpecijalizantiMentori
             // 

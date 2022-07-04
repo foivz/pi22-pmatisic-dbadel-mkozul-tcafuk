@@ -85,6 +85,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>EDnevnikModel.edmx</DependentUpon>
     </Compile>
+    <Compile Include="frmBiljeske.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBiljeske.Designer.cs">
+      <DependentUpon>frmBiljeske.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmDnevnik.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -147,6 +153,9 @@
     </Compile>
     <EmbeddedResource Include="e-Dnevnik.resx">
       <DependentUpon>e-Dnevnik.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBiljeske.resx">
+      <DependentUpon>frmBiljeske.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmDnevnik.resx">
       <DependentUpon>frmDnevnik.cs</DependentUpon>

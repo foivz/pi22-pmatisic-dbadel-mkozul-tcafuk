@@ -85,6 +85,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>EDnevnikModel.edmx</DependentUpon>
     </Compile>
+    <Compile Include="frmDnevnik.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDnevnik.Designer.cs">
+      <DependentUpon>frmDnevnik.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmDnevnikAktivnosti.cs">
       <SubType>Form</SubType>
     </Compile>

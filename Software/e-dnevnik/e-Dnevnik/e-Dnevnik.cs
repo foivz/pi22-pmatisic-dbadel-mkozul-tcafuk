@@ -23,7 +23,7 @@ namespace e_Dnevnik
 
             pboxResize.Image = Properties.Resources.window_decrease;
             sideBarWidth = panelSideBar.Width;
-            mainForm.uloga = MainForm.uloge.mentor;
+            mainForm.uloga = MainForm.uloge.specijalizant;
             mainForm.panelBody = panelBody;
         }
 
@@ -96,12 +96,9 @@ namespace e_Dnevnik
                 btnDnevnikAktivnosti.Visible = true;
                 btnStrucniRadovi.Visible = true;
                 bntSlucajeviBolesnika.Visible = true;
+                btnIspisDnevnika.Visible = true;
                 btnPregledDogadaja.Visible = false;
                 btnSpecijalizantiMentori.Visible = false;
-                btnProvjereZnanja.Location = new Point(
-                 btnProvjereZnanja.Location.X,
-                 btnProvjereZnanja.Location.Y -15
-                );
             }
             else
             {
@@ -111,12 +108,9 @@ namespace e_Dnevnik
                 btnDnevnikAktivnosti.Visible = false;
                 btnStrucniRadovi.Visible = false;
                 bntSlucajeviBolesnika.Visible = false;
+                btnIspisDnevnika.Visible = false;
                 btnPregledDogadaja.Visible = true;
                 btnSpecijalizantiMentori.Visible = true;
-                btnProvjereZnanja.Location = new Point(
-                 btnProvjereZnanja.Location.X,
-                 btnProvjereZnanja.Location.Y
-                );
             }
         }
 
@@ -163,6 +157,11 @@ namespace e_Dnevnik
         private void btnHome_Click_1(object sender, EventArgs e)
         {
             ucitajPocetnu();
+        }
+
+        private void btnProvjereZnanja_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

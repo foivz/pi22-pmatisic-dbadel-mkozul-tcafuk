@@ -1,4 +1,4 @@
-﻿namespace e_Dnevnik
+namespace e_Dnevnik
 {
     partial class frmEDnevnik
     {
@@ -73,6 +73,7 @@
             this.btnHome = new System.Windows.Forms.PictureBox();
             this.pboxResize = new System.Windows.Forms.PictureBox();
             this.pboxHamburger = new System.Windows.Forms.PictureBox();
+            this.btnIspis = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panelSideBar.SuspendLayout();
             this.panelBody.SuspendLayout();
@@ -134,8 +135,11 @@
             // panelSideBar
             // 
             this.panelSideBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(37)))), ((int)(((byte)(44)))));
+
             this.panelSideBar.Controls.Add(this.btnSpecijalizantiMentori);
             this.panelSideBar.Controls.Add(this.btnPregledDogadaja);
+            this.panelSideBar.Controls.Add(this.btnIspis);
+            
             this.panelSideBar.Controls.Add(this.btnStrucniRadovi);
             this.panelSideBar.Controls.Add(this.btnProvjereZnanja);
             this.panelSideBar.Controls.Add(this.bntSlucajeviBolesnika);
@@ -170,6 +174,7 @@
             this.btnProvjereZnanja.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(53)))), ((int)(((byte)(53)))));
             this.btnProvjereZnanja.Name = "btnProvjereZnanja";
             this.btnProvjereZnanja.UseVisualStyleBackColor = true;
+            this.btnProvjereZnanja.Click += new System.EventHandler(this.btnProvjereZnanja_Click);
             // 
             // bntSlucajeviBolesnika
             // 
@@ -190,11 +195,12 @@
             // 
             // btnBiljeske
             // 
-            resources.ApplyResources(this.btnBiljeske, "btnBiljeske");
             this.btnBiljeske.FlatAppearance.BorderSize = 0;
+            resources.ApplyResources(this.btnBiljeske, "btnBiljeske");
             this.btnBiljeske.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(53)))), ((int)(((byte)(53)))));
             this.btnBiljeske.Name = "btnBiljeske";
             this.btnBiljeske.UseVisualStyleBackColor = true;
+            this.btnBiljeske.Click += new System.EventHandler(this.btnBiljeske_Click);
             // 
             // btnProfil
             // 
@@ -441,6 +447,15 @@
             this.pboxHamburger.TabStop = false;
             this.pboxHamburger.Click += new System.EventHandler(this.pboxHamburger_Click);
             // 
+            // btnIspis
+            // 
+            resources.ApplyResources(this.btnIspis, "btnIspis");
+            this.btnIspis.FlatAppearance.BorderSize = 0;
+            this.btnIspis.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(53)))), ((int)(((byte)(53)))));
+            this.btnIspis.Name = "btnIspis";
+            this.btnIspis.UseVisualStyleBackColor = true;
+            this.btnIspis.Click += new System.EventHandler(this.btnIspis_Click);
+            // 
             // frmEDnevnik
             // 
             resources.ApplyResources(this, "$this");
@@ -528,6 +543,7 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label1;
+
         private System.Windows.Forms.Button btnPregledDogadaja;
         private System.Windows.Forms.Button btnSpecijalizantiMentori;
         private System.Windows.Forms.PictureBox btnHome;
@@ -537,6 +553,7 @@
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.Button btnIspis;
     }
 }
 

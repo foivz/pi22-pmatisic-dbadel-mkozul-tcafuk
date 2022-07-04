@@ -23,7 +23,7 @@ namespace e_Dnevnik
 
             pboxResize.Image = Properties.Resources.window_decrease;
             sideBarWidth = panelSideBar.Width;
-            mainForm.uloga = MainForm.uloge.mentor;
+            mainForm.uloga = MainForm.uloge.specijalizant;
             mainForm.panelBody = panelBody;
         }
 

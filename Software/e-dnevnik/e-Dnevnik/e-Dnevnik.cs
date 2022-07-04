@@ -23,7 +23,7 @@ namespace e_Dnevnik
 
             pboxResize.Image = Properties.Resources.window_decrease;
             sideBarWidth = panelSideBar.Width;
-            mainForm.uloga = MainForm.uloge.specijalizant;
+            mainForm.uloga = MainForm.uloge.mentor;
             mainForm.panelBody = panelBody;
         }
 
@@ -91,10 +91,32 @@ namespace e_Dnevnik
             if(mainForm.uloga == MainForm.uloge.specijalizant)
             {
                 if(mainForm.openForm != null) mainForm.openForm.Close();
+
+                btnBiljeske.Visible = true;
+                btnDnevnikAktivnosti.Visible = true;
+                btnStrucniRadovi.Visible = true;
+                bntSlucajeviBolesnika.Visible = true;
+                btnPregledDogadaja.Visible = false;
+                btnSpecijalizantiMentori.Visible = false;
+                btnProvjereZnanja.Location = new Point(
+                 btnProvjereZnanja.Location.X,
+                 btnProvjereZnanja.Location.Y -15
+                );
             }
             else
             {
                 mainForm.ucitajFormu(new frmPocetnaModerator(mainForm));
+
+                btnBiljeske.Visible = false;
+                btnDnevnikAktivnosti.Visible = false;
+                btnStrucniRadovi.Visible = false;
+                bntSlucajeviBolesnika.Visible = false;
+                btnPregledDogadaja.Visible = true;
+                btnSpecijalizantiMentori.Visible = true;
+                btnProvjereZnanja.Location = new Point(
+                 btnProvjereZnanja.Location.X,
+                 btnProvjereZnanja.Location.Y
+                );
             }
         }
 
@@ -111,15 +133,7 @@ namespace e_Dnevnik
             
         }
 
-        private void btnPocetnDnevnik_Click(object sender, EventArgs e)
-        {
-            mainForm.ucitajFormu(new frmDnevnikAktivnosti());
-        }
-
-        private void btnProfilDnevnik2_Click(object sender, EventArgs e)
-        {
-            mainForm.ucitajFormu(new frmDnevnikAktivnosti());
-        }
+        
 
         private void frmEDnevnik_Load(object sender, EventArgs e)
         {
@@ -129,6 +143,26 @@ namespace e_Dnevnik
         private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void btnPregledDogadaja_Click(object sender, EventArgs e)
+        {
+            mainForm.ucitajFormu(new frmDogadaji());
+        }
+
+        private void btnDnevnikAktivnosti_click(object sender, EventArgs e)
+        {
+            mainForm.ucitajFormu(new frmDnevnikAktivnosti());
+        }
+
+        private void btnSpecijalizantiMentori_Click(object sender, EventArgs e)
+        {
+            mainForm.ucitajFormu(new frmMentorSpecijalizant(mainForm));
+        }
+
+        private void btnHome_Click_1(object sender, EventArgs e)
+        {
+            ucitajPocetnu();
         }
 
         private void btnBiljeske_Click(object sender, EventArgs e)

@@ -130,5 +130,20 @@ namespace e_Dnevnik
         {
 
         }
+
+        private void btnBiljeske_Click(object sender, EventArgs e)
+        {
+            mainForm.ucitajFormu(new frmBiljeske());
+        }
+
+        private void btnProvjereZnanja_Click(object sender, EventArgs e)
+        {
+            mainForm.ucitajFormu(new frmProvjeraZnanja());
+        }
+
+        private void btnIspis_Click(object sender, EventArgs e)
+        {
+            mainForm.ucitajFormu(new frmDnevnik());
+        }
     }
 }

@@ -67,6 +67,7 @@
             this.timerZatvoriMeni = new System.Windows.Forms.Timer(this.components);
             this.pboxResize = new System.Windows.Forms.PictureBox();
             this.pboxHamburger = new System.Windows.Forms.PictureBox();
+            this.btnIspis = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panelSideBar.SuspendLayout();
             this.panelBody.SuspendLayout();
@@ -130,6 +131,7 @@
             // panelSideBar
             // 
             this.panelSideBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(37)))), ((int)(((byte)(44)))));
+            this.panelSideBar.Controls.Add(this.btnIspis);
             this.panelSideBar.Controls.Add(this.btnStrucniRadovi);
             this.panelSideBar.Controls.Add(this.btnProvjereZnanja);
             this.panelSideBar.Controls.Add(this.bntSlucajeviBolesnika);
@@ -155,6 +157,7 @@
             this.btnProvjereZnanja.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(53)))), ((int)(((byte)(53)))));
             this.btnProvjereZnanja.Name = "btnProvjereZnanja";
             this.btnProvjereZnanja.UseVisualStyleBackColor = true;
+            this.btnProvjereZnanja.Click += new System.EventHandler(this.btnProvjereZnanja_Click);
             // 
             // bntSlucajeviBolesnika
             // 
@@ -175,11 +178,12 @@
             // 
             // btnBiljeske
             // 
-            resources.ApplyResources(this.btnBiljeske, "btnBiljeske");
             this.btnBiljeske.FlatAppearance.BorderSize = 0;
+            resources.ApplyResources(this.btnBiljeske, "btnBiljeske");
             this.btnBiljeske.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(53)))), ((int)(((byte)(53)))));
             this.btnBiljeske.Name = "btnBiljeske";
             this.btnBiljeske.UseVisualStyleBackColor = true;
+            this.btnBiljeske.Click += new System.EventHandler(this.btnBiljeske_Click);
             // 
             // btnProfil
             // 
@@ -375,6 +379,15 @@
             this.pboxHamburger.TabStop = false;
             this.pboxHamburger.Click += new System.EventHandler(this.pboxHamburger_Click);
             // 
+            // btnIspis
+            // 
+            resources.ApplyResources(this.btnIspis, "btnIspis");
+            this.btnIspis.FlatAppearance.BorderSize = 0;
+            this.btnIspis.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(53)))), ((int)(((byte)(53)))));
+            this.btnIspis.Name = "btnIspis";
+            this.btnIspis.UseVisualStyleBackColor = true;
+            this.btnIspis.Click += new System.EventHandler(this.btnIspis_Click);
+            // 
             // frmEDnevnik
             // 
             resources.ApplyResources(this, "$this");
@@ -454,6 +467,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnPocetnDnevnik;
         private System.Windows.Forms.Button btnProfilDnevnik2;
+        private System.Windows.Forms.Button btnIspis;
     }
 }
 

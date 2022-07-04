@@ -52,6 +52,18 @@
     <Compile Include="e-Dnevnik.Designer.cs">
       <DependentUpon>e-Dnevnik.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmBiljeske.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBiljeske.Designer.cs">
+      <DependentUpon>frmBiljeske.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDnevnik.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDnevnik.Designer.cs">
+      <DependentUpon>frmDnevnik.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmDnevnikAktivnosti.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -70,11 +82,35 @@
     <Compile Include="frmPocetnaModerator.Designer.cs">
       <DependentUpon>frmPocetnaModerator.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmProvjeraZnanja.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmProvjeraZnanja.Designer.cs">
+      <DependentUpon>frmProvjeraZnanja.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmUnesiBiljesku.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUnesiBiljesku.Designer.cs">
+      <DependentUpon>frmUnesiBiljesku.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmZahtjevPolaganjaIspita.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmZahtjevPolaganjaIspita.Designer.cs">
+      <DependentUpon>frmZahtjevPolaganjaIspita.cs</DependentUpon>
+    </Compile>
     <Compile Include="MainForm.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="e-Dnevnik.resx">
       <DependentUpon>e-Dnevnik.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBiljeske.resx">
+      <DependentUpon>frmBiljeske.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDnevnik.resx">
+      <DependentUpon>frmDnevnik.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmDnevnikAktivnosti.resx">
       <DependentUpon>frmDnevnikAktivnosti.cs</DependentUpon>
@@ -84,6 +120,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmPocetnaModerator.resx">
       <DependentUpon>frmPocetnaModerator.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmProvjeraZnanja.resx">
+      <DependentUpon>frmProvjeraZnanja.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUnesiBiljesku.resx">
+      <DependentUpon>frmUnesiBiljesku.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmZahtjevPolaganjaIspita.resx">
+      <DependentUpon>frmZahtjevPolaganjaIspita.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

@@ -148,6 +148,9 @@
     <EmbeddedResource Include="e-Dnevnik.resx">
       <DependentUpon>e-Dnevnik.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmDnevnik.resx">
+      <DependentUpon>frmDnevnik.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmDnevnikAktivnosti.resx">
       <DependentUpon>frmDnevnikAktivnosti.cs</DependentUpon>
     </EmbeddedResource>

@@ -29,109 +29,109 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPrijava));
-            this.lblPrijava = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.labelPrijava = new System.Windows.Forms.Label();
+            this.labelKorime = new System.Windows.Forms.Label();
+            this.labelLozinka = new System.Windows.Forms.Label();
+            this.linkLabelZabLozinka = new System.Windows.Forms.LinkLabel();
+            this.textBoxKorime = new System.Windows.Forms.TextBox();
+            this.textBoxLozinka = new System.Windows.Forms.TextBox();
+            this.buttonPrijaviSe = new System.Windows.Forms.Button();
+            this.buttonNatrag = new System.Windows.Forms.Button();
+            this.buttonSakrij = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // lblPrijava
+            // labelPrijava
             // 
-            this.lblPrijava.AutoSize = true;
-            this.lblPrijava.Location = new System.Drawing.Point(351, 92);
-            this.lblPrijava.Name = "lblPrijava";
-            this.lblPrijava.Size = new System.Drawing.Size(39, 13);
-            this.lblPrijava.TabIndex = 0;
-            this.lblPrijava.Text = "Prijava";
+            this.labelPrijava.AutoSize = true;
+            this.labelPrijava.Location = new System.Drawing.Point(351, 92);
+            this.labelPrijava.Name = "labelPrijava";
+            this.labelPrijava.Size = new System.Drawing.Size(39, 13);
+            this.labelPrijava.TabIndex = 0;
+            this.labelPrijava.Text = "Prijava";
             // 
-            // label1
+            // labelKorime
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(199, 139);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(78, 13);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Korisničko ime:";
+            this.labelKorime.AutoSize = true;
+            this.labelKorime.Location = new System.Drawing.Point(199, 139);
+            this.labelKorime.Name = "labelKorime";
+            this.labelKorime.Size = new System.Drawing.Size(78, 13);
+            this.labelKorime.TabIndex = 1;
+            this.labelKorime.Text = "Korisničko ime:";
             // 
-            // label2
+            // labelLozinka
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(199, 171);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(47, 13);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Lozinka:";
+            this.labelLozinka.AutoSize = true;
+            this.labelLozinka.Location = new System.Drawing.Point(199, 171);
+            this.labelLozinka.Name = "labelLozinka";
+            this.labelLozinka.Size = new System.Drawing.Size(47, 13);
+            this.labelLozinka.TabIndex = 2;
+            this.labelLozinka.Text = "Lozinka:";
             // 
-            // linkLabel1
+            // linkLabelZabLozinka
             // 
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Location = new System.Drawing.Point(318, 223);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(111, 13);
-            this.linkLabel1.TabIndex = 3;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "Zaboravljena lozinka?";
+            this.linkLabelZabLozinka.AutoSize = true;
+            this.linkLabelZabLozinka.Location = new System.Drawing.Point(318, 223);
+            this.linkLabelZabLozinka.Name = "linkLabelZabLozinka";
+            this.linkLabelZabLozinka.Size = new System.Drawing.Size(111, 13);
+            this.linkLabelZabLozinka.TabIndex = 3;
+            this.linkLabelZabLozinka.TabStop = true;
+            this.linkLabelZabLozinka.Text = "Zaboravljena lozinka?";
             // 
-            // textBox1
+            // textBoxKorime
             // 
-            this.textBox1.Location = new System.Drawing.Point(323, 136);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 4;
+            this.textBoxKorime.Location = new System.Drawing.Point(323, 136);
+            this.textBoxKorime.Name = "textBoxKorime";
+            this.textBoxKorime.Size = new System.Drawing.Size(100, 20);
+            this.textBoxKorime.TabIndex = 4;
             // 
-            // textBox2
+            // textBoxLozinka
             // 
-            this.textBox2.Location = new System.Drawing.Point(323, 168);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 5;
+            this.textBoxLozinka.Location = new System.Drawing.Point(323, 168);
+            this.textBoxLozinka.Name = "textBoxLozinka";
+            this.textBoxLozinka.Size = new System.Drawing.Size(100, 20);
+            this.textBoxLozinka.TabIndex = 5;
             // 
-            // button1
+            // buttonPrijaviSe
             // 
-            this.button1.Location = new System.Drawing.Point(237, 260);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 6;
-            this.button1.Text = "Prijavi se";
-            this.button1.UseVisualStyleBackColor = true;
+            this.buttonPrijaviSe.Location = new System.Drawing.Point(237, 260);
+            this.buttonPrijaviSe.Name = "buttonPrijaviSe";
+            this.buttonPrijaviSe.Size = new System.Drawing.Size(75, 23);
+            this.buttonPrijaviSe.TabIndex = 6;
+            this.buttonPrijaviSe.Text = "Prijavi se";
+            this.buttonPrijaviSe.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // buttonNatrag
             // 
-            this.button2.Location = new System.Drawing.Point(435, 260);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 7;
-            this.button2.Text = "Natrag";
-            this.button2.UseVisualStyleBackColor = true;
+            this.buttonNatrag.Location = new System.Drawing.Point(435, 260);
+            this.buttonNatrag.Name = "buttonNatrag";
+            this.buttonNatrag.Size = new System.Drawing.Size(75, 23);
+            this.buttonNatrag.TabIndex = 7;
+            this.buttonNatrag.Text = "Natrag";
+            this.buttonNatrag.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // buttonSakrij
             // 
-            this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
-            this.button3.Location = new System.Drawing.Point(435, 168);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(22, 20);
-            this.button3.TabIndex = 8;
-            this.button3.UseVisualStyleBackColor = true;
+            this.buttonSakrij.Image = ((System.Drawing.Image)(resources.GetObject("buttonSakrij.Image")));
+            this.buttonSakrij.Location = new System.Drawing.Point(430, 168);
+            this.buttonSakrij.Name = "buttonSakrij";
+            this.buttonSakrij.Size = new System.Drawing.Size(20, 20);
+            this.buttonSakrij.TabIndex = 8;
+            this.buttonSakrij.UseVisualStyleBackColor = true;
             // 
             // frmPrijava
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.linkLabel1);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.lblPrijava);
+            this.Controls.Add(this.buttonSakrij);
+            this.Controls.Add(this.buttonNatrag);
+            this.Controls.Add(this.buttonPrijaviSe);
+            this.Controls.Add(this.textBoxLozinka);
+            this.Controls.Add(this.textBoxKorime);
+            this.Controls.Add(this.linkLabelZabLozinka);
+            this.Controls.Add(this.labelLozinka);
+            this.Controls.Add(this.labelKorime);
+            this.Controls.Add(this.labelPrijava);
             this.Name = "frmPrijava";
             this.Text = "frmPrijava";
             this.ResumeLayout(false);
@@ -141,14 +141,14 @@
 
         #endregion
 
-        private System.Windows.Forms.Label lblPrijava;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.LinkLabel linkLabel1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Label labelPrijava;
+        private System.Windows.Forms.Label labelKorime;
+        private System.Windows.Forms.Label labelLozinka;
+        private System.Windows.Forms.LinkLabel linkLabelZabLozinka;
+        private System.Windows.Forms.TextBox textBoxKorime;
+        private System.Windows.Forms.TextBox textBoxLozinka;
+        private System.Windows.Forms.Button buttonPrijaviSe;
+        private System.Windows.Forms.Button buttonNatrag;
+        private System.Windows.Forms.Button buttonSakrij;
     }
 }

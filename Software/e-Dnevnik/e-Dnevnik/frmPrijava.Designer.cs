@@ -76,6 +76,7 @@
             this.linkLabelZabLozinka.TabIndex = 3;
             this.linkLabelZabLozinka.TabStop = true;
             this.linkLabelZabLozinka.Text = "Zaboravljena lozinka?";
+            this.linkLabelZabLozinka.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelZabLozinka_LinkClicked);
             // 
             // textBoxKorime
             // 
@@ -107,8 +108,9 @@
             this.buttonNatrag.Name = "buttonNatrag";
             this.buttonNatrag.Size = new System.Drawing.Size(75, 23);
             this.buttonNatrag.TabIndex = 7;
-            this.buttonNatrag.Text = "Natrag";
+            this.buttonNatrag.Text = "Izađi";
             this.buttonNatrag.UseVisualStyleBackColor = true;
+            this.buttonNatrag.Click += new System.EventHandler(this.buttonNatrag_Click);
             // 
             // buttonSakrij
             // 
@@ -118,6 +120,7 @@
             this.buttonSakrij.Size = new System.Drawing.Size(20, 20);
             this.buttonSakrij.TabIndex = 8;
             this.buttonSakrij.UseVisualStyleBackColor = true;
+            this.buttonSakrij.Click += new System.EventHandler(this.buttonSakrij_Click);
             // 
             // frmPrijava
             // 

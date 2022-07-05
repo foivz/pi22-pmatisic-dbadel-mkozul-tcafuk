@@ -12,8 +12,10 @@ namespace e_Dnevnik
 {
     public partial class frmMentorSpecijalizant : Form
     {
+        MainForm mainForm;
         public frmMentorSpecijalizant(MainForm mainFrm)
         {
+            mainForm = mainFrm;
             InitializeComponent();
             if(mainFrm.uloga == MainForm.uloge.glavni_mentor)
             {
@@ -29,21 +31,47 @@ namespace e_Dnevnik
         private void frmMentorSpecijalizant_Load(object sender, EventArgs e)
         {
             dgvMentoriSpecijalizanti.DataSource = GetMentoriSpecijalizanti();
-            dgvMentoriSpecijalizanti.Columns["ProgramSpecijalizacije_idProgramSpecijalizacije"].Visible = false;
-            dgvMentoriSpecijalizanti.Columns["Uloga_idUloga"].Visible = false;
-            dgvMentoriSpecijalizanti.Columns["Biljeske"].Visible = false;
-            dgvMentoriSpecijalizanti.Columns["Dogadjaj"].Visible = false;
-            dgvMentoriSpecijalizanti.Columns["ProgramSpecijalizacije"].Visible = false;
-            dgvMentoriSpecijalizanti.Columns["Uloga"].Visible = false;
-            dgvMentoriSpecijalizanti.Columns["PrijavaIspita"].Visible = false;
-            dgvMentoriSpecijalizanti.Columns["StrucniRad"].Visible = false;
         }
 
         private object GetMentoriSpecijalizanti()
         {
             using (var context = new PI2205_DBEntities())
             {
-                return context.Korisnik.ToList();
+                var upit = from k in context.Korisnik
+                           from u in context.Uloga
+                           from ps in context.ProgramSpecijalizacije
+                           where u.idUloga == k.Uloga_idUloga
+                           && k.Uloga_idUloga == 3
+                           && ps.idProgramSpecijalizacije == k.ProgramSpecijalizacije_idProgramSpecijalizacije
+                           && k.ProgramSpecijalizacije_idProgramSpecijalizacije == 2
+                           select new
+                           {
+                               Ime = k.ime,
+                               Korisnicko_ime = k.korime,
+                               Uloga = u.nazivuloge,
+                               Program = ps.nazivps
+                           };
+
+                if (mainForm.uloga == MainForm.uloge.glavni_mentor)
+                {
+                    upit = from k in context.Korisnik
+                               from u in context.Uloga
+                               from ps in context.ProgramSpecijalizacije
+                               where u.idUloga == k.Uloga_idUloga
+                               && k.Uloga_idUloga != 1
+                               && ps.idProgramSpecijalizacije == k.ProgramSpecijalizacije_idProgramSpecijalizacije
+                               && k.ProgramSpecijalizacije_idProgramSpecijalizacije == 2
+                               select new
+                               {
+                                   Ime = k.ime,
+                                   Korisnicko_ime = k.korime,
+                                   Uloga = u.nazivuloge,
+                                   Program = ps.nazivps
+                               };
+                }
+                return upit.ToList();
+
+
             }
         }
     }

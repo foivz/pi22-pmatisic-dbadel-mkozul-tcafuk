@@ -104,6 +104,7 @@ namespace e_Dnevnik.Klase
                     KorisnickoImeKorisnika = dataReader["korime"].ToString(),
                     LozinkaKorisnika = dataReader["lozinka"].ToString()
                 };
+                korisnici.Add(korisnik);
             }
 
             dataReader.Close();

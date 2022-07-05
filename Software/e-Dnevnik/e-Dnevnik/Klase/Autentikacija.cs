@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using KorisnikLib;
 using e_Dnevnik.Klase;
 
 namespace e_Dnevnik.Klase

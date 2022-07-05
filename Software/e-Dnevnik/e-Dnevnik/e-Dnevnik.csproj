@@ -109,6 +109,9 @@
     <Compile Include="frmPocetnaModerator.Designer.cs">
       <DependentUpon>frmPocetnaModerator.cs</DependentUpon>
     </Compile>
+    <Compile Include="Klase\Autentikacija.cs" />
+    <Compile Include="Klase\IspravnostUnosa.cs" />
+    <Compile Include="Klase\RepozitorijHLK.cs" />
     <Compile Include="Korisnik.cs">
       <DependentUpon>EDnevnikModel.tt</DependentUpon>
     </Compile>

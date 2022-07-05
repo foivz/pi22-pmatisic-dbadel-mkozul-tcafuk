@@ -147,7 +147,7 @@ namespace e_Dnevnik
 
         private void btnPregledDogadaja_Click(object sender, EventArgs e)
         {
-            mainForm.ucitajFormu(new frmDogadaji());
+            mainForm.ucitajFormu(new frmDogadaji(mainForm));
         }
 
         private void btnDnevnikAktivnosti_click(object sender, EventArgs e)

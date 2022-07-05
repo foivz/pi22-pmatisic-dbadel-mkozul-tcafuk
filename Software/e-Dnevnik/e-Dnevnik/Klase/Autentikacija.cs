@@ -14,7 +14,7 @@ namespace e_Dnevnik.Klase
         // Metoda prijava provjerava ispravnost unosa (prazan unos, postojece korisnicko ime ili neispravnu lozinku)
         // U slučaju da je prijava ispravna dohvaća podatke o korisniku, u suprotnom vraća poruku greške, tj. baca iznimku
 
-        public static Korisnik Prijava(string korisnickoIme, string lozinka)
+        /*public static Korisnik Prijava(string korisnickoIme, string lozinka)
         {
             Korisnik korisnikPrijava = null;
 
@@ -47,7 +47,7 @@ namespace e_Dnevnik.Klase
                 }
             }
             return korisnikPrijava;
-        }
+        }*/
 
         public static void ProvjeriPrazanUnosPrijave(string korisnickoIme, string lozinka)
         {
@@ -77,7 +77,7 @@ namespace e_Dnevnik.Klase
             return ispravnaLozinka;
         }
 
-        public static bool ProvjeriKorisnickoIme(string korisnickoIme)
+        /*public static bool ProvjeriKorisnickoIme(string korisnickoIme)
         {
             bool postojiKorisnik = RepozitorijHLK.PostojiKorisnik(korisnickoIme);
 
@@ -86,7 +86,7 @@ namespace e_Dnevnik.Klase
                 throw new IspravnostUnosa($"Već postoji korisnik s korisničkim imenom {korisnickoIme}!");
             }
             return postojiKorisnik;
-        }
+        }*/
 
         public static bool ProvjeriUnosProfil(string ime, string prezime, string korisnickoIme, string email, string mobitel)
         {

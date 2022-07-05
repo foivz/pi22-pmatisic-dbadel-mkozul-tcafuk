@@ -16,7 +16,7 @@ namespace e_Dnevnik.Klase
     {
         public static Korisnik prijavljeniKorisnik;
 
-        internal static int AzurirajKorisnika(string email, string lozinka)
+        /*internal static int AzurirajKorisnika(string email, string lozinka)
         {
             Database.Instance.Connect();
 
@@ -43,7 +43,7 @@ namespace e_Dnevnik.Klase
             Database.Instance.Disconnect();
 
             return numAffectedRows;
-        }
+        }*/
 
         private static Korisnik DohvatiPodatkeOdabranogKorisnika(string sql)
         {
@@ -61,7 +61,7 @@ namespace e_Dnevnik.Klase
             else
             {
                 UlogaKorisnika uloga = new UlogaKorisnika();
-                if (dataReader["NazivUlogeKorisnika"].ToString() == "GlavniMentor")
+                if (dataReader["NazivUlogeKorisnika"].ToString() == "Glavni mentor")
                 {
                     uloga = UlogaKorisnika.GlavniMentor;
                 }
@@ -75,18 +75,14 @@ namespace e_Dnevnik.Klase
                 }
                 Korisnik korisnik = new Korisnik()
                 {
-                    KorisnikId = (int)dataReader["KorisnikId"],
+                    KorisnikId = (int)dataReader["idKorisnik"],
                     UlogaKorisnika = uloga,
-                    Aviokompanija = null,
-                    ImeKorisnika = dataReader["Ime"].ToString(),
-                    PrezimeKorisnika = dataReader["Prezime"].ToString(),
-                    AdresaKorisnika = dataReader["AdresaKorisnika"].ToString(),
-                    KontaktTelefonKorisnika = dataReader["KontaktTelefon"].ToString(),
-                    EmailKorisnika = dataReader["EmailAdresaKorisnika"].ToString(),
-                    OIBKorisnika = dataReader["OIBKorisnika"].ToString(),
-                    KorisnickoImeKorisnika = dataReader["KorisnickoIme"].ToString(),
-                    LozinkaKorisnika = dataReader["Lozinka"].ToString()
-
+                    ProgramSpecijalizacije = null, //hardkodirano
+                    ImeKorisnika = dataReader["ime"].ToString(),
+                    PrezimeKorisnika = dataReader["prezime"].ToString(),
+                    EmailKorisnika = dataReader["email"].ToString(),
+                    KorisnickoImeKorisnika = dataReader["korime"].ToString(),
+                    LozinkaKorisnika = dataReader["lozinka"].ToString()
                 };
                 dataReader.Close();
                 Database.Instance.Disconnect();
@@ -108,16 +104,16 @@ namespace e_Dnevnik.Klase
             return numAffectedRows;
         }*/
 
-        public static List<Korisnik> DohvatiSveKorisnike()
+        /*public static List<Korisnik> DohvatiSveKorisnike()
         {
-            string sql = "SELECT * FROM Korisnik k " +
-                "INNER JOIN UlogaKorisnika u ON k.IdUlogaKorisnika = u.UlogaKorisnikaId " +
-                "LEFT JOIN Aviokompanija a ON k.AviokompanijaKorisnika = a.AviokompanijaId;";
+            string sql = "SELECT * FROM Korisnik " +
+                "INNER JOIN nazivuloge ON Korisnik.Uloga_idUloga = Uloga.idUloga " +
+                "LEFT JOIN ProgramSpecijalizacije ON Korisnik.ProgramSpecijalizacije_idProgramSpecijalizacije = ProgramSpecijalizacije.idProgramSpecijalizacije;";
 
             List<Korisnik> korisnik = DohvatiPodatkeKorisnika(sql);
 
             return korisnik;
-        }
+        }*/
 
         private static List<Korisnik> DohvatiPodatkeKorisnika(string sql)
         {
@@ -129,7 +125,7 @@ namespace e_Dnevnik.Klase
             while (dataReader.Read())
             {
                 UlogaKorisnika uloga = new UlogaKorisnika();
-                if (dataReader["NazivUlogeKorisnika"].ToString() == "GlavniMentor")
+                if (dataReader["NazivUlogeKorisnika"].ToString() == "Glavni mentor")
                 {
                     uloga = UlogaKorisnika.GlavniMentor;
                 }
@@ -176,18 +172,14 @@ namespace e_Dnevnik.Klase
                 //{
                     Korisnik korisnik = new Korisnik()
                     {
-                        KorisnikId = (int)dataReader["KorisnikId"],
+                        KorisnikId = (int)dataReader["idKorisnik"],
                         UlogaKorisnika = uloga,
-                        Aviokompanija = null,
-                        ImeKorisnika = dataReader["Ime"].ToString(),
-                        PrezimeKorisnika = dataReader["Prezime"].ToString(),
-                        AdresaKorisnika = dataReader["AdresaKorisnika"].ToString(),
-                        KontaktTelefonKorisnika = dataReader["KontaktTelefon"].ToString(),
-                        EmailKorisnika = dataReader["EmailAdresaKorisnika"].ToString(),
-                        OIBKorisnika = dataReader["OIBKorisnika"].ToString(),
-                        KorisnickoImeKorisnika = dataReader["KorisnickoIme"].ToString(),
-                        LozinkaKorisnika = dataReader["Lozinka"].ToString()
-
+                        ProgramSpecijalizacije = null, //hardkodirano
+                        ImeKorisnika = dataReader["ime"].ToString(),
+                        PrezimeKorisnika = dataReader["prezime"].ToString(),
+                        EmailKorisnika = dataReader["email"].ToString(),
+                        KorisnickoImeKorisnika = dataReader["korime"].ToString(),
+                        LozinkaKorisnika = dataReader["lozinka"].ToString()
                     };
                     korisnici.Add(korisnik);
                 //}

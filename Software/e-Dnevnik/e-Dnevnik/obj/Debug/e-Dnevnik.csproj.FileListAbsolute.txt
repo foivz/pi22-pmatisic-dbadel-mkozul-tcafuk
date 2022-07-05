@@ -50,3 +50,5 @@ C:\Users\stident\Documents\pi22-pmatisic-dbadel-mkozul-tcafuk\Software\e-Dnevnik
 C:\Users\stident\Documents\pi22-pmatisic-dbadel-mkozul-tcafuk\Software\e-Dnevnik\e-Dnevnik\obj\Debug\e-Dnevnik.csproj.CoreCompileInputs.cache
 C:\Users\stident\Documents\pi22-pmatisic-dbadel-mkozul-tcafuk\Software\e-Dnevnik\e-Dnevnik\obj\Debug\e-Dnevnik.exe
 C:\Users\stident\Documents\pi22-pmatisic-dbadel-mkozul-tcafuk\Software\e-Dnevnik\e-Dnevnik\obj\Debug\e-Dnevnik.pdb
+C:\Users\stident\Documents\pi22-pmatisic-dbadel-mkozul-tcafuk\Software\e-dnevnik\e-Dnevnik\obj\Debug\e_Dnevnik.frmPrijava.resources
+C:\Users\stident\Documents\pi22-pmatisic-dbadel-mkozul-tcafuk\Software\e-dnevnik\e-Dnevnik\obj\Debug\e_Dnevnik.frmZaboravljenaLozinka.resources

@@ -1,230 +1,251 @@
-﻿using System;
+﻿using Database_Access;
+using System;
 using System.Collections.Generic;
-using System.Drawing;
-using System.Drawing.Imaging;
-using System.IO;
+using System.Data;
 using System.Linq;
+using System.Net;
+using System.Net.Mail;
 using System.Text;
 using System.Threading.Tasks;
-using KorisnikLib;
+using System.Windows.Forms;
+using e_Dnevnik.Klase;
 
 namespace e_Dnevnik.Klase
 {
     public static class RepozitorijHLK
     {
-        // Metodom PopuniListu stvara se kopija liste korisnika iz baze podataka 
-        // Svrha: Svesti rad s bazom na minimum i stvoriti jedinstven popis svih korisnika (ientora i studenata)
+        public static Korisnik prijavljeniKorisnik;
 
-        public static List<Korisnik> PopuniListu()
+        internal static int AzurirajKorisnika(string email, string lozinka)
         {
-            using (var context = new PI2205_DBEntities())
-            {
-                List<Specijalizanti> specijalizanti = context.Korisnik.ToList();
-                List<Mentori> mentori = context.Korisnik.ToList();
+            Database.Instance.Connect();
 
-                List<Korisnik> ListaKorisnika = new List<Korisnik>();
+            string sql = $"UPDATE Korisnik SET Lozinka = '{lozinka}' " +
+                $"WHERE EmailAdresaKorisnika = '{email}';";
 
-                foreach (var item in specijalizanti)
-                {
-                    ListaKorisnika.Add(
-                    new Specijalizant
-                    {
-                        ID_specijalizanta = item.ID_specijalizanta,
-                        Ime = item.ime,
-                        Prezime = item.prezime,
-                        KorisnickoIme = item.korisnicko_ime,
-                        Lozinka = item.lozinka,
-                        Email = item.email,
-                        Mjesto = item.mjesto,
-                        Ulica = item.ulica,
-                        Mobitel = item.mobitel,
-                        Slika = PretvoriSlikuIzBaze(item.slika),
-                        Opis = item.opis,
-                        Uloga = Uloga.Specijalizant
-                    });
-                }
+            int numAffectedRows = Database.Instance.ExecuteCommand(sql);
 
-                foreach (var item in mentori)
-                {
-                    ListaKorisnika.Add(
-                    new Mentor
-                    {
-                        ID_mentora = item.ID_mentora,
-                        Ime = item.ime,
-                        Prezime = item.prezime,
-                        KorisnickoIme = item.korisnicko_ime,
-                        Lozinka = item.lozinka,
-                        Email = item.email,
-                        Mjesto = item.mjesto,
-                        Ulica = item.ulica,
-                        Mobitel = item.mobitel,
-                        Slika = PretvoriSlikuIzBaze(item.slika),
-                        Opis = item.opis,
-                        Titula = item.titula,
-                        Uloga = Uloga.Mentor
-                    });
-                }
+            Database.Instance.Disconnect();
 
-                return ListaKorisnika;
-            }
+            return numAffectedRows;
         }
 
-
-
-        // Slika u bazi pohranjena je kao tip byte[], u klasi Ientor i Specijalizant slika je tipa Image
-        // Metoda PretvoriSlikuIzBaze pretvara tip byte[] u Image u svrhu kasnijeg mogućeg prikaza slike korisnika u PictureBox-u
-
-        public static Image PretvoriSlikuIzBaze(byte[] slikaBaza)
+        internal static int AzurirajKorisnika(int Id, Korisnik korisnik)
         {
-            if (slikaBaza != null)
+            Database.Instance.Connect();
+
+            string sql = $"UPDATE Korisnik SET Ime = '{korisnik.ImeKorisnika}', Prezime = '{korisnik.PrezimeKorisnika}', AdresaKorisnika = '{korisnik.AdresaKorisnika}', KontaktTelefon = '{korisnik.KontaktTelefonKorisnika}', " +
+                $"EmailAdresaKorisnika = '{korisnik.EmailKorisnika}', OIBKorisnika = '{korisnik.OIBKorisnika}', KorisnickoIme = '{korisnik.KorisnickoImeKorisnika}', Lozinka = '{korisnik.LozinkaKorisnika}' " +
+                $"WHERE KorisnikId = {Id};";
+
+            int numAffectedRows = Database.Instance.ExecuteCommand(sql);
+
+            Database.Instance.Disconnect();
+
+            return numAffectedRows;
+        }
+
+        private static Korisnik DohvatiPodatkeOdabranogKorisnika(string sql)
+        {
+            Database.Instance.Connect();
+
+            IDataReader dataReader = Database.Instance.GetDataReader(sql);
+
+            bool recvData = dataReader.Read();
+            if (recvData == false)
             {
-                MemoryStream ms = new MemoryStream(slikaBaza);
-                return Image.FromStream(ms);
+                dataReader.Close();
+                Database.Instance.Disconnect();
+                return null;
             }
             else
             {
-                return null;
+                UlogaKorisnika uloga = new UlogaKorisnika();
+                if (dataReader["NazivUlogeKorisnika"].ToString() == "GlavniMentor")
+                {
+                    uloga = UlogaKorisnika.GlavniMentor;
+                }
+                if (dataReader["NazivUlogeKorisnika"].ToString() == "Mentor")
+                {
+                    uloga = UlogaKorisnika.Mentor;
+                }
+                if (dataReader["NazivUlogeKorisnika"].ToString() == "Specijalizant")
+                {
+                    uloga = UlogaKorisnika.Specijalizant;
+                }
+                Korisnik korisnik = new Korisnik()
+                {
+                    KorisnikId = (int)dataReader["KorisnikId"],
+                    UlogaKorisnika = uloga,
+                    Aviokompanija = null,
+                    ImeKorisnika = dataReader["Ime"].ToString(),
+                    PrezimeKorisnika = dataReader["Prezime"].ToString(),
+                    AdresaKorisnika = dataReader["AdresaKorisnika"].ToString(),
+                    KontaktTelefonKorisnika = dataReader["KontaktTelefon"].ToString(),
+                    EmailKorisnika = dataReader["EmailAdresaKorisnika"].ToString(),
+                    OIBKorisnika = dataReader["OIBKorisnika"].ToString(),
+                    KorisnickoImeKorisnika = dataReader["KorisnickoIme"].ToString(),
+                    LozinkaKorisnika = dataReader["Lozinka"].ToString()
+
+                };
+                dataReader.Close();
+                Database.Instance.Disconnect();
+                return korisnik;
             }
         }
 
-        // Metodom DohvatiKorisnika se prvo metodom PopuniListu dohvaća lista s najnovijim podacima
-
-        public static Korisnik DohvatiKorisnika(string korisnickoIme, string lozinka)
+        /*public static int DodajKorisnika(Korisnik korisnik)
         {
-            List<Korisnik> listaKorisnika = PopuniListu();
-            Korisnik korisnik = listaKorisnika.Find(x => (x.KorisnickoIme == korisnickoIme) && (x.Lozinka == lozinka));
+            Database.Instance.Connect();
+            string sqlNULL = "NULL";
+            string sql = "INSERT INTO Korisnik (IdUlogaKorisnika, AviokompanijaKorisnika, Ime, Prezime, AdresaKorisnika, KontaktTelefon, EmailAdresaKorisnika, OIBKorisnika, KorisnickoIme, Lozinka) " +
+                $"VALUES('{1}', {sqlNULL}, '{korisnik.ImeKorisnika}', '{korisnik.PrezimeKorisnika}', '{korisnik.AdresaKorisnika}', '{korisnik.KontaktTelefonKorisnika}', '{korisnik.EmailKorisnika}', '{korisnik.OIBKorisnika}', '{korisnik.KorisnickoImeKorisnika}', '{korisnik.LozinkaKorisnika}');";
+
+            int numAffectedRows = Database.Instance.ExecuteCommand(sql);
+
+            Database.Instance.Disconnect();
+
+            return numAffectedRows;
+        }*/
+
+        public static List<Korisnik> DohvatiSveKorisnike()
+        {
+            string sql = "SELECT * FROM Korisnik k " +
+                "INNER JOIN UlogaKorisnika u ON k.IdUlogaKorisnika = u.UlogaKorisnikaId " +
+                "LEFT JOIN Aviokompanija a ON k.AviokompanijaKorisnika = a.AviokompanijaId;";
+
+            List<Korisnik> korisnik = DohvatiPodatkeKorisnika(sql);
+
             return korisnik;
-
         }
 
-        public static bool PostojiKorisnik(string korisnickoIme)
+        private static List<Korisnik> DohvatiPodatkeKorisnika(string sql)
         {
-            List<Korisnik> listaKorisnika = PopuniListu();
-            return listaKorisnika.Exists(x => (x.KorisnickoIme == korisnickoIme));
-        }
+            Database.Instance.Connect();
 
+            IDataReader dataReader = Database.Instance.GetDataReader(sql);
 
-        //Metoda AzurirajLozinku ažurira korisnika temeljem korisničkog imena kako u bazi ne postoje dva korisnika s istim korisničkim imenom
-
-        public static void AzurirajLozinku(Korisnik korisnik)
-        {
-            using (var context = new Entities())
+            List<Korisnik> korisnici = new List<Korisnik>();
+            while (dataReader.Read())
             {
-                if (korisnik.Uloga == Uloga.Mentor)
+                UlogaKorisnika uloga = new UlogaKorisnika();
+                if (dataReader["NazivUlogeKorisnika"].ToString() == "GlavniMentor")
                 {
-                    Mentori mentorBaza = context.Mentori.FirstOrDefault(x => (x.korisnicko_ime == korisnik.KorisnickoIme));
-                    mentorBaza.lozinka = korisnik.Lozinka;
-
-                    context.SaveChanges();
-
+                    uloga = UlogaKorisnika.GlavniMentor;
                 }
-                else if (korisnik.Uloga == Uloga.Specijalizant)
+                if (dataReader["NazivUlogeKorisnika"].ToString() == "Mentor")
                 {
-                    Specijalizanti specijalizantBaza = context.Specijalizanti.FirstOrDefault(x => (x.korisnicko_ime == korisnik.KorisnickoIme));
-                    specijalizantBaza.lozinka = korisnik.Lozinka;
-
-                    context.SaveChanges();
+                    uloga = UlogaKorisnika.Mentor;
                 }
-            }
-        }
-        public static void AzurirajIentora(Mentor mentor, string korisnickoIme)
-        {
-            using (var context = new Entities())
-            {
-                Mentori mentorBaza = context.Ientori.FirstOrDefault(x => (x.korisnicko_ime == korisnickoIme));
-
-                mentorBaza.ime = mentor.Ime;
-                mentorBaza.prezime = mentor.Prezime;
-                mentorBaza.korisnicko_ime = mentor.KorisnickoIme;
-                mentorBaza.email = mentor.Email;
-                mentorBaza.mjesto = mentor.Mjesto;
-                mentorBaza.ulica = mentor.Ulica;
-                mentorBaza.mobitel = mentor.Mobitel;
-                mentorBaza.opis = mentor.Opis;
-                mentorBaza.titula = mentor.Titula;
-
-                if (mentor.Slika != null)
+                if (dataReader["NazivUlogeKorisnika"].ToString() == "Specijalizant")
                 {
-                    MemoryStream ms = new MemoryStream();
-                    mentor.Slika.Save(ms, ImageFormat.Png);
-                    mentorBaza.slika = ms.ToArray();
+                    uloga = UlogaKorisnika.Specijalizant;
                 }
-
-                context.SaveChanges();
-            }
-        }
-
-        public static void AzurirajSpecijalizanta(Specijalizant specijalizant, string korisnickoIme)
-        {
-            using (var context = new Entities())
-            {
-                Specijalizanti specijalizantBaza = context.Specijalizanti.FirstOrDefault(x => (x.korisnicko_ime == korisnickoIme));
-
-                specijalizantBaza.ime = specijalizant.Ime;
-                specijalizantBaza.prezime = specijalizant.Prezime;
-                specijalizantBaza.korisnicko_ime = specijalizant.KorisnickoIme;
-                specijalizantBaza.email = specijalizant.Email;
-                specijalizantBaza.mjesto = specijalizant.Mjesto;
-                specijalizantBaza.ulica = specijalizant.Ulica;
-                specijalizantBaza.mobitel = specijalizant.Mobitel;
-                specijalizantBaza.opis = specijalizant.Opis;
-
-                if (specijalizant.Slika != null)
+                /*bool aviokompanijaNull = dataReader.IsDBNull(dataReader.GetOrdinal("AviokompanijaKorisnika"));
+                if (!aviokompanijaNull)
                 {
-                    MemoryStream ms = new MemoryStream();
-                    specijalizant.Slika.Save(ms, ImageFormat.Png);
-                    specijalizantBaza.slika = ms.ToArray();
-                }
-
-                context.SaveChanges();
-            }
-        }
-
-        public static Korisnik DodajKorisnika(Uloga uloga, string ime, string prezime, string korisnickoIme, string lozinka, string email, string mobitel, string mjesto, string ulica, string opis, string titula = null)
-        {
-            using (var context = new Entities())
-            {
-                if (uloga == Uloga.Mentor)
-                {
-                    Mentori mentor = new Mentori()
+                    Aviokompanija aviokompanija = new Aviokompanija()
                     {
-                        titula = titula,
-                        ime = ime,
-                        prezime = prezime,
-                        korisnicko_ime = korisnickoIme,
-                        lozinka = lozinka,
-                        email = email,
-                        mobitel = mobitel,
-                        mjesto = mjesto,
-                        ulica = ulica,
-                        opis = opis,
+                        AviokompanijaId = (int)dataReader["AviokompanijaId"],
+                        NazivAviokompanije = dataReader["NazivAviokompanije"].ToString(),
+                        OIBAviokompanije = dataReader["OIBAviokompanije"].ToString(),
+                        IBANAviokompanije = dataReader["IBANAviokompanije"].ToString(),
+                        AdresaAviokompanije = dataReader["AdresaAviokompanije"].ToString(),
+                        KontaktAviokompanije = dataReader["KontaktTelefonAviokompanije"].ToString(),
+                        EmailAviokompanije = dataReader["EmailAviokompanije"].ToString()
                     };
-                    context.Mentori.Add(mentor);
-                    context.SaveChanges();
-                }
-                else
-                {
-                    Specijalizanti specijalizant = new Specijalizanti()
+
+                    Korisnik korisnik = new Korisnik()
                     {
-                        ime = ime,
-                        prezime = prezime,
-                        korisnicko_ime = korisnickoIme,
-                        lozinka = lozinka,
-                        email = email,
-                        mobitel = mobitel,
-                        mjesto = mjesto,
-                        ulica = ulica,
-                        opis = opis,
+                        KorisnikId = (int)dataReader["KorisnikId"],
+                        UlogaKorisnika = uloga,
+                        Aviokompanija = aviokompanija,
+                        ImeKorisnika = dataReader["Ime"].ToString(),
+                        PrezimeKorisnika = dataReader["Prezime"].ToString(),
+                        AdresaKorisnika = dataReader["AdresaKorisnika"].ToString(),
+                        KontaktTelefonKorisnika = dataReader["KontaktTelefon"].ToString(),
+                        EmailKorisnika = dataReader["EmailAdresaKorisnika"].ToString(),
+                        OIBKorisnika = dataReader["OIBKorisnika"].ToString(),
+                        KorisnickoImeKorisnika = dataReader["KorisnickoIme"].ToString(),
+                        LozinkaKorisnika = dataReader["Lozinka"].ToString()
+
                     };
-                    context.Specijalizanti.Add(specijalizant);
-                    context.SaveChanges();
-                }
+                    korisnici.Add(korisnik);
+                }*/
+                //else
+                //{
+                    Korisnik korisnik = new Korisnik()
+                    {
+                        KorisnikId = (int)dataReader["KorisnikId"],
+                        UlogaKorisnika = uloga,
+                        Aviokompanija = null,
+                        ImeKorisnika = dataReader["Ime"].ToString(),
+                        PrezimeKorisnika = dataReader["Prezime"].ToString(),
+                        AdresaKorisnika = dataReader["AdresaKorisnika"].ToString(),
+                        KontaktTelefonKorisnika = dataReader["KontaktTelefon"].ToString(),
+                        EmailKorisnika = dataReader["EmailAdresaKorisnika"].ToString(),
+                        OIBKorisnika = dataReader["OIBKorisnika"].ToString(),
+                        KorisnickoImeKorisnika = dataReader["KorisnickoIme"].ToString(),
+                        LozinkaKorisnika = dataReader["Lozinka"].ToString()
+
+                    };
+                    korisnici.Add(korisnik);
+                //}
             }
 
-            List<Korisnik> listaKorisnika = RepozitorijHLK.PopuniListu();
-            Korisnik noviKorisnik = listaKorisnika.Find(x => (x.KorisnickoIme == korisnickoIme));
+            dataReader.Close();
+            Database.Instance.Disconnect();
 
-            return noviKorisnik;
+            return korisnici;
         }
+
+        /*public static void ObrisiKorisnika(string id)
+        {
+            string sql = "DELETE FROM Korisnik " +
+                $"WHERE KorisnikId = '{id}';";
+            Database.Instance.ExecuteCommand(sql);
+        }*/
+
+        /*public static int DodajUloguAdministratora(int id)
+        {
+            Database.Instance.Connect();
+
+            string sql = "UPDATE Korisnik SET IdUlogaKorisnika = 3 " +
+                $"WHERE KorisnikId = '{id}';";
+
+            int numAffectedRows = Database.Instance.ExecuteCommand(sql);
+
+            Database.Instance.Disconnect();
+
+            return numAffectedRows;
+        }*/
+
+        /*public static int DodajUloguRegistriranogKorisnika(int id)
+        {
+            Database.Instance.Connect();
+            string sqlNULL = "NULL";
+            string sql = $"UPDATE Korisnik SET IdUlogaKorisnika = 1, AviokompanijaKorisnika = {sqlNULL} " +
+                $"WHERE KorisnikId = '{id}';";
+
+            int numAffectedRows = Database.Instance.ExecuteCommand(sql);
+
+            Database.Instance.Disconnect();
+
+            return numAffectedRows;
+        }*/
+
+        /*public static int DodajUloguModeratora(int id, Aviokompanija aviokompanija)
+        {
+            Database.Instance.Connect();
+
+            string sql = $"UPDATE Korisnik SET IdUlogaKorisnika = 2,  AviokompanijaKorisnika = '{aviokompanija.AviokompanijaId}'" +
+                $"WHERE KorisnikId = '{id}';";
+
+            int numAffectedRows = Database.Instance.ExecuteCommand(sql);
+
+            Database.Instance.Disconnect();
+
+            return numAffectedRows;
+        }*/
     }
 }

@@ -6,30 +6,30 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using KorisniciLib;
+using KorisnikLib;
 
 namespace e_Dnevnik.Klase
 {
     public static class RepozitorijHLK
     {
         // Metodom PopuniListu stvara se kopija liste korisnika iz baze podataka 
-        // Svrha: Svesti rad s bazom na minimum i stvoriti jedinstven popis svih korisnika (instruktora i studenata)
+        // Svrha: Svesti rad s bazom na minimum i stvoriti jedinstven popis svih korisnika (ientora i studenata)
 
         public static List<Korisnik> PopuniListu()
         {
             using (var context = new Entities())
             {
-                List<Studenti> studenti = context.Studenti.ToList();
-                List<Instruktori> instruktori = context.Instruktori.ToList();
+                List<Specijalizanti> specijalizanti = context.Korisnik.ToList();
+                List<Mentori> mentori = context.Korisnik.ToList();
 
                 List<Korisnik> ListaKorisnika = new List<Korisnik>();
 
-                foreach (var item in studenti)
+                foreach (var item in specijalizanti)
                 {
                     ListaKorisnika.Add(
-                    new Student
+                    new Specijalizant
                     {
-                        ID_studenta = item.ID_studenta,
+                        ID_specijalizanta = item.ID_specijalizanta,
                         Ime = item.ime,
                         Prezime = item.prezime,
                         KorisnickoIme = item.korisnicko_ime,
@@ -40,16 +40,16 @@ namespace e_Dnevnik.Klase
                         Mobitel = item.mobitel,
                         Slika = PretvoriSlikuIzBaze(item.slika),
                         Opis = item.opis,
-                        Uloga = Uloga.Student
+                        Uloga = Uloga.Specijalizant
                     });
                 }
 
-                foreach (var item in instruktori)
+                foreach (var item in mentori)
                 {
                     ListaKorisnika.Add(
-                    new Instruktor
+                    new Mentor
                     {
-                        ID_instruktora = item.ID_instruktora,
+                        ID_mentora = item.ID_mentora,
                         Ime = item.ime,
                         Prezime = item.prezime,
                         KorisnickoIme = item.korisnicko_ime,
@@ -61,7 +61,7 @@ namespace e_Dnevnik.Klase
                         Slika = PretvoriSlikuIzBaze(item.slika),
                         Opis = item.opis,
                         Titula = item.titula,
-                        Uloga = Uloga.Instruktor
+                        Uloga = Uloga.Mentor
                     });
                 }
 
@@ -71,7 +71,7 @@ namespace e_Dnevnik.Klase
 
 
 
-        // Slika u bazi pohranjena je kao tip byte[], u klasi Instruktor i Student slika je tipa Image
+        // Slika u bazi pohranjena je kao tip byte[], u klasi Ientor i Specijalizant slika je tipa Image
         // Metoda PretvoriSlikuIzBaze pretvara tip byte[] u Image u svrhu kasnijeg mogućeg prikaza slike korisnika u PictureBox-u
 
         public static Image PretvoriSlikuIzBaze(byte[] slikaBaza)
@@ -110,70 +110,70 @@ namespace e_Dnevnik.Klase
         {
             using (var context = new Entities())
             {
-                if (korisnik.Uloga == Uloga.Instruktor)
+                if (korisnik.Uloga == Uloga.Mentor)
                 {
-                    Instruktori instruktorBaza = context.Instruktori.FirstOrDefault(x => (x.korisnicko_ime == korisnik.KorisnickoIme));
-                    instruktorBaza.lozinka = korisnik.Lozinka;
+                    Mentori mentorBaza = context.Mentori.FirstOrDefault(x => (x.korisnicko_ime == korisnik.KorisnickoIme));
+                    mentorBaza.lozinka = korisnik.Lozinka;
 
                     context.SaveChanges();
 
                 }
-                else if (korisnik.Uloga == Uloga.Student)
+                else if (korisnik.Uloga == Uloga.Specijalizant)
                 {
-                    Studenti studentBaza = context.Studenti.FirstOrDefault(x => (x.korisnicko_ime == korisnik.KorisnickoIme));
-                    studentBaza.lozinka = korisnik.Lozinka;
+                    Specijalizanti specijalizantBaza = context.Specijalizanti.FirstOrDefault(x => (x.korisnicko_ime == korisnik.KorisnickoIme));
+                    specijalizantBaza.lozinka = korisnik.Lozinka;
 
                     context.SaveChanges();
                 }
             }
         }
-        public static void AzurirajInstruktora(Instruktor instruktor, string korisnickoIme)
+        public static void AzurirajIentora(Mentor mentor, string korisnickoIme)
         {
             using (var context = new Entities())
             {
-                Instruktori instruktorBaza = context.Instruktori.FirstOrDefault(x => (x.korisnicko_ime == korisnickoIme));
+                Mentori mentorBaza = context.Ientori.FirstOrDefault(x => (x.korisnicko_ime == korisnickoIme));
 
-                instruktorBaza.ime = instruktor.Ime;
-                instruktorBaza.prezime = instruktor.Prezime;
-                instruktorBaza.korisnicko_ime = instruktor.KorisnickoIme;
-                instruktorBaza.email = instruktor.Email;
-                instruktorBaza.mjesto = instruktor.Mjesto;
-                instruktorBaza.ulica = instruktor.Ulica;
-                instruktorBaza.mobitel = instruktor.Mobitel;
-                instruktorBaza.opis = instruktor.Opis;
-                instruktorBaza.titula = instruktor.Titula;
+                mentorBaza.ime = mentor.Ime;
+                mentorBaza.prezime = mentor.Prezime;
+                mentorBaza.korisnicko_ime = mentor.KorisnickoIme;
+                mentorBaza.email = mentor.Email;
+                mentorBaza.mjesto = mentor.Mjesto;
+                mentorBaza.ulica = mentor.Ulica;
+                mentorBaza.mobitel = mentor.Mobitel;
+                mentorBaza.opis = mentor.Opis;
+                mentorBaza.titula = mentor.Titula;
 
-                if (instruktor.Slika != null)
+                if (mentor.Slika != null)
                 {
                     MemoryStream ms = new MemoryStream();
-                    instruktor.Slika.Save(ms, ImageFormat.Png);
-                    instruktorBaza.slika = ms.ToArray();
+                    mentor.Slika.Save(ms, ImageFormat.Png);
+                    mentorBaza.slika = ms.ToArray();
                 }
 
                 context.SaveChanges();
             }
         }
 
-        public static void AzurirajStudenta(Student student, string korisnickoIme)
+        public static void AzurirajSpecijalizanta(Specijalizant specijalizant, string korisnickoIme)
         {
             using (var context = new Entities())
             {
-                Studenti studentBaza = context.Studenti.FirstOrDefault(x => (x.korisnicko_ime == korisnickoIme));
+                Specijalizanti specijalizantBaza = context.Specijalizanti.FirstOrDefault(x => (x.korisnicko_ime == korisnickoIme));
 
-                studentBaza.ime = student.Ime;
-                studentBaza.prezime = student.Prezime;
-                studentBaza.korisnicko_ime = student.KorisnickoIme;
-                studentBaza.email = student.Email;
-                studentBaza.mjesto = student.Mjesto;
-                studentBaza.ulica = student.Ulica;
-                studentBaza.mobitel = student.Mobitel;
-                studentBaza.opis = student.Opis;
+                specijalizantBaza.ime = specijalizant.Ime;
+                specijalizantBaza.prezime = specijalizant.Prezime;
+                specijalizantBaza.korisnicko_ime = specijalizant.KorisnickoIme;
+                specijalizantBaza.email = specijalizant.Email;
+                specijalizantBaza.mjesto = specijalizant.Mjesto;
+                specijalizantBaza.ulica = specijalizant.Ulica;
+                specijalizantBaza.mobitel = specijalizant.Mobitel;
+                specijalizantBaza.opis = specijalizant.Opis;
 
-                if (student.Slika != null)
+                if (specijalizant.Slika != null)
                 {
                     MemoryStream ms = new MemoryStream();
-                    student.Slika.Save(ms, ImageFormat.Png);
-                    studentBaza.slika = ms.ToArray();
+                    specijalizant.Slika.Save(ms, ImageFormat.Png);
+                    specijalizantBaza.slika = ms.ToArray();
                 }
 
                 context.SaveChanges();
@@ -184,9 +184,9 @@ namespace e_Dnevnik.Klase
         {
             using (var context = new Entities())
             {
-                if (uloga == Uloga.Instruktor)
+                if (uloga == Uloga.Mentor)
                 {
-                    Instruktori instruktor = new Instruktori()
+                    Mentori mentor = new Mentori()
                     {
                         titula = titula,
                         ime = ime,
@@ -199,12 +199,12 @@ namespace e_Dnevnik.Klase
                         ulica = ulica,
                         opis = opis,
                     };
-                    context.Instruktori.Add(instruktor);
+                    context.Mentori.Add(mentor);
                     context.SaveChanges();
                 }
                 else
                 {
-                    Studenti student = new Studenti()
+                    Specijalizanti specijalizant = new Specijalizanti()
                     {
                         ime = ime,
                         prezime = prezime,
@@ -216,7 +216,7 @@ namespace e_Dnevnik.Klase
                         ulica = ulica,
                         opis = opis,
                     };
-                    context.Studenti.Add(student);
+                    context.Specijalizanti.Add(specijalizant);
                     context.SaveChanges();
                 }
             }

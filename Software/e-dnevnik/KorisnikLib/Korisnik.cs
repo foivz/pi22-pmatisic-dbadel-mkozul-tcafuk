@@ -4,12 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace KorisniciLib
+namespace KorisnikLib
 {
     public enum Uloga
     {
-        Instruktor,
-        Student
+        Mentor,
+        Specijalizant
     }
     public abstract class Korisnik
     {
@@ -25,10 +25,6 @@ namespace KorisniciLib
 
         public Uloga Uloga { get; set; }
 
-        public Korisnik()
-        {
-
-        }
         public Korisnik(string ime, string prezime, string korisnickoIme, string lozinka, string email, Uloga uloga)
         {
             Ime = ime;

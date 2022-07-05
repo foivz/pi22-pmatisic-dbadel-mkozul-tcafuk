@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using KorisniciLib;
+using KorisnikLib;
 using e_Dnevnik.Klase;
 
 namespace e_Dnevnik.Klase
@@ -21,7 +21,7 @@ namespace e_Dnevnik.Klase
             ProvjeriPrazanUnosPrijave(korisnickoIme, lozinka);
 
 
-            bool postojiKorisnik = RepozitorijKorisnika.PostojiKorisnik(korisnickoIme);
+            bool postojiKorisnik = RepozitorijHLK.PostojiKorisnik(korisnickoIme);
 
             // 1. Slučaj: Ne postoji korisničko ime u bazi podataka
 
@@ -37,7 +37,7 @@ namespace e_Dnevnik.Klase
 
                 // 2.1. Dohvaća se korisnik (ispravno korisničko ime i lozinka)
 
-                korisnikPrijava = RepozitorijKorisnika.DohvatiKorisnika(korisnickoIme, lozinka);
+                korisnikPrijava = RepozitorijHLK.DohvatiKorisnika(korisnickoIme, lozinka);
 
                 // 2.2. Baca se iznimka (pogrešna lozinka)
 
@@ -79,7 +79,7 @@ namespace e_Dnevnik.Klase
 
         public static bool ProvjeriKorisnickoIme(string korisnickoIme)
         {
-            bool postojiKorisnik = RepozitorijKorisnika.PostojiKorisnik(korisnickoIme);
+            bool postojiKorisnik = RepozitorijHLK.PostojiKorisnik(korisnickoIme);
 
             if (postojiKorisnik == true)
             {
@@ -112,50 +112,6 @@ namespace e_Dnevnik.Klase
             ProvjeriEmailAdresu(email);
 
             return ispravanUnos;
-        }
-
-        public static Korisnik Registracija(Uloga uloga, string ime, string prezime, string korisnickoIme, string lozinka, string ponovljenaLozinka, string email, string mobitel, string mjesto, string ulica, string opis, string titula = null)
-        {
-            Korisnik korisnikRegistracija = null;
-
-            ProvjeriPrazanUnosRegistracije(ime, prezime, korisnickoIme, lozinka, ponovljenaLozinka, email);
-
-            bool postojiKorisnik = RepozitorijKorisnika.PostojiKorisnik(korisnickoIme);
-
-            // 1. slučaj: Već postoji korisničko ime u bazi podataka
-            if (postojiKorisnik == true)
-            {
-                throw new IspravnostUnosa($"Neuspješna registracija! Već postoji korisnik s korisničkim imenom {korisnickoIme}!");
-            }
-
-            // 2. slučaj: Ne postoji korisničko ime u bazi podataka
-            else if (postojiKorisnik == false && ProvjeriLozinkeRegistracije(lozinka, ponovljenaLozinka) == true && ProvjeriEmailAdresu(email) == true)
-            {
-                // 2.1. Dodaje se korisnik (ispravni parametri i izvršena validacija obrasca)
-                korisnikRegistracija = RepozitorijKorisnika.DodajKorisnika(uloga, ime, prezime, korisnickoIme, lozinka, email, mobitel, mjesto, ulica, opis, titula);
-            }
-
-            return korisnikRegistracija;
-        }
-
-        public static void ProvjeriPrazanUnosRegistracije(string ime, string prezime, string korisnickoIme, string lozinka, string ponovljenaLozinka, string email)
-        {
-            if (ime == "" || prezime == "" || korisnickoIme == "" || lozinka == "" || ponovljenaLozinka == "" || email == "")
-            {
-                throw new IspravnostUnosa("Neuspješna registracija! Niste popunili tražena polja! (Označena zvjezdicom *)");
-            }
-        }
-
-        public static bool ProvjeriLozinkeRegistracije(string lozinka, string ponovljenaLozinka)
-        {
-            if (lozinka != ponovljenaLozinka)
-            {
-                throw new IspravnostUnosa("Neuspješna registracija! Lozinka i ponovljena lozinka se ne poklapaju!");
-            }
-            else
-            {
-                return true;
-            }
         }
 
         public static bool ProvjeriEmailAdresu(string email)

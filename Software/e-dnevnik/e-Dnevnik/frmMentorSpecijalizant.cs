@@ -33,6 +33,23 @@ namespace e_Dnevnik
             dgvMentoriSpecijalizanti.DataSource = GetMentoriSpecijalizanti();
         }
 
+
+        private void cboxFilter_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            object popis;
+            if(cboxFilter.SelectedIndex == -1 || cboxFilter.SelectedIndex == 0) //Svi
+            {
+                popis = GetMentoriSpecijalizanti();
+
+            }
+            else
+            {
+                popis = GetSpecificno(cboxFilter.Text);
+            }
+            dgvMentoriSpecijalizanti.DataSource = popis;
+            
+        }
+
         private object GetMentoriSpecijalizanti()
         {
             using (var context = new PI2205_DBEntities())
@@ -55,24 +72,53 @@ namespace e_Dnevnik
                 if (mainForm.uloga == MainForm.uloge.glavni_mentor)
                 {
                     upit = from k in context.Korisnik
-                               from u in context.Uloga
-                               from ps in context.ProgramSpecijalizacije
-                               where u.idUloga == k.Uloga_idUloga
-                               && k.Uloga_idUloga != 1
-                               && ps.idProgramSpecijalizacije == k.ProgramSpecijalizacije_idProgramSpecijalizacije
-                               && k.ProgramSpecijalizacije_idProgramSpecijalizacije == 2
-                               select new
-                               {
-                                   Ime = k.ime,
-                                   Korisnicko_ime = k.korime,
-                                   Uloga = u.nazivuloge,
-                                   Program = ps.nazivps
-                               };
+                           from u in context.Uloga
+                           from ps in context.ProgramSpecijalizacije
+                           where u.idUloga == k.Uloga_idUloga
+                           && k.Uloga_idUloga != 1
+                           && ps.idProgramSpecijalizacije == k.ProgramSpecijalizacije_idProgramSpecijalizacije
+                           && k.ProgramSpecijalizacije_idProgramSpecijalizacije == 2
+                           select new
+                           {
+                               Ime = k.ime,
+                               Korisnicko_ime = k.korime,
+                               Uloga = u.nazivuloge,
+                               Program = ps.nazivps
+                           };
                 }
                 return upit.ToList();
 
 
             }
         }
+
+
+        private object GetSpecificno(string uloga)
+        {
+            int kUloge;
+            if (uloga == "Mentori") kUloge = 2;
+            else kUloge = 3;
+
+            using (var context = new PI2205_DBEntities())
+            {
+                var upit = from k in context.Korisnik
+                           from u in context.Uloga
+                           from ps in context.ProgramSpecijalizacije
+                           where u.idUloga == k.Uloga_idUloga
+                           && k.Uloga_idUloga == kUloge
+                           && ps.idProgramSpecijalizacije == k.ProgramSpecijalizacije_idProgramSpecijalizacije
+                           && k.ProgramSpecijalizacije_idProgramSpecijalizacije == 2
+                           select new
+                           {
+                               Ime = k.ime,
+                               Korisnicko_ime = k.korime,
+                               Uloga = u.nazivuloge,
+                               Program = ps.nazivps
+                           };
+
+                return upit.ToList();
+            }
+        }
+
     }
 }

@@ -99,6 +99,7 @@
             this.buttonPrijaviSe.TabIndex = 6;
             this.buttonPrijaviSe.Text = "Prijavi se";
             this.buttonPrijaviSe.UseVisualStyleBackColor = true;
+            this.buttonPrijaviSe.Click += new System.EventHandler(this.buttonPrijaviSe_Click);
             // 
             // buttonNatrag
             // 

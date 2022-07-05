@@ -104,7 +104,7 @@ namespace e_Dnevnik.Klase
             return numAffectedRows;
         }*/
 
-        /*public static List<Korisnik> DohvatiSveKorisnike()
+        public static List<Korisnik> DohvatiSveKorisnike()
         {
             string sql = "SELECT * FROM Korisnik " +
                 "INNER JOIN nazivuloge ON Korisnik.Uloga_idUloga = Uloga.idUloga " +
@@ -113,7 +113,7 @@ namespace e_Dnevnik.Klase
             List<Korisnik> korisnik = DohvatiPodatkeKorisnika(sql);
 
             return korisnik;
-        }*/
+        }
 
         private static List<Korisnik> DohvatiPodatkeKorisnika(string sql)
         {

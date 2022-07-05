@@ -33,6 +33,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Database Access">
+      <HintPath>..\Database Access\bin\Debug\Database Access.dll</HintPath>
+    </Reference>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
@@ -112,8 +115,21 @@
     <Compile Include="frmPocetnaModerator.Designer.cs">
       <DependentUpon>frmPocetnaModerator.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmPrijava.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPrijava.Designer.cs">
+      <DependentUpon>frmPrijava.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmZaboravljenaLozinka.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmZaboravljenaLozinka.Designer.cs">
+      <DependentUpon>frmZaboravljenaLozinka.cs</DependentUpon>
+    </Compile>
     <Compile Include="Klase\Autentikacija.cs" />
     <Compile Include="Klase\IspravnostUnosa.cs" />
+    <Compile Include="Klase\Korisnik.cs" />
     <Compile Include="Klase\RepozitorijHLK.cs" />
     <Compile Include="Korisnik.cs">
       <DependentUpon>EDnevnikModel.tt</DependentUpon>
@@ -159,6 +175,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmPocetnaModerator.resx">
       <DependentUpon>frmPocetnaModerator.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPrijava.resx">
+      <DependentUpon>frmPrijava.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmZaboravljenaLozinka.resx">
+      <DependentUpon>frmZaboravljenaLozinka.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

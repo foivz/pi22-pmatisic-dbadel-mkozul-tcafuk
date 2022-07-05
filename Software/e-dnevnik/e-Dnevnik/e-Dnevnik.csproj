@@ -109,6 +109,12 @@
     <Compile Include="frmPocetnaModerator.Designer.cs">
       <DependentUpon>frmPocetnaModerator.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmSlucajBolesnika.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSlucajBolesnika.Designer.cs">
+      <DependentUpon>frmSlucajBolesnika.cs</DependentUpon>
+    </Compile>
     <Compile Include="Korisnik.cs">
       <DependentUpon>EDnevnikModel.tt</DependentUpon>
     </Compile>
@@ -153,6 +159,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmPocetnaModerator.resx">
       <DependentUpon>frmPocetnaModerator.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSlucajBolesnika.resx">
+      <DependentUpon>frmSlucajBolesnika.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

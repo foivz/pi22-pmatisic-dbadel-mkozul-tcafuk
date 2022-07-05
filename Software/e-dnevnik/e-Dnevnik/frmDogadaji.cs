@@ -19,6 +19,7 @@ namespace e_Dnevnik
             InitializeComponent();
             btnProvjereZnanja.Enabled = false;
             dgvDogađaji.DataSource = GetProvjereZnanja();
+            btnDetaljno.Enabled = false;
         }
 
         private void frmDogadaji_Load(object sender, EventArgs e)
@@ -151,6 +152,17 @@ namespace e_Dnevnik
                     row.DefaultCellStyle.BackColor = Color.LightGray;
                 }
             }
+        }
+
+        private void btnDetaljno_Click(object sender, EventArgs e)
+        {
+            
+            mainForm.ucitajFormu(new frmSlucajBolesnika((int)dgvDogađaji.CurrentRow.Cells[0].Value));
+        }
+
+        private void dgvDogađaji_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            btnDetaljno.Enabled = true;
         }
     }
 }

@@ -12,9 +12,14 @@ namespace e_Dnevnik
 {
     public partial class frmPrijavaIspita : Form
     {
-        public frmPrijavaIspita()
+        public frmPrijavaIspita(MainForm mainFrm)
         {
             InitializeComponent();
+        }
+
+        private void btnOdustani_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

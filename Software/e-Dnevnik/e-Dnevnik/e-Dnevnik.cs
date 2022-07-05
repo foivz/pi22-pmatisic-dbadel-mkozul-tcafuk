@@ -161,7 +161,7 @@ namespace e_Dnevnik
 
         private void btnProvjereZnanja_Click(object sender, EventArgs e)
         {
-            mainForm.ucitajFormu(new frmProvjeraZnanja());
+            mainForm.ucitajFormu(new frmProvjeraZnanja(mainForm));
         }
 
         private void btnBiljeske_Click(object sender, EventArgs e)

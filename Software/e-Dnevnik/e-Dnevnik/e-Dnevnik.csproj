@@ -64,6 +64,7 @@
     <Compile Include="Dogadjaj.cs">
       <DependentUpon>EDnevnikModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="DogadjajExt.cs" />
     <Compile Include="e-Dnevnik.cs">
       <SubType>Form</SubType>
     </Compile>

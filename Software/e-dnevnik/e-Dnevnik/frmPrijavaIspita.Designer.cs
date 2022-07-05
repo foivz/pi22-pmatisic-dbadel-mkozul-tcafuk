@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnOdustani = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.btnPrijavi = new System.Windows.Forms.Button();
-            this.btnOdustani = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -46,6 +46,24 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(800, 450);
             this.panel1.TabIndex = 19;
+            // 
+            // btnOdustani
+            // 
+            this.btnOdustani.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnOdustani.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(101)))), ((int)(((byte)(101)))));
+            this.btnOdustani.FlatAppearance.BorderSize = 0;
+            this.btnOdustani.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnOdustani.Font = new System.Drawing.Font("Mongolian Baiti", 13F);
+            this.btnOdustani.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(37)))), ((int)(((byte)(44)))));
+            this.btnOdustani.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.btnOdustani.Location = new System.Drawing.Point(578, 402);
+            this.btnOdustani.Margin = new System.Windows.Forms.Padding(2);
+            this.btnOdustani.Name = "btnOdustani";
+            this.btnOdustani.Size = new System.Drawing.Size(85, 21);
+            this.btnOdustani.TabIndex = 18;
+            this.btnOdustani.Text = "Odustani";
+            this.btnOdustani.UseVisualStyleBackColor = false;
+            this.btnOdustani.Click += new System.EventHandler(this.btnOdustani_Click);
             // 
             // label1
             // 
@@ -75,23 +93,6 @@
             this.btnPrijavi.TabIndex = 15;
             this.btnPrijavi.Text = "Prijavi";
             this.btnPrijavi.UseVisualStyleBackColor = false;
-            // 
-            // btnOdustani
-            // 
-            this.btnOdustani.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnOdustani.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(101)))), ((int)(((byte)(101)))));
-            this.btnOdustani.FlatAppearance.BorderSize = 0;
-            this.btnOdustani.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnOdustani.Font = new System.Drawing.Font("Mongolian Baiti", 13F);
-            this.btnOdustani.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(37)))), ((int)(((byte)(44)))));
-            this.btnOdustani.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnOdustani.Location = new System.Drawing.Point(578, 402);
-            this.btnOdustani.Margin = new System.Windows.Forms.Padding(2);
-            this.btnOdustani.Name = "btnOdustani";
-            this.btnOdustani.Size = new System.Drawing.Size(85, 21);
-            this.btnOdustani.TabIndex = 18;
-            this.btnOdustani.Text = "Odustani";
-            this.btnOdustani.UseVisualStyleBackColor = false;
             // 
             // frmPrijavaIspita
             // 

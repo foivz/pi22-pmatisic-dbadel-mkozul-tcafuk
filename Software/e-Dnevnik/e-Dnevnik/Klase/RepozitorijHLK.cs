@@ -17,7 +17,7 @@ namespace e_Dnevnik.Klase
 
         public static List<Korisnik> PopuniListu()
         {
-            using (var context = new Entities())
+            using (var context = new PI2205_DBEntities())
             {
                 List<Specijalizanti> specijalizanti = context.Korisnik.ToList();
                 List<Mentori> mentori = context.Korisnik.ToList();

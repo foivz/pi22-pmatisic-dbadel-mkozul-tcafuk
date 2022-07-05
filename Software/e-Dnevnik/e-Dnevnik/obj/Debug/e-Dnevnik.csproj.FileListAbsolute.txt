@@ -38,3 +38,15 @@ C:\Users\Mihael\Desktop\pi22-pmatisic-dbadel-mkozul-tcafuk\Software\e-dnevnik\e-
 C:\Users\Mihael\Desktop\pi22-pmatisic-dbadel-mkozul-tcafuk\Software\e-dnevnik\e-Dnevnik\obj\Debug\e-Dnevnik.csproj.CopyComplete
 C:\Users\Mihael\Desktop\pi22-pmatisic-dbadel-mkozul-tcafuk\Software\e-dnevnik\e-Dnevnik\obj\Debug\e-Dnevnik.exe
 C:\Users\Mihael\Desktop\pi22-pmatisic-dbadel-mkozul-tcafuk\Software\e-dnevnik\e-Dnevnik\obj\Debug\e-Dnevnik.pdb
+C:\Users\stident\Documents\pi22-pmatisic-dbadel-mkozul-tcafuk\Software\e-Dnevnik\e-Dnevnik\obj\Debug\e-Dnevnik.csproj.AssemblyReference.cache
+C:\Users\stident\Documents\pi22-pmatisic-dbadel-mkozul-tcafuk\Software\e-Dnevnik\e-Dnevnik\obj\Debug\e-Dnevnik.csproj.SuggestedBindingRedirects.cache
+C:\Users\stident\Documents\pi22-pmatisic-dbadel-mkozul-tcafuk\Software\e-Dnevnik\e-Dnevnik\obj\Debug\e_Dnevnik.frmEDnevnik.resources
+C:\Users\stident\Documents\pi22-pmatisic-dbadel-mkozul-tcafuk\Software\e-Dnevnik\e-Dnevnik\obj\Debug\e_Dnevnik.frmDnevnikAktivnosti.resources
+C:\Users\stident\Documents\pi22-pmatisic-dbadel-mkozul-tcafuk\Software\e-Dnevnik\e-Dnevnik\obj\Debug\e_Dnevnik.frmDogadaji.resources
+C:\Users\stident\Documents\pi22-pmatisic-dbadel-mkozul-tcafuk\Software\e-Dnevnik\e-Dnevnik\obj\Debug\e_Dnevnik.frmMentorSpecijalizant.resources
+C:\Users\stident\Documents\pi22-pmatisic-dbadel-mkozul-tcafuk\Software\e-Dnevnik\e-Dnevnik\obj\Debug\e_Dnevnik.frmPocetnaModerator.resources
+C:\Users\stident\Documents\pi22-pmatisic-dbadel-mkozul-tcafuk\Software\e-Dnevnik\e-Dnevnik\obj\Debug\e_Dnevnik.Properties.Resources.resources
+C:\Users\stident\Documents\pi22-pmatisic-dbadel-mkozul-tcafuk\Software\e-Dnevnik\e-Dnevnik\obj\Debug\e-Dnevnik.csproj.GenerateResource.cache
+C:\Users\stident\Documents\pi22-pmatisic-dbadel-mkozul-tcafuk\Software\e-Dnevnik\e-Dnevnik\obj\Debug\e-Dnevnik.csproj.CoreCompileInputs.cache
+C:\Users\stident\Documents\pi22-pmatisic-dbadel-mkozul-tcafuk\Software\e-Dnevnik\e-Dnevnik\obj\Debug\e-Dnevnik.exe
+C:\Users\stident\Documents\pi22-pmatisic-dbadel-mkozul-tcafuk\Software\e-Dnevnik\e-Dnevnik\obj\Debug\e-Dnevnik.pdb

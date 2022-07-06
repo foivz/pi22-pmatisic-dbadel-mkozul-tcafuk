@@ -37,6 +37,7 @@
             this.btnZatvori = new System.Windows.Forms.Button();
             this.pboxHamburger = new System.Windows.Forms.PictureBox();
             this.panelSideBar = new System.Windows.Forms.Panel();
+            this.btnIspisDnevnika = new System.Windows.Forms.Button();
             this.btnSpecijalizantiMentori = new System.Windows.Forms.Button();
             this.btnPregledDogadaja = new System.Windows.Forms.Button();
             this.btnStrucniRadovi = new System.Windows.Forms.Button();
@@ -73,7 +74,7 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.timerZatvoriMeni = new System.Windows.Forms.Timer(this.components);
-            this.btnIspisDnevnika = new System.Windows.Forms.Button();
+            this.btnProgramSpecijalizacije = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnHome)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pboxResize)).BeginInit();
@@ -160,6 +161,7 @@
             // panelSideBar
             // 
             this.panelSideBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(37)))), ((int)(((byte)(44)))));
+            this.panelSideBar.Controls.Add(this.btnProgramSpecijalizacije);
             this.panelSideBar.Controls.Add(this.btnIspisDnevnika);
             this.panelSideBar.Controls.Add(this.btnSpecijalizantiMentori);
             this.panelSideBar.Controls.Add(this.btnPregledDogadaja);
@@ -172,6 +174,14 @@
             this.panelSideBar.Controls.Add(this.btnOdjava);
             resources.ApplyResources(this.panelSideBar, "panelSideBar");
             this.panelSideBar.Name = "panelSideBar";
+            // 
+            // btnIspisDnevnika
+            // 
+            this.btnIspisDnevnika.FlatAppearance.BorderSize = 0;
+            resources.ApplyResources(this.btnIspisDnevnika, "btnIspisDnevnika");
+            this.btnIspisDnevnika.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(53)))), ((int)(((byte)(53)))));
+            this.btnIspisDnevnika.Name = "btnIspisDnevnika";
+            this.btnIspisDnevnika.UseVisualStyleBackColor = true;
             // 
             // btnSpecijalizantiMentori
             // 
@@ -248,6 +258,7 @@
             this.btnOdjava.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(53)))), ((int)(((byte)(53)))));
             this.btnOdjava.Name = "btnOdjava";
             this.btnOdjava.UseVisualStyleBackColor = true;
+            this.btnOdjava.Click += new System.EventHandler(this.btnOdjava_Click);
             // 
             // panelBody
             // 
@@ -444,13 +455,13 @@
             this.timerZatvoriMeni.Interval = 10;
             this.timerZatvoriMeni.Tick += new System.EventHandler(this.timerZatvoriMeni_Tick);
             // 
-            // btnIspisDnevnika
+            // btnProgramSpecijalizacije
             // 
-            this.btnIspisDnevnika.FlatAppearance.BorderSize = 0;
-            resources.ApplyResources(this.btnIspisDnevnika, "btnIspisDnevnika");
-            this.btnIspisDnevnika.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(53)))), ((int)(((byte)(53)))));
-            this.btnIspisDnevnika.Name = "btnIspisDnevnika";
-            this.btnIspisDnevnika.UseVisualStyleBackColor = true;
+            this.btnProgramSpecijalizacije.FlatAppearance.BorderSize = 0;
+            resources.ApplyResources(this.btnProgramSpecijalizacije, "btnProgramSpecijalizacije");
+            this.btnProgramSpecijalizacije.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(53)))), ((int)(((byte)(53)))));
+            this.btnProgramSpecijalizacije.Name = "btnProgramSpecijalizacije";
+            this.btnProgramSpecijalizacije.UseVisualStyleBackColor = true;
             // 
             // frmEDnevnik
             // 
@@ -549,6 +560,7 @@
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Button btnIspisDnevnika;
+        private System.Windows.Forms.Button btnProgramSpecijalizacije;
     }
 }
 

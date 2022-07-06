@@ -116,7 +116,7 @@ namespace e_Dnevnik
                            from d in context.Dogadjaj
                            from t in context.TipDogadjaja
                            from k in context.Korisnik
-                           where k.ProgramSpecijalizacije_idProgramSpecijalizacije == 2
+                           where k.ProgramSpecijalizacije_idProgramSpecijalizacije == 1
                            && d.idDogadjaj == da.Dogadjaj_idDogadjaj
                            && d.Korisnik_idKorisnik == k.idKorisnik
                            && d.TipDogadjaja_idTipDogadjaja == t.idTipDogadjaja

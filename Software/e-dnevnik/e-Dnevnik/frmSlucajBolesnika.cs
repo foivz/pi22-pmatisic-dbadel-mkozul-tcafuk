@@ -72,18 +72,22 @@ namespace e_Dnevnik
             using (var context = new PI2205_DBEntities())
             {
 
-                /*ProvjeraZnanja provjera = new ProvjeraZnanja
-                {
-                    datumprovjere = datum,
-                    pitanja = pitanja,
-                    ocjena = ocjena,
-                    Dogadjaj_idDogadjaj = IdDogadaja
-                };
+                var upitDogadaj = from d in context.Dogadjaj
+                                  from sb in context.SlucajBolesnika
+                                  where sb.idSlucajBolesnika == ID_slucaja
+                                  && d.idDogadjaj == sb.Dogadjaj_idDogadjaj
+                                  select d.idDogadjaj;
 
-                entities.ProvjeraZnanja.Add(provjera);
-                entities.SaveChanges();
-                mainForm.ucitajFormu(new frmDogadaji(mainForm));*/
+                var IdDog = upitDogadaj.First();
+
+                var updateDogadaj = context.Dogadjaj.SingleOrDefault(x => x.idDogadjaj == IdDog);
+                if (updateDogadaj != null)
+                {
+                    updateDogadaj.statusdogadjaja = "Provjereno";
+                    context.SaveChanges();
+                }
             }
+            mainForm.ucitajFormu(new frmDogadaji(mainForm));
         }
     }
 

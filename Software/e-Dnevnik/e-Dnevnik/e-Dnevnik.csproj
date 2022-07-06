@@ -124,10 +124,8 @@
     <Compile Include="frmZaboravljenaLozinka.Designer.cs">
       <DependentUpon>frmZaboravljenaLozinka.cs</DependentUpon>
     </Compile>
-    <Compile Include="Klase\Iznimka.cs" />
     <Compile Include="Klase\Korisnik.cs" />
     <Compile Include="Klase\RepozitorijHLK.cs" />
-    <Compile Include="Klase\Validacija.cs" />
     <Compile Include="Korisnik.cs">
       <DependentUpon>EDnevnikModel.tt</DependentUpon>
     </Compile>

@@ -62,5 +62,3 @@ C:\Users\stident\Documents\pi22-pmatisic-dbadel-mkozul-tcafuk\Software\e-dnevnik
 C:\Users\stident\Documents\pi22-pmatisic-dbadel-mkozul-tcafuk\Software\e-dnevnik\e-Dnevnik\bin\Debug\EntityFramework.xml
 C:\Users\stident\Documents\pi22-pmatisic-dbadel-mkozul-tcafuk\Software\e-dnevnik\e-Dnevnik\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\stident\Documents\pi22-pmatisic-dbadel-mkozul-tcafuk\Software\e-dnevnik\e-Dnevnik\obj\Debug\e-Dnevnik.csproj.CopyComplete
-C:\Users\stident\Documents\pi22-pmatisic-dbadel-mkozul-tcafuk\Software\e-dnevnik\e-Dnevnik\bin\Debug\KorisnikLib.dll
-C:\Users\stident\Documents\pi22-pmatisic-dbadel-mkozul-tcafuk\Software\e-dnevnik\e-Dnevnik\bin\Debug\KorisnikLib.pdb

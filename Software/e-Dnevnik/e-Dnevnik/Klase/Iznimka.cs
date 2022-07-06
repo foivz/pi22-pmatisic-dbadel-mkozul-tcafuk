@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace e_Dnevnik.Klase
 {
-    public class IspravnostUnosa : ApplicationException
+    public class Iznimka : ApplicationException
     {
         public string Poruka { get; set; }
-        public IspravnostUnosa(string poruka)
+        public Iznimka(string poruka)
         {
             Poruka = poruka;
         }

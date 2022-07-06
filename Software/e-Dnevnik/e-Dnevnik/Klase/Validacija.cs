@@ -3,17 +3,18 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using KorisniciLib;
 using e_Dnevnik.Klase;
 
 namespace e_Dnevnik.Klase
 {
-    public static class Autentikacija
+    public static class Validacija
     {
 
         // Metoda prijava provjerava ispravnost unosa (prazan unos, postojece korisnicko ime ili neispravnu lozinku)
         // U slučaju da je prijava ispravna dohvaća podatke o korisniku, u suprotnom vraća poruku greške, tj. baca iznimku
 
-        /*public static Korisnik Prijava(string korisnickoIme, string lozinka)
+        public static Korisnik Prijava(string korisnickoIme, string lozinka)
         {
             Korisnik korisnikPrijava = null;
 
@@ -26,7 +27,7 @@ namespace e_Dnevnik.Klase
 
             if (postojiKorisnik == false)
             {
-                throw new IspravnostUnosa($"Neuspješna prijava! Ne postoji korisnik s korisničkim imenom {korisnickoIme}!");
+                throw new Iznimka($"Neuspješna prijava! Ne postoji korisnik s korisničkim imenom {korisnickoIme}!");
             }
 
             // 2. Slučaj: Postoji korisničko ime u bazi podataka
@@ -42,17 +43,17 @@ namespace e_Dnevnik.Klase
 
                 if (korisnikPrijava == null)
                 {
-                    throw new IspravnostUnosa($"Neuspješna prijava! Pogrešna lozinka za {korisnickoIme}!");
+                    throw new Iznimka($"Neuspješna prijava! Pogrešna lozinka za {korisnickoIme}!");
                 }
             }
             return korisnikPrijava;
-        }*/
+        }
 
         public static void ProvjeriPrazanUnosPrijave(string korisnickoIme, string lozinka)
         {
             if (korisnickoIme == "" || lozinka == "")
             {
-                throw new IspravnostUnosa("Neuspješna prijava! Niste popunili sva polja!");
+                throw new Iznimka("Neuspješna prijava! Niste popunili sva polja!");
             }
         }
 
@@ -62,30 +63,30 @@ namespace e_Dnevnik.Klase
 
             if (novaLozinka == "" || ponovljenaLozinka == "")
             {
-                throw new IspravnostUnosa("Neuspješna prijava! Niste popunili polja za lozinke!");
+                throw new Iznimka("Neuspješna prijava! Niste popunili polja za lozinke!");
             }
             else if (trenutnaLozinka == novaLozinka)
             {
-                throw new IspravnostUnosa("Trenutna lozinka i nova lozinka su jednake!");
+                throw new Iznimka("Trenutna lozinka i nova lozinka su jednake!");
             }
             else if (novaLozinka != ponovljenaLozinka)
             {
-                throw new IspravnostUnosa($"Nova lozinka i ponovljena lozinka nisu jednake!");
+                throw new Iznimka($"Nova lozinka i ponovljena lozinka nisu jednake!");
             }
 
             return ispravnaLozinka;
         }
 
-        /*public static bool ProvjeriKorisnickoIme(string korisnickoIme)
+        public static bool ProvjeriKorisnickoIme(string korisnickoIme)
         {
             bool postojiKorisnik = RepozitorijHLK.PostojiKorisnik(korisnickoIme);
 
             if (postojiKorisnik == true)
             {
-                throw new IspravnostUnosa($"Već postoji korisnik s korisničkim imenom {korisnickoIme}!");
+                throw new Iznimka($"Već postoji korisnik s korisničkim imenom {korisnickoIme}!");
             }
             return postojiKorisnik;
-        }*/
+        }
 
         public static bool ProvjeriUnosProfil(string ime, string prezime, string korisnickoIme, string email, string mobitel)
         {
@@ -93,7 +94,7 @@ namespace e_Dnevnik.Klase
 
             if (korisnickoIme == "" || prezime == "" || ime == "" || email == "")
             {
-                throw new IspravnostUnosa("Nisu uneseni svi obavezni podaci označeni s *");
+                throw new Iznimka("Nisu uneseni svi obavezni podaci označeni s *");
             }
 
             //Mobitel može biti u unosu: 0917917899 (minimalno 10 znakova bez razmaka) ili sa spojnicama 091/791-8199 može imati maksimalno 12 znakova
@@ -101,11 +102,11 @@ namespace e_Dnevnik.Klase
 
             else if (mobitel.Length < 10 && mobitel.Length >= 1)
             {
-                throw new IspravnostUnosa("Broj mobitela ima premalo znakova (minimalno 10 znakova)! Primjer: unos +385 91 791 7899, NIJE ispravan pokušajte s formatom 091 791 7899");
+                throw new Iznimka("Broj mobitela ima premalo znakova (minimalno 10 znakova)! Primjer: unos +385 91 791 7899, NIJE ispravan pokušajte s formatom 091 791 7899");
             }
             else if (mobitel.Length > 12)
             {
-                throw new IspravnostUnosa("Broj mobitela ima previše znakova (dozvoljeno 12 znakova)! Primjer: unos +385 91 791 7899, NIJE ispravan pokušajte s formatom 091 791 7899");
+                throw new Iznimka("Broj mobitela ima previše znakova (dozvoljeno 12 znakova)! Primjer: unos +385 91 791 7899, NIJE ispravan pokušajte s formatom 091 791 7899");
             }
 
             ProvjeriEmailAdresu(email);
@@ -121,7 +122,7 @@ namespace e_Dnevnik.Klase
             }
             else
             {
-                throw new IspravnostUnosa("Neispravan format email adrese!");
+                throw new Iznimka("Neispravan format email adrese!");
             }
         }
     }

@@ -388,7 +388,7 @@
     <value>NoControl</value>
   </data>
   <data name="btnProgramSpecijalizacije.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 141</value>
+    <value>2, 141</value>
   </data>
   <data name="btnProgramSpecijalizacije.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>2, 2, 2, 2</value>

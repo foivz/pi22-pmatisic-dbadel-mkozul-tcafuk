@@ -190,6 +190,7 @@
             this.btnIspisDnevnika.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(53)))), ((int)(((byte)(53)))));
             this.btnIspisDnevnika.Name = "btnIspisDnevnika";
             this.btnIspisDnevnika.UseVisualStyleBackColor = true;
+            this.btnIspisDnevnika.Click += new System.EventHandler(this.btnIspisDnevnika_Click_1);
             // 
             // btnSpecijalizantiMentori
             // 
@@ -250,6 +251,7 @@
             this.btnBiljeske.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(53)))), ((int)(((byte)(53)))));
             this.btnBiljeske.Name = "btnBiljeske";
             this.btnBiljeske.UseVisualStyleBackColor = true;
+            this.btnBiljeske.Click += new System.EventHandler(this.btnBiljeske_Click_1);
             // 
             // btnProfil
             // 

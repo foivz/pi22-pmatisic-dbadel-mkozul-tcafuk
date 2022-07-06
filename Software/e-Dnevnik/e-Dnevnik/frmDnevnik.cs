@@ -14,6 +14,7 @@ namespace e_Dnevnik
     public partial class frmDnevnik : Form
     {
         PI2205_DBEntities entities = new PI2205_DBEntities();
+        private int korisnikID = Klase.RepozitorijHLK.prijavljeniKorisnik.KorisnikId;
         public frmDnevnik()
         {
             InitializeComponent();
@@ -27,6 +28,20 @@ namespace e_Dnevnik
             dgvEvidencijaDnevnihAktivnosti.DataSource = entities.DnevnaAktivnost.Local;
             dgvEvidencijaProvjeraZnanja.DataSource = entities.ProvjeraZnanja.Local;
             dgvEvidencijaBiljeski.DataSource = entities.Biljeske.Local;
+
+            //var upit = from a in entities.DnevnaAktivnost.Local
+            //           from d in entities.Dogadjaj.Local
+            //           from k in entities.Korisnik.Local
+            //           where a.Dogadjaj_idDogadjaj == d.idDogadjaj && d.Korisnik_idKorisnik == korisnikID
+            //           select new
+            //           {
+            //               a.nazivaktivnosti,
+            //               a.opisaktivnosti,
+            //               a.datumobavljeneaktivnosti,
+            //               a.brojsamostalnihzahvata,
+            //               a.brojzahvatauznadzor
+            //           };
+            //dgvEvidencijaDnevnihAktivnosti.DataSource = upit.ToList();
 
             dgvEvidencijaDnevnihAktivnosti.AutoResizeColumns();
             dgvEvidencijaProvjeraZnanja.AutoResizeColumns();

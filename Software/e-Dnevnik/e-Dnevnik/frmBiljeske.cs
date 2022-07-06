@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using e_Dnevnik.Klase;
 
 namespace e_Dnevnik
 {
@@ -15,6 +16,7 @@ namespace e_Dnevnik
     {
         PI2205_DBEntities entities = new PI2205_DBEntities();
         private MainForm mainFrm;
+        private int korisnikID = Klase.RepozitorijHLK.prijavljeniKorisnik.KorisnikId;
         public frmBiljeske(MainForm mainForm)
         {
             this.mainFrm = mainForm;
@@ -25,11 +27,11 @@ namespace e_Dnevnik
         {
             //entities = new PI2205_DBEntities();
             entities.Biljeske.Load();
-            entities.Korisnik.Load();
+            entities.Korisnik.Load();            
 
             var upit = from b in entities.Biljeske.Local
                        join k in entities.Korisnik.Local on b.Korisnik_idKorisnik equals k.idKorisnik
-                       where b.Korisnik_idKorisnik == 2
+                       where b.Korisnik_idKorisnik == korisnikID
                        select new
                        {
                            Datum_biljeske = b.datumbiljeske,
@@ -75,7 +77,7 @@ namespace e_Dnevnik
                 //MessageBox.Show(izabraneBiljeske);
 
                 var upit = from b in entities.Biljeske.Local
-                           where b.datumbiljeske.ToString().Equals(izabraniDatum) && b.biljeska.ToString().Equals(izabraneBiljeske)
+                           where b.datumbiljeske.ToString().Equals(izabraniDatum) && b.biljeska.ToString().Equals(izabraneBiljeske) && b.Korisnik_idKorisnik == korisnikID
                            select b.idBiljeske;
                 var idBiljeske = upit.First();
                 //MessageBox.Show(idBiljeske.ToString());
@@ -102,7 +104,7 @@ namespace e_Dnevnik
 
             var upit = from b in entities.Biljeske.Local
                        join k in entities.Korisnik.Local on b.Korisnik_idKorisnik equals k.idKorisnik
-                       where b.Korisnik_idKorisnik == 2 && (b.datumbiljeske >= izabranPocetak && b.datumbiljeske <= izabranKraj)
+                       where b.Korisnik_idKorisnik == korisnikID && (b.datumbiljeske >= izabranPocetak && b.datumbiljeske <= izabranKraj)
                        select new
                        {
                            Datum_biljeske = b.datumbiljeske,

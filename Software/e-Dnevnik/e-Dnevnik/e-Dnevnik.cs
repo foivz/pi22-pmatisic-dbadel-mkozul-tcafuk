@@ -201,5 +201,10 @@ namespace e_Dnevnik
         {
             mainForm.ucitajFormu(new frmPrijavaIspita());
         }
+
+        private void btnProfil_Click(object sender, EventArgs e)
+        {
+            mainForm.ucitajFormu(new frmKorisnickiRacun(mainForm));
+        }
     }
 }

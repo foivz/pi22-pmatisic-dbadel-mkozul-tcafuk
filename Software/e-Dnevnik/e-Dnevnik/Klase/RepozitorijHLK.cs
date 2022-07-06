@@ -53,9 +53,12 @@ namespace e_Dnevnik.Klase
                     ProgramSpecijalizacije = (int)dataReader["ProgramSpecijalizacije_idProgramSpecijalizacije"],
                     ImeKorisnika = dataReader["ime"].ToString(),
                     PrezimeKorisnika = dataReader["prezime"].ToString(),
+                    AdresaKorisnika = dataReader["adresa"].ToString(),
+                    KontaktTelefonKorisnika = dataReader["telefon"].ToString(),
                     EmailKorisnika = dataReader["email"].ToString(),
                     KorisnickoImeKorisnika = dataReader["korime"].ToString(),
                     LozinkaKorisnika = dataReader["lozinka"].ToString()
+                    //slika ne treba
                 };
                 dataReader.Close();
                 Database.Instance.Disconnect();

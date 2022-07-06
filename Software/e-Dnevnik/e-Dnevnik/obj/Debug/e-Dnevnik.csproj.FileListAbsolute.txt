@@ -62,3 +62,28 @@ C:\Users\stident\Documents\pi22-pmatisic-dbadel-mkozul-tcafuk\Software\e-dnevnik
 C:\Users\stident\Documents\pi22-pmatisic-dbadel-mkozul-tcafuk\Software\e-dnevnik\e-Dnevnik\bin\Debug\EntityFramework.xml
 C:\Users\stident\Documents\pi22-pmatisic-dbadel-mkozul-tcafuk\Software\e-dnevnik\e-Dnevnik\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\stident\Documents\pi22-pmatisic-dbadel-mkozul-tcafuk\Software\e-dnevnik\e-Dnevnik\obj\Debug\e-Dnevnik.csproj.CopyComplete
+C:\Users\Dorian\Desktop\PI-proj\pi22-pmatisic-dbadel-mkozul-tcafuk\Software\e-Dnevnik\e-Dnevnik\obj\Debug\e-Dnevnik.csproj.AssemblyReference.cache
+C:\Users\Dorian\Desktop\PI-proj\pi22-pmatisic-dbadel-mkozul-tcafuk\Software\e-Dnevnik\e-Dnevnik\obj\Debug\e-Dnevnik.csproj.SuggestedBindingRedirects.cache
+C:\Users\Dorian\Desktop\PI-proj\pi22-pmatisic-dbadel-mkozul-tcafuk\Software\e-Dnevnik\e-Dnevnik\obj\Debug\e_Dnevnik.frmEDnevnik.resources
+C:\Users\Dorian\Desktop\PI-proj\pi22-pmatisic-dbadel-mkozul-tcafuk\Software\e-Dnevnik\e-Dnevnik\obj\Debug\e_Dnevnik.frmDnevnikAktivnosti.resources
+C:\Users\Dorian\Desktop\PI-proj\pi22-pmatisic-dbadel-mkozul-tcafuk\Software\e-Dnevnik\e-Dnevnik\obj\Debug\e_Dnevnik.frmDogadaji.resources
+C:\Users\Dorian\Desktop\PI-proj\pi22-pmatisic-dbadel-mkozul-tcafuk\Software\e-Dnevnik\e-Dnevnik\obj\Debug\e_Dnevnik.frmMentorSpecijalizant.resources
+C:\Users\Dorian\Desktop\PI-proj\pi22-pmatisic-dbadel-mkozul-tcafuk\Software\e-Dnevnik\e-Dnevnik\obj\Debug\e_Dnevnik.frmPocetnaModerator.resources
+C:\Users\Dorian\Desktop\PI-proj\pi22-pmatisic-dbadel-mkozul-tcafuk\Software\e-Dnevnik\e-Dnevnik\obj\Debug\e_Dnevnik.frmPrijava.resources
+C:\Users\Dorian\Desktop\PI-proj\pi22-pmatisic-dbadel-mkozul-tcafuk\Software\e-Dnevnik\e-Dnevnik\obj\Debug\e_Dnevnik.frmZaboravljenaLozinka.resources
+C:\Users\Dorian\Desktop\PI-proj\pi22-pmatisic-dbadel-mkozul-tcafuk\Software\e-Dnevnik\e-Dnevnik\obj\Debug\e_Dnevnik.Properties.Resources.resources
+C:\Users\Dorian\Desktop\PI-proj\pi22-pmatisic-dbadel-mkozul-tcafuk\Software\e-Dnevnik\e-Dnevnik\obj\Debug\e-Dnevnik.csproj.GenerateResource.cache
+C:\Users\Dorian\Desktop\PI-proj\pi22-pmatisic-dbadel-mkozul-tcafuk\Software\e-Dnevnik\e-Dnevnik\obj\Debug\e-Dnevnik.csproj.CoreCompileInputs.cache
+C:\Users\Dorian\Desktop\PI-proj\pi22-pmatisic-dbadel-mkozul-tcafuk\Software\e-Dnevnik\e-Dnevnik\obj\Debug\e-Dnevnik.exe
+C:\Users\Dorian\Desktop\PI-proj\pi22-pmatisic-dbadel-mkozul-tcafuk\Software\e-Dnevnik\e-Dnevnik\obj\Debug\e-Dnevnik.pdb
+C:\Users\Dorian\Desktop\PI-proj\pi22-pmatisic-dbadel-mkozul-tcafuk\Software\e-Dnevnik\e-Dnevnik\bin\Debug\e-Dnevnik.exe.config
+C:\Users\Dorian\Desktop\PI-proj\pi22-pmatisic-dbadel-mkozul-tcafuk\Software\e-Dnevnik\e-Dnevnik\bin\Debug\e-Dnevnik.exe
+C:\Users\Dorian\Desktop\PI-proj\pi22-pmatisic-dbadel-mkozul-tcafuk\Software\e-Dnevnik\e-Dnevnik\bin\Debug\e-Dnevnik.pdb
+C:\Users\Dorian\Desktop\PI-proj\pi22-pmatisic-dbadel-mkozul-tcafuk\Software\e-Dnevnik\e-Dnevnik\bin\Debug\Database Access.dll
+C:\Users\Dorian\Desktop\PI-proj\pi22-pmatisic-dbadel-mkozul-tcafuk\Software\e-Dnevnik\e-Dnevnik\bin\Debug\EntityFramework.dll
+C:\Users\Dorian\Desktop\PI-proj\pi22-pmatisic-dbadel-mkozul-tcafuk\Software\e-Dnevnik\e-Dnevnik\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Dorian\Desktop\PI-proj\pi22-pmatisic-dbadel-mkozul-tcafuk\Software\e-Dnevnik\e-Dnevnik\bin\Debug\Database Access.pdb
+C:\Users\Dorian\Desktop\PI-proj\pi22-pmatisic-dbadel-mkozul-tcafuk\Software\e-Dnevnik\e-Dnevnik\bin\Debug\EntityFramework.xml
+C:\Users\Dorian\Desktop\PI-proj\pi22-pmatisic-dbadel-mkozul-tcafuk\Software\e-Dnevnik\e-Dnevnik\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Dorian\Desktop\PI-proj\pi22-pmatisic-dbadel-mkozul-tcafuk\Software\e-Dnevnik\e-Dnevnik\obj\Debug\e-Dnevnik.csproj.CopyComplete
+C:\Users\Dorian\Desktop\PI-proj\pi22-pmatisic-dbadel-mkozul-tcafuk\Software\e-Dnevnik\e-Dnevnik\obj\Debug\e_Dnevnik.frmSlucajBolesnika.resources

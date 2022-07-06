@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using e_Dnevnik.Klase;
 
 namespace e_Dnevnik
 {
@@ -19,12 +20,21 @@ namespace e_Dnevnik
         public frmEDnevnik()
         {
             InitializeComponent();
-            mainForm = new MainForm();
+            mainForm = new MainForm();            
 
             pboxResize.Image = Properties.Resources.window_decrease;
             sideBarWidth = panelSideBar.Width;
-            mainForm.uloga = MainForm.uloge.specijalizant;
+
+            if (Klase.RepozitorijHLK.prijavljeniKorisnik.UlogaKorisnika == Klase.UlogaKorisnika.Mentor)
+                mainForm.uloga = MainForm.uloge.mentor;
+            else if (Klase.RepozitorijHLK.prijavljeniKorisnik.UlogaKorisnika == Klase.UlogaKorisnika.GlavniMentor)
+                mainForm.uloga = MainForm.uloge.glavni_mentor;
+            else if (Klase.RepozitorijHLK.prijavljeniKorisnik.UlogaKorisnika == Klase.UlogaKorisnika.Specijalizant)
+                mainForm.uloga = MainForm.uloge.specijalizant;
+
+            mainForm.programSpecijalizacije = Klase.RepozitorijHLK.prijavljeniKorisnik.ProgramSpecijalizacije;
             mainForm.panelBody = panelBody;
+            
         }
 
         private void btnZatvori_Click(object sender, EventArgs e)
@@ -99,9 +109,12 @@ namespace e_Dnevnik
                 btnIspisDnevnika.Visible = true;
                 btnPregledDogadaja.Visible = false;
                 btnSpecijalizantiMentori.Visible = false;
+                btnProgramSpecijalizacije.Visible = false;
+                btnProvjereZnanja.Visible = false;
             }
             else
             {
+                if (mainForm.openForm != null) mainForm.openForm.Close();
                 mainForm.ucitajFormu(new frmPocetnaModerator(mainForm));
 
                 btnBiljeske.Visible = false;
@@ -111,6 +124,8 @@ namespace e_Dnevnik
                 btnIspisDnevnika.Visible = false;
                 btnPregledDogadaja.Visible = true;
                 btnSpecijalizantiMentori.Visible = true;
+                btnProgramSpecijalizacije.Visible = true;
+                btnProvjereZnanja.Visible = true;
             }
         }
 
@@ -141,7 +156,7 @@ namespace e_Dnevnik
 
         private void btnPregledDogadaja_Click(object sender, EventArgs e)
         {
-            mainForm.ucitajFormu(new frmDogadaji());
+            mainForm.ucitajFormu(new frmDogadaji(mainForm));
         }
 
         private void btnDnevnikAktivnosti_click(object sender, EventArgs e)
@@ -162,6 +177,11 @@ namespace e_Dnevnik
         private void btnProvjereZnanja_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnOdjava_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

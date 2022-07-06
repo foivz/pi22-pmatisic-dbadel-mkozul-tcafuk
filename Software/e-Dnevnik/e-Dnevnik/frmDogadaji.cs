@@ -175,7 +175,7 @@ namespace e_Dnevnik
             switch (selected)
             {
                 case 1:
-                    mainForm.ucitajFormu(new frmDogadaj_ProvjeraZnanja((int)dgvDogađaji.CurrentRow.Cells[0].Value, mainForm));
+                    mainForm.ucitajFormu(new frmDogadajProvjeraZnanja((int)dgvDogađaji.CurrentRow.Cells[0].Value, mainForm));
                     break;
                 case 2:
                     mainForm.ucitajFormu(new frmSlucajBolesnika((int)dgvDogađaji.CurrentRow.Cells[0].Value, mainForm));

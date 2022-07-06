@@ -1,6 +1,6 @@
 ﻿namespace e_Dnevnik
 {
-    partial class frmDogadaj_ProvjeraZnanja
+    partial class frmDogadajProvjeraZnanja
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmDogadaj_ProvjeraZnanja));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmDogadajProvjeraZnanja));
             this.panel1 = new System.Windows.Forms.Panel();
             this.pbIspit = new System.Windows.Forms.PictureBox();
             this.cbOcjene = new System.Windows.Forms.ComboBox();

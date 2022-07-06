@@ -104,4 +104,4 @@ C:\Users\Dorian\Desktop\PI-proj\pi22-pmatisic-dbadel-mkozul-tcafuk\Software\e-Dn
 C:\Users\Dorian\Desktop\PI-proj\pi22-pmatisic-dbadel-mkozul-tcafuk\Software\e-Dnevnik\e-Dnevnik\obj\Debug\e_Dnevnik.frmDodajProvjeruZnanja.resources
 C:\Users\Dorian\Desktop\PI-proj\pi22-pmatisic-dbadel-mkozul-tcafuk\Software\e-Dnevnik\e-Dnevnik\obj\Debug\e_Dnevnik.frmPrijavaIspita.resources
 C:\Users\Dorian\Desktop\PI-proj\pi22-pmatisic-dbadel-mkozul-tcafuk\Software\e-Dnevnik\e-Dnevnik\obj\Debug\e_Dnevnik.frmProvjeraZnanja.resources
-C:\Users\Dorian\Desktop\PI-proj\pi22-pmatisic-dbadel-mkozul-tcafuk\Software\e-Dnevnik\e-Dnevnik\obj\Debug\e_Dnevnik.frmDogadaj_ProvjeraZnanja.resources
+C:\Users\Dorian\Desktop\PI-proj\pi22-pmatisic-dbadel-mkozul-tcafuk\Software\e-Dnevnik\e-Dnevnik\obj\Debug\e_Dnevnik.frmDogadajProvjeraZnanja.resources

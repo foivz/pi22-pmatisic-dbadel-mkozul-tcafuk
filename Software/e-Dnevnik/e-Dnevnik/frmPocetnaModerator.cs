@@ -106,7 +106,7 @@ namespace e_Dnevnik
             switch (selected)
             {
                 case 1:
-                    mainFrm.ucitajFormu(new frmDogadaj_ProvjeraZnanja((int)dgvPocetnaAktivnosti.CurrentRow.Cells[0].Value, mainFrm));
+                    mainFrm.ucitajFormu(new frmDogadajProvjeraZnanja((int)dgvPocetnaAktivnosti.CurrentRow.Cells[0].Value, mainFrm));
 
                     break;
                 case 2:

@@ -10,11 +10,11 @@ using System.Windows.Forms;
 
 namespace e_Dnevnik
 {
-    public partial class frmDogadaj_ProvjeraZnanja : Form
+    public partial class frmDogadajProvjeraZnanja : Form
     {
         private MainForm mainFrm;
         private int ID_provjere = -1;
-        public frmDogadaj_ProvjeraZnanja(int ID_provjere, MainForm mainForm)
+        public frmDogadajProvjeraZnanja(int ID_provjere, MainForm mainForm)
         {
             this.mainFrm = mainForm;
             this.ID_provjere = ID_provjere;

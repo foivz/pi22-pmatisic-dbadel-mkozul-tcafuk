@@ -180,7 +180,7 @@ namespace e_Dnevnik
                 case 2:
                     mainForm.ucitajFormu(new frmSlucajBolesnika((int)dgvDogađaji.CurrentRow.Cells[0].Value, mainForm));
                     break;
-                case 3: break;
+                case 3: mainForm.ucitajFormu(new frmDogadajDnevnaAktivnost((int)dgvDogađaji.CurrentRow.Cells[0].Value, mainForm)); break;
             }
         }
 

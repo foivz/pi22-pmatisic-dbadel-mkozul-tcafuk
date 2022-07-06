@@ -126,6 +126,12 @@
     <Compile Include="frmDogadaji.Designer.cs">
       <DependentUpon>frmDogadaji.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmDogadaj_ProvjeraZnanja.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDogadaj_ProvjeraZnanja.Designer.cs">
+      <DependentUpon>frmDogadaj_ProvjeraZnanja.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmMentorSpecijalizant.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -221,6 +227,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmDogadaji.resx">
       <DependentUpon>frmDogadaji.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDogadaj_ProvjeraZnanja.resx">
+      <DependentUpon>frmDogadaj_ProvjeraZnanja.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmMentorSpecijalizant.resx">
       <DependentUpon>frmMentorSpecijalizant.cs</DependentUpon>

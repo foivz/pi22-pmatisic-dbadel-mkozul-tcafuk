@@ -13,13 +13,19 @@ namespace e_Dnevnik
     public partial class frmDogadaji : Form
     {
         MainForm mainForm;
+        int selected;
         public frmDogadaji(MainForm mainForm)
         {
             this.mainForm = mainForm;
+
             InitializeComponent();
+
             btnProvjereZnanja.Enabled = false;
-            dgvDogađaji.DataSource = GetProvjereZnanja();
             btnDetaljno.Enabled = false;
+            selected = 1;
+
+            dgvDogađaji.DataSource = GetProvjereZnanja();
+
             dgvDogađaji.AutoResizeColumns();
         }
 
@@ -69,7 +75,10 @@ namespace e_Dnevnik
             btnProvjereZnanja.Enabled = true;
             btnDnevneAktivnosti.Enabled = true;
             btnSlucajeviBolesnika.Enabled = false;
+
             dgvDogađaji.DataSource = GetSlucajeviBolesnika();
+
+            selected = 2;
             paintRows();
 
         }
@@ -105,7 +114,10 @@ namespace e_Dnevnik
             btnProvjereZnanja.Enabled = true;
             btnDnevneAktivnosti.Enabled = false;
             btnSlucajeviBolesnika.Enabled = true;
+
             dgvDogađaji.DataSource = GetDnevnikAktivnosti();
+
+            selected = 3;
             paintRows();
         }
 
@@ -140,7 +152,10 @@ namespace e_Dnevnik
             btnProvjereZnanja.Enabled = false;
             btnDnevneAktivnosti.Enabled = true;
             btnSlucajeviBolesnika.Enabled = true;
+
             dgvDogađaji.DataSource = GetProvjereZnanja();
+
+            selected = 1;
             paintRows();
         }
 
@@ -157,8 +172,16 @@ namespace e_Dnevnik
 
         private void btnDetaljno_Click(object sender, EventArgs e)
         {
-            
-            mainForm.ucitajFormu(new frmSlucajBolesnika((int)dgvDogađaji.CurrentRow.Cells[0].Value,mainForm));
+            switch (selected)
+            {
+                case 1:
+                    mainForm.ucitajFormu(new frmDogadaj_ProvjeraZnanja((int)dgvDogađaji.CurrentRow.Cells[0].Value, mainForm));
+                    break;
+                case 2:
+                    mainForm.ucitajFormu(new frmSlucajBolesnika((int)dgvDogađaji.CurrentRow.Cells[0].Value, mainForm));
+                    break;
+                case 3: break;
+            }
         }
 
         private void dgvDogađaji_CellContentClick(object sender, DataGridViewCellEventArgs e)

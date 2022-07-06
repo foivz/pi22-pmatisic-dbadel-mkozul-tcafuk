@@ -29,6 +29,10 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.btnDnevneAktivnosti = new System.Windows.Forms.Button();
+            this.btnSlucajeviBolesnika = new System.Windows.Forms.Button();
+            this.btnProvjereZnanja = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel6 = new System.Windows.Forms.Panel();
@@ -46,11 +50,8 @@
             this.btnProfilDnevnik2 = new System.Windows.Forms.Button();
             this.btnPogledajDogadaj = new System.Windows.Forms.Button();
             this.dgvPocetnaAktivnosti = new System.Windows.Forms.DataGridView();
-            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.btnDnevneAktivnosti = new System.Windows.Forms.Button();
-            this.btnSlucajeviBolesnika = new System.Windows.Forms.Button();
-            this.btnProvjereZnanja = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
+            this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -62,7 +63,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPocetnaAktivnosti)).BeginInit();
-            this.tableLayoutPanel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -79,6 +79,63 @@
             this.panel1.Size = new System.Drawing.Size(1524, 788);
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // tableLayoutPanel2
+            // 
+            this.tableLayoutPanel2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.tableLayoutPanel2.ColumnCount = 3;
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel2.Controls.Add(this.btnDnevneAktivnosti, 2, 0);
+            this.tableLayoutPanel2.Controls.Add(this.btnSlucajeviBolesnika, 1, 0);
+            this.tableLayoutPanel2.Controls.Add(this.btnProvjereZnanja, 0, 0);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(896, 12);
+            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
+            this.tableLayoutPanel2.RowCount = 1;
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(470, 50);
+            this.tableLayoutPanel2.TabIndex = 21;
+            // 
+            // btnDnevneAktivnosti
+            // 
+            this.btnDnevneAktivnosti.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDnevneAktivnosti.Font = new System.Drawing.Font("Mongolian Baiti", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDnevneAktivnosti.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(53)))), ((int)(((byte)(53)))));
+            this.btnDnevneAktivnosti.Location = new System.Drawing.Point(315, 3);
+            this.btnDnevneAktivnosti.Name = "btnDnevneAktivnosti";
+            this.btnDnevneAktivnosti.Size = new System.Drawing.Size(152, 27);
+            this.btnDnevneAktivnosti.TabIndex = 3;
+            this.btnDnevneAktivnosti.Text = "Dnevne aktivnosti";
+            this.btnDnevneAktivnosti.UseVisualStyleBackColor = true;
+            this.btnDnevneAktivnosti.Click += new System.EventHandler(this.btnDnevneAktivnosti_Click);
+            // 
+            // btnSlucajeviBolesnika
+            // 
+            this.btnSlucajeviBolesnika.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSlucajeviBolesnika.Font = new System.Drawing.Font("Mongolian Baiti", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSlucajeviBolesnika.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(53)))), ((int)(((byte)(53)))));
+            this.btnSlucajeviBolesnika.Location = new System.Drawing.Point(159, 3);
+            this.btnSlucajeviBolesnika.Name = "btnSlucajeviBolesnika";
+            this.btnSlucajeviBolesnika.Size = new System.Drawing.Size(150, 27);
+            this.btnSlucajeviBolesnika.TabIndex = 1;
+            this.btnSlucajeviBolesnika.Text = "Slučajevi bolesnika";
+            this.btnSlucajeviBolesnika.UseVisualStyleBackColor = true;
+            this.btnSlucajeviBolesnika.Click += new System.EventHandler(this.btnSlucajeviBolesnika_Click);
+            // 
+            // btnProvjereZnanja
+            // 
+            this.btnProvjereZnanja.BackColor = System.Drawing.SystemColors.Control;
+            this.btnProvjereZnanja.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnProvjereZnanja.Font = new System.Drawing.Font("Mongolian Baiti", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnProvjereZnanja.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(53)))), ((int)(((byte)(53)))));
+            this.btnProvjereZnanja.Location = new System.Drawing.Point(3, 3);
+            this.btnProvjereZnanja.Name = "btnProvjereZnanja";
+            this.btnProvjereZnanja.Size = new System.Drawing.Size(150, 27);
+            this.btnProvjereZnanja.TabIndex = 0;
+            this.btnProvjereZnanja.Text = "Provjere znanja";
+            this.btnProvjereZnanja.UseVisualStyleBackColor = false;
+            this.btnProvjereZnanja.Click += new System.EventHandler(this.btnProvjereZnanja_Click);
             // 
             // label4
             // 
@@ -180,6 +237,7 @@
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox2.TabIndex = 2;
             this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.btnProvjereZnanjaBody_Click);
             // 
             // panel5
             // 
@@ -191,6 +249,7 @@
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(454, 69);
             this.panel5.TabIndex = 0;
+            this.panel5.Click += new System.EventHandler(this.btnProvjereZnanjaBody_Click);
             // 
             // label2
             // 
@@ -204,6 +263,7 @@
             this.label2.Size = new System.Drawing.Size(162, 25);
             this.label2.TabIndex = 0;
             this.label2.Text = "Provjere znanja";
+            this.label2.Click += new System.EventHandler(this.btnProvjereZnanjaBody_Click);
             // 
             // panel2
             // 
@@ -226,7 +286,7 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.btnMentoriSpecijalizant_click);
+            this.pictureBox1.Click += new System.EventHandler(this.btnPocetnDnevnik_Click);
             // 
             // panel3
             // 
@@ -249,10 +309,10 @@
             this.label1.Location = new System.Drawing.Point(20, 21);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(188, 25);
+            this.label1.Size = new System.Drawing.Size(181, 25);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Prregled događaja";
-            this.label1.Click += new System.EventHandler(this.btnMentoriSpecijalizant_click);
+            this.label1.Text = "Pregled događaja";
+            this.label1.Click += new System.EventHandler(this.btnPocetnDnevnik_Click);
             // 
             // btnProfilDnevnik2
             // 
@@ -266,7 +326,7 @@
             this.btnProfilDnevnik2.Size = new System.Drawing.Size(454, 69);
             this.btnProfilDnevnik2.TabIndex = 2;
             this.btnProfilDnevnik2.UseVisualStyleBackColor = false;
-            this.btnProfilDnevnik2.Click += new System.EventHandler(this.btnMentoriSpecijalizant_click);
+            this.btnProfilDnevnik2.Click += new System.EventHandler(this.btnPocetnDnevnik_Click);
             // 
             // btnPogledajDogadaj
             // 
@@ -302,63 +362,6 @@
             this.dgvPocetnaAktivnosti.TabIndex = 0;
             this.dgvPocetnaAktivnosti.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPocetnaAktivnosti_CellContentClick);
             // 
-            // tableLayoutPanel2
-            // 
-            this.tableLayoutPanel2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.tableLayoutPanel2.ColumnCount = 3;
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel2.Controls.Add(this.btnDnevneAktivnosti, 2, 0);
-            this.tableLayoutPanel2.Controls.Add(this.btnSlucajeviBolesnika, 1, 0);
-            this.tableLayoutPanel2.Controls.Add(this.btnProvjereZnanja, 0, 0);
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(896, 29);
-            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
-            this.tableLayoutPanel2.RowCount = 1;
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(470, 33);
-            this.tableLayoutPanel2.TabIndex = 21;
-            // 
-            // btnDnevneAktivnosti
-            // 
-            this.btnDnevneAktivnosti.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDnevneAktivnosti.Font = new System.Drawing.Font("Mongolian Baiti", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDnevneAktivnosti.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(53)))), ((int)(((byte)(53)))));
-            this.btnDnevneAktivnosti.Location = new System.Drawing.Point(315, 3);
-            this.btnDnevneAktivnosti.Name = "btnDnevneAktivnosti";
-            this.btnDnevneAktivnosti.Size = new System.Drawing.Size(152, 27);
-            this.btnDnevneAktivnosti.TabIndex = 3;
-            this.btnDnevneAktivnosti.Text = "Dnevne aktivnosti";
-            this.btnDnevneAktivnosti.UseVisualStyleBackColor = true;
-            this.btnDnevneAktivnosti.Click += new System.EventHandler(this.btnDnevneAktivnosti_Click);
-            // 
-            // btnSlucajeviBolesnika
-            // 
-            this.btnSlucajeviBolesnika.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSlucajeviBolesnika.Font = new System.Drawing.Font("Mongolian Baiti", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSlucajeviBolesnika.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(53)))), ((int)(((byte)(53)))));
-            this.btnSlucajeviBolesnika.Location = new System.Drawing.Point(159, 3);
-            this.btnSlucajeviBolesnika.Name = "btnSlucajeviBolesnika";
-            this.btnSlucajeviBolesnika.Size = new System.Drawing.Size(150, 27);
-            this.btnSlucajeviBolesnika.TabIndex = 1;
-            this.btnSlucajeviBolesnika.Text = "Slučajevi bolesnika";
-            this.btnSlucajeviBolesnika.UseVisualStyleBackColor = true;
-            this.btnSlucajeviBolesnika.Click += new System.EventHandler(this.btnSlucajeviBolesnika_Click);
-            // 
-            // btnProvjereZnanja
-            // 
-            this.btnProvjereZnanja.BackColor = System.Drawing.SystemColors.Control;
-            this.btnProvjereZnanja.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnProvjereZnanja.Font = new System.Drawing.Font("Mongolian Baiti", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnProvjereZnanja.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(53)))), ((int)(((byte)(53)))));
-            this.btnProvjereZnanja.Location = new System.Drawing.Point(3, 3);
-            this.btnProvjereZnanja.Name = "btnProvjereZnanja";
-            this.btnProvjereZnanja.Size = new System.Drawing.Size(150, 27);
-            this.btnProvjereZnanja.TabIndex = 0;
-            this.btnProvjereZnanja.Text = "Provjere znanja";
-            this.btnProvjereZnanja.UseVisualStyleBackColor = false;
-            this.btnProvjereZnanja.Click += new System.EventHandler(this.btnProvjereZnanja_Click);
-            // 
             // frmPocetnaModerator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
@@ -371,6 +374,7 @@
             this.Load += new System.EventHandler(this.frmPocetnaModerator_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
@@ -385,7 +389,6 @@
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPocetnaAktivnosti)).EndInit();
-            this.tableLayoutPanel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

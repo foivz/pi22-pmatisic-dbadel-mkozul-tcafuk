@@ -15,6 +15,7 @@ namespace e_Dnevnik
     {
         private MainForm mainFrm;
         Dogadaji dogadaj;
+        int selected;
         public frmPocetnaModerator(MainForm mainForm)
         {
             this.mainFrm = mainForm;
@@ -31,8 +32,8 @@ namespace e_Dnevnik
 
             btnProvjereZnanja.Enabled = false;
             dgvPocetnaAktivnosti.DataSource = dogadaj.GetProvjereZnanja();
-            dgvPocetnaAktivnosti.AutoResizeColumns();
             btnPogledajDogadaj.Enabled = false;
+            selected = 1;
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -43,6 +44,7 @@ namespace e_Dnevnik
         private void frmPocetnaModerator_Load(object sender, EventArgs e)
         {
 
+            dgvPocetnaAktivnosti.AutoResizeColumns();
         }
 
         private void btnPocetnDnevnik_Click(object sender, EventArgs e)
@@ -64,6 +66,9 @@ namespace e_Dnevnik
             btnSlucajeviBolesnika.Enabled = true;
             dgvPocetnaAktivnosti.DataSource = dogadaj.GetProvjereZnanja();
 
+            dgvPocetnaAktivnosti.AutoResizeColumns();
+            selected = 1;
+
         }
 
         private void btnSlucajeviBolesnika_Click(object sender, EventArgs e)
@@ -73,6 +78,10 @@ namespace e_Dnevnik
             btnSlucajeviBolesnika.Enabled = false;
             dgvPocetnaAktivnosti.DataSource = dogadaj.GetSlucajeviBolesnika();
 
+
+            dgvPocetnaAktivnosti.AutoResizeColumns();
+            selected = 2;
+
         }
 
         private void btnDnevneAktivnosti_Click(object sender, EventArgs e)
@@ -81,6 +90,10 @@ namespace e_Dnevnik
             btnDnevneAktivnosti.Enabled = false;
             btnSlucajeviBolesnika.Enabled = true;
             dgvPocetnaAktivnosti.DataSource = dogadaj.GetDnevnikAktivnosti();
+
+
+            dgvPocetnaAktivnosti.AutoResizeColumns();
+            selected = 3;
         }
 
         private void dgvPocetnaAktivnosti_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -90,7 +103,22 @@ namespace e_Dnevnik
 
         private void btnPogledajDogadaj_Click(object sender, EventArgs e)
         {
-            mainFrm.ucitajFormu(new frmSlucajBolesnika((int)dgvPocetnaAktivnosti.CurrentRow.Cells[0].Value, mainFrm));
+            switch (selected)
+            {
+                case 1:
+                    mainFrm.ucitajFormu(new frmDogadaj_ProvjeraZnanja((int)dgvPocetnaAktivnosti.CurrentRow.Cells[0].Value, mainFrm));
+
+                    break;
+                case 2:
+                    mainFrm.ucitajFormu(new frmSlucajBolesnika((int)dgvPocetnaAktivnosti.CurrentRow.Cells[0].Value, mainFrm));
+                break;
+                case 3: break;
+            }
+        }
+
+        private void btnProvjereZnanjaBody_Click(object sender, EventArgs e)
+        {
+            mainFrm.ucitajFormu(new frmProvjeraZnanja(mainFrm));
         }
     }
 }

@@ -44,7 +44,8 @@ namespace e_Dnevnik
                                Dijagnoza = sb.dijagnoza,
                                Vrsta = sb.vrstaosobe,
                                Datum = sb.datumpregleda,
-                               Opis = sb.opisslucaja
+                               Opis = sb.opisslucaja,
+                               Status = d.statusdogadjaja
                            };
 
                 foreach (var s in upit)
@@ -54,6 +55,16 @@ namespace e_Dnevnik
                     tbOpis.Text = s.Opis;
                     tbDatum.Text = s.Datum.ToString();
                     tbDijagnoza.Text = s.Dijagnoza;
+
+                    if(s.Status != "")
+                    {
+                        tbDatumCom.Enabled = false;
+                        tbDijagnozaCom.Enabled = false;
+                        tbOpisCom.Enabled = false;
+                        tbDatumCom.Enabled = false;
+                        tbVrstaCom.Enabled = false;
+                        btnDetaljno.Enabled = false;
+                    }
                 }
 
                 
@@ -62,7 +73,7 @@ namespace e_Dnevnik
 
         private void button1_Click(object sender, EventArgs e)
         {
-            this.Close();
+            mainForm.ucitajFormu(new frmPocetnaModerator(mainForm));
         }
 
         private void btnDetaljno_Click(object sender, EventArgs e)

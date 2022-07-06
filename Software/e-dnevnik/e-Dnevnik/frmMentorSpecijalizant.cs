@@ -59,7 +59,7 @@ namespace e_Dnevnik
                            where u.idUloga == k.Uloga_idUloga
                            && k.Uloga_idUloga == 3
                            && ps.idProgramSpecijalizacije == k.ProgramSpecijalizacije_idProgramSpecijalizacije
-                           && k.ProgramSpecijalizacije_idProgramSpecijalizacije == 2
+                           && k.ProgramSpecijalizacije_idProgramSpecijalizacije == mainForm.programSpecijalizacije
                            select new
                            {
                                Ime = k.ime,
@@ -76,7 +76,7 @@ namespace e_Dnevnik
                            where u.idUloga == k.Uloga_idUloga
                            && k.Uloga_idUloga != 1
                            && ps.idProgramSpecijalizacije == k.ProgramSpecijalizacije_idProgramSpecijalizacije
-                           && k.ProgramSpecijalizacije_idProgramSpecijalizacije == 2
+                           && k.ProgramSpecijalizacije_idProgramSpecijalizacije == mainForm.programSpecijalizacije
                            select new
                            {
                                Ime = k.ime,
@@ -106,7 +106,7 @@ namespace e_Dnevnik
                            where u.idUloga == k.Uloga_idUloga
                            && k.Uloga_idUloga == kUloge
                            && ps.idProgramSpecijalizacije == k.ProgramSpecijalizacije_idProgramSpecijalizacije
-                           && k.ProgramSpecijalizacije_idProgramSpecijalizacije == 2
+                           && k.ProgramSpecijalizacije_idProgramSpecijalizacije == mainForm.programSpecijalizacije
                            select new
                            {
                                Ime = k.ime,

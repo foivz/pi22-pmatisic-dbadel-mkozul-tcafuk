@@ -68,6 +68,7 @@
             this.buttonPodnesi.TabIndex = 3;
             this.buttonPodnesi.Text = "Podnesi";
             this.buttonPodnesi.UseVisualStyleBackColor = true;
+            this.buttonPodnesi.Click += new System.EventHandler(this.buttonPodnesi_Click);
             // 
             // buttonNatrag
             // 
@@ -77,6 +78,7 @@
             this.buttonNatrag.TabIndex = 4;
             this.buttonNatrag.Text = "Natrag";
             this.buttonNatrag.UseVisualStyleBackColor = true;
+            this.buttonNatrag.Click += new System.EventHandler(this.buttonNatrag_Click);
             // 
             // frmZaboravljenaLozinka
             // 

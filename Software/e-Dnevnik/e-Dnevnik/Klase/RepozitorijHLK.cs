@@ -2,6 +2,9 @@
 using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Drawing;
+using System.Drawing.Imaging;
+using System.IO;
 using System.Linq;
 using System.Net;
 using System.Net.Mail;
@@ -31,15 +34,15 @@ namespace e_Dnevnik.Klase
             else
             {
                 UlogaKorisnika uloga = new UlogaKorisnika();
-                if (dataReader["NazivUlogeKorisnika"].ToString() == "Glavni mentor")
+                if (dataReader["nazivuloge"].ToString() == "Glavni mentor")
                 {
                     uloga = UlogaKorisnika.GlavniMentor;
                 }
-                if (dataReader["NazivUlogeKorisnika"].ToString() == "Mentor")
+                if (dataReader["nazivuloge"].ToString() == "Mentor")
                 {
                     uloga = UlogaKorisnika.Mentor;
                 }
-                if (dataReader["NazivUlogeKorisnika"].ToString() == "Specijalizant")
+                if (dataReader["nazivuloge"].ToString() == "Specijalizant")
                 {
                     uloga = UlogaKorisnika.Specijalizant;
                 }
@@ -110,6 +113,31 @@ namespace e_Dnevnik.Klase
             dataReader.Close();
             Database.Instance.Disconnect();
             return korisnici;
+        }
+
+        internal static Korisnik ProvjeriEmail(string email)
+        {
+            string sql = "SELECT * FROM Korisnik k " +
+                         "INNER JOIN Uloga u ON k.Uloga_idUloga = u.idUloga " +
+                        $"LEFT JOIN ProgramSpecijalizacije ps ON k.ProgramSpecijalizacije_idProgramSpecijalizacije = ps.idProgramSpecijalizacije WHERE email = '{email}';";
+
+            Korisnik korisnik = DohvatiPodatkeOdabranogKorisnika(sql);
+
+            return korisnik;
+        }
+
+        internal static int AzurirajKorisnika(string email, string lozinka)
+        {
+            Database.Instance.Connect();
+
+            string sql = $"UPDATE Korisnik SET lozinka = '{lozinka}' " +
+                $"WHERE email = '{email}';";
+
+            int numAffectedRows = Database.Instance.ExecuteCommand(sql);
+
+            Database.Instance.Disconnect();
+
+            return numAffectedRows;
         }
     }
 }

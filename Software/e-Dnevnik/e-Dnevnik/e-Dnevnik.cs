@@ -176,12 +176,22 @@ namespace e_Dnevnik
 
         private void btnProvjereZnanja_Click(object sender, EventArgs e)
         {
-
+            mainForm.ucitajFormu(new frmProvjeraZnanja(mainForm));
         }
 
         private void btnOdjava_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void btnIspisDnevnika_Click(object sender, EventArgs e)
+        {
+            mainForm.ucitajFormu(new frmDnevnik());
+        }
+
+        private void btnBiljeske_Click(object sender, EventArgs e)
+        {
+            mainForm.ucitajFormu(new frmBiljeske(mainForm));
         }
     }
 }

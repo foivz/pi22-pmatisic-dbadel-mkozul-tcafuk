@@ -36,7 +36,7 @@ namespace e_Dnevnik
 
         private void btnPocetnDnevnik_Click(object sender, EventArgs e)
         {
-            mainFrm.ucitajFormu(new frmDogadaji());
+            mainFrm.ucitajFormu(new frmDogadaji(mainFrm));
         }
 
         private void btnMentoriSpecijalizant_click(object sender, EventArgs e)

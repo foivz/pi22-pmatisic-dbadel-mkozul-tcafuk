@@ -23,7 +23,8 @@ namespace e_Dnevnik
 
             pboxResize.Image = Properties.Resources.window_decrease;
             sideBarWidth = panelSideBar.Width;
-            mainForm.uloga = MainForm.uloge.specijalizant;
+            mainForm.uloga = MainForm.uloge.mentor;
+            mainForm.programSpecijalizacije = 1;
             mainForm.panelBody = panelBody;
         }
 
@@ -141,7 +142,7 @@ namespace e_Dnevnik
 
         private void btnPregledDogadaja_Click(object sender, EventArgs e)
         {
-            mainForm.ucitajFormu(new frmDogadaji());
+            mainForm.ucitajFormu(new frmDogadaji(mainForm));
         }
 
         private void btnDnevnikAktivnosti_click(object sender, EventArgs e)

@@ -12,6 +12,9 @@ namespace e_Dnevnik
         public Form openForm { get; set; }
         public Panel panelBody { get; set; }
 
+        public int programSpecijalizacije { get; set; }
+
+
         public enum uloge
         {
             specijalizant,

@@ -157,7 +157,7 @@ namespace e_Dnevnik
         private void btnDetaljno_Click(object sender, EventArgs e)
         {
             
-            mainForm.ucitajFormu(new frmSlucajBolesnika((int)dgvDogađaji.CurrentRow.Cells[0].Value));
+            mainForm.ucitajFormu(new frmSlucajBolesnika((int)dgvDogađaji.CurrentRow.Cells[0].Value,mainForm));
         }
 
         private void dgvDogađaji_CellContentClick(object sender, DataGridViewCellEventArgs e)

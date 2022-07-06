@@ -2,48 +2,21 @@
 using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Drawing;
+using System.Drawing.Imaging;
+using System.IO;
 using System.Linq;
 using System.Net;
 using System.Net.Mail;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using e_Dnevnik.Klase;
 
 namespace e_Dnevnik.Klase
 {
     public static class RepozitorijHLK
     {
         public static Korisnik prijavljeniKorisnik;
-
-        /*internal static int AzurirajKorisnika(string email, string lozinka)
-        {
-            Database.Instance.Connect();
-
-            string sql = $"UPDATE Korisnik SET Lozinka = '{lozinka}' " +
-                $"WHERE EmailAdresaKorisnika = '{email}';";
-
-            int numAffectedRows = Database.Instance.ExecuteCommand(sql);
-
-            Database.Instance.Disconnect();
-
-            return numAffectedRows;
-        }
-
-        internal static int AzurirajKorisnika(int Id, Korisnik korisnik)
-        {
-            Database.Instance.Connect();
-
-            string sql = $"UPDATE Korisnik SET Ime = '{korisnik.ImeKorisnika}', Prezime = '{korisnik.PrezimeKorisnika}', AdresaKorisnika = '{korisnik.AdresaKorisnika}', KontaktTelefon = '{korisnik.KontaktTelefonKorisnika}', " +
-                $"EmailAdresaKorisnika = '{korisnik.EmailKorisnika}', OIBKorisnika = '{korisnik.OIBKorisnika}', KorisnickoIme = '{korisnik.KorisnickoImeKorisnika}', Lozinka = '{korisnik.LozinkaKorisnika}' " +
-                $"WHERE KorisnikId = {Id};";
-
-            int numAffectedRows = Database.Instance.ExecuteCommand(sql);
-
-            Database.Instance.Disconnect();
-
-            return numAffectedRows;
-        }*/
 
         private static Korisnik DohvatiPodatkeOdabranogKorisnika(string sql)
         {
@@ -61,15 +34,15 @@ namespace e_Dnevnik.Klase
             else
             {
                 UlogaKorisnika uloga = new UlogaKorisnika();
-                if (dataReader["NazivUlogeKorisnika"].ToString() == "Glavni mentor")
+                if (dataReader["nazivuloge"].ToString() == "Glavni mentor")
                 {
                     uloga = UlogaKorisnika.GlavniMentor;
                 }
-                if (dataReader["NazivUlogeKorisnika"].ToString() == "Mentor")
+                if (dataReader["nazivuloge"].ToString() == "Mentor")
                 {
                     uloga = UlogaKorisnika.Mentor;
                 }
-                if (dataReader["NazivUlogeKorisnika"].ToString() == "Specijalizant")
+                if (dataReader["nazivuloge"].ToString() == "Specijalizant")
                 {
                     uloga = UlogaKorisnika.Specijalizant;
                 }
@@ -77,7 +50,7 @@ namespace e_Dnevnik.Klase
                 {
                     KorisnikId = (int)dataReader["idKorisnik"],
                     UlogaKorisnika = uloga,
-                    ProgramSpecijalizacije = null, //hardkodirano
+                    ProgramSpecijalizacije = (int)dataReader["ProgramSpecijalizacije_idProgramSpecijalizacije"],
                     ImeKorisnika = dataReader["ime"].ToString(),
                     PrezimeKorisnika = dataReader["prezime"].ToString(),
                     EmailKorisnika = dataReader["email"].ToString(),
@@ -90,25 +63,11 @@ namespace e_Dnevnik.Klase
             }
         }
 
-        /*public static int DodajKorisnika(Korisnik korisnik)
-        {
-            Database.Instance.Connect();
-            string sqlNULL = "NULL";
-            string sql = "INSERT INTO Korisnik (IdUlogaKorisnika, AviokompanijaKorisnika, Ime, Prezime, AdresaKorisnika, KontaktTelefon, EmailAdresaKorisnika, OIBKorisnika, KorisnickoIme, Lozinka) " +
-                $"VALUES('{1}', {sqlNULL}, '{korisnik.ImeKorisnika}', '{korisnik.PrezimeKorisnika}', '{korisnik.AdresaKorisnika}', '{korisnik.KontaktTelefonKorisnika}', '{korisnik.EmailKorisnika}', '{korisnik.OIBKorisnika}', '{korisnik.KorisnickoImeKorisnika}', '{korisnik.LozinkaKorisnika}');";
-
-            int numAffectedRows = Database.Instance.ExecuteCommand(sql);
-
-            Database.Instance.Disconnect();
-
-            return numAffectedRows;
-        }*/
-
         public static List<Korisnik> DohvatiSveKorisnike()
         {
-            string sql = "SELECT * FROM Korisnik " +
-                "INNER JOIN nazivuloge ON Korisnik.Uloga_idUloga = Uloga.idUloga " +
-                "LEFT JOIN ProgramSpecijalizacije ON Korisnik.ProgramSpecijalizacije_idProgramSpecijalizacije = ProgramSpecijalizacije.idProgramSpecijalizacije;";
+            string sql = "SELECT * FROM Korisnik k " +
+                         "INNER JOIN Uloga u ON k.Uloga_idUloga = u.idUloga " +
+                         "LEFT JOIN ProgramSpecijalizacije ps ON k.ProgramSpecijalizacije_idProgramSpecijalizacije = ps.idProgramSpecijalizacije;";
 
             List<Korisnik> korisnik = DohvatiPodatkeKorisnika(sql);
 
@@ -125,119 +84,60 @@ namespace e_Dnevnik.Klase
             while (dataReader.Read())
             {
                 UlogaKorisnika uloga = new UlogaKorisnika();
-                if (dataReader["NazivUlogeKorisnika"].ToString() == "Glavni mentor")
+                if (dataReader["nazivuloge"].ToString() == "Glavni mentor")
                 {
                     uloga = UlogaKorisnika.GlavniMentor;
                 }
-                if (dataReader["NazivUlogeKorisnika"].ToString() == "Mentor")
+                if (dataReader["nazivuloge"].ToString() == "Mentor")
                 {
                     uloga = UlogaKorisnika.Mentor;
                 }
-                if (dataReader["NazivUlogeKorisnika"].ToString() == "Specijalizant")
+                if (dataReader["nazivuloge"].ToString() == "Specijalizant")
                 {
                     uloga = UlogaKorisnika.Specijalizant;
                 }
-                /*bool aviokompanijaNull = dataReader.IsDBNull(dataReader.GetOrdinal("AviokompanijaKorisnika"));
-                if (!aviokompanijaNull)
+                Korisnik korisnik = new Korisnik()
                 {
-                    Aviokompanija aviokompanija = new Aviokompanija()
-                    {
-                        AviokompanijaId = (int)dataReader["AviokompanijaId"],
-                        NazivAviokompanije = dataReader["NazivAviokompanije"].ToString(),
-                        OIBAviokompanije = dataReader["OIBAviokompanije"].ToString(),
-                        IBANAviokompanije = dataReader["IBANAviokompanije"].ToString(),
-                        AdresaAviokompanije = dataReader["AdresaAviokompanije"].ToString(),
-                        KontaktAviokompanije = dataReader["KontaktTelefonAviokompanije"].ToString(),
-                        EmailAviokompanije = dataReader["EmailAviokompanije"].ToString()
-                    };
-
-                    Korisnik korisnik = new Korisnik()
-                    {
-                        KorisnikId = (int)dataReader["KorisnikId"],
-                        UlogaKorisnika = uloga,
-                        Aviokompanija = aviokompanija,
-                        ImeKorisnika = dataReader["Ime"].ToString(),
-                        PrezimeKorisnika = dataReader["Prezime"].ToString(),
-                        AdresaKorisnika = dataReader["AdresaKorisnika"].ToString(),
-                        KontaktTelefonKorisnika = dataReader["KontaktTelefon"].ToString(),
-                        EmailKorisnika = dataReader["EmailAdresaKorisnika"].ToString(),
-                        OIBKorisnika = dataReader["OIBKorisnika"].ToString(),
-                        KorisnickoImeKorisnika = dataReader["KorisnickoIme"].ToString(),
-                        LozinkaKorisnika = dataReader["Lozinka"].ToString()
-
-                    };
-                    korisnici.Add(korisnik);
-                }*/
-                //else
-                //{
-                    Korisnik korisnik = new Korisnik()
-                    {
-                        KorisnikId = (int)dataReader["idKorisnik"],
-                        UlogaKorisnika = uloga,
-                        ProgramSpecijalizacije = null, //hardkodirano
-                        ImeKorisnika = dataReader["ime"].ToString(),
-                        PrezimeKorisnika = dataReader["prezime"].ToString(),
-                        EmailKorisnika = dataReader["email"].ToString(),
-                        KorisnickoImeKorisnika = dataReader["korime"].ToString(),
-                        LozinkaKorisnika = dataReader["lozinka"].ToString()
-                    };
-                    korisnici.Add(korisnik);
-                //}
+                    KorisnikId = (int)dataReader["idKorisnik"],
+                    UlogaKorisnika = uloga,
+                    ProgramSpecijalizacije = (int)dataReader["ProgramSpecijalizacije_idProgramSpecijalizacije"],
+                    ImeKorisnika = dataReader["ime"].ToString(),
+                    PrezimeKorisnika = dataReader["prezime"].ToString(),
+                    EmailKorisnika = dataReader["email"].ToString(),
+                    KorisnickoImeKorisnika = dataReader["korime"].ToString(),
+                    LozinkaKorisnika = dataReader["lozinka"].ToString()
+                };
+                korisnici.Add(korisnik);
             }
 
             dataReader.Close();
             Database.Instance.Disconnect();
-
             return korisnici;
         }
 
-        /*public static void ObrisiKorisnika(string id)
+        internal static Korisnik ProvjeriEmail(string email)
         {
-            string sql = "DELETE FROM Korisnik " +
-                $"WHERE KorisnikId = '{id}';";
-            Database.Instance.ExecuteCommand(sql);
-        }*/
+            string sql = "SELECT * FROM Korisnik k " +
+                         "INNER JOIN Uloga u ON k.Uloga_idUloga = u.idUloga " +
+                        $"LEFT JOIN ProgramSpecijalizacije ps ON k.ProgramSpecijalizacije_idProgramSpecijalizacije = ps.idProgramSpecijalizacije WHERE email = '{email}';";
 
-        /*public static int DodajUloguAdministratora(int id)
+            Korisnik korisnik = DohvatiPodatkeOdabranogKorisnika(sql);
+
+            return korisnik;
+        }
+
+        internal static int AzurirajKorisnika(string email, string lozinka)
         {
             Database.Instance.Connect();
 
-            string sql = "UPDATE Korisnik SET IdUlogaKorisnika = 3 " +
-                $"WHERE KorisnikId = '{id}';";
+            string sql = $"UPDATE Korisnik SET lozinka = '{lozinka}' " +
+                $"WHERE email = '{email}';";
 
             int numAffectedRows = Database.Instance.ExecuteCommand(sql);
 
             Database.Instance.Disconnect();
 
             return numAffectedRows;
-        }*/
-
-        /*public static int DodajUloguRegistriranogKorisnika(int id)
-        {
-            Database.Instance.Connect();
-            string sqlNULL = "NULL";
-            string sql = $"UPDATE Korisnik SET IdUlogaKorisnika = 1, AviokompanijaKorisnika = {sqlNULL} " +
-                $"WHERE KorisnikId = '{id}';";
-
-            int numAffectedRows = Database.Instance.ExecuteCommand(sql);
-
-            Database.Instance.Disconnect();
-
-            return numAffectedRows;
-        }*/
-
-        /*public static int DodajUloguModeratora(int id, Aviokompanija aviokompanija)
-        {
-            Database.Instance.Connect();
-
-            string sql = $"UPDATE Korisnik SET IdUlogaKorisnika = 2,  AviokompanijaKorisnika = '{aviokompanija.AviokompanijaId}'" +
-                $"WHERE KorisnikId = '{id}';";
-
-            int numAffectedRows = Database.Instance.ExecuteCommand(sql);
-
-            Database.Instance.Disconnect();
-
-            return numAffectedRows;
-        }*/
+        }
     }
 }

@@ -12,19 +12,19 @@ namespace e_Dnevnik
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
-    
+
     public partial class PI2205_DBEntities : DbContext
     {
         public PI2205_DBEntities()
             : base("name=PI2205_DBEntities")
         {
         }
-    
+
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             throw new UnintentionalCodeFirstException();
         }
-    
+
         public virtual DbSet<Biljeske> Biljeske { get; set; }
         public virtual DbSet<DnevnaAktivnost> DnevnaAktivnost { get; set; }
         public virtual DbSet<Dogadjaj> Dogadjaj { get; set; }

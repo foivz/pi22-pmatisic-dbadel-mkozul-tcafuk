@@ -22,7 +22,7 @@ namespace e_Dnevnik.Klase
         public string KorisnickoImeKorisnika { get; set; }
         public string LozinkaKorisnika { get; set; }
         public UlogaKorisnika UlogaKorisnika { get; set; }
-        public ProgramSpecijalizacije ProgramSpecijalizacije { get; set; }
+        public int ProgramSpecijalizacije { get; set; }
 
         public void PromijeniUlogu(UlogaKorisnika uloga)
         {

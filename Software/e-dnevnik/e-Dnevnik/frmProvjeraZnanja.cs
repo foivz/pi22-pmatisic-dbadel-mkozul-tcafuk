@@ -67,11 +67,6 @@ namespace e_Dnevnik
             tbProsjecnaOcjena.Text = Math.Round(Avg, 2).ToString();
         }
 
-        private void btnPrijaviIspit_Click(object sender, EventArgs e)
-        {
-            mainFrm.ucitajFormu(new frmPrijavaIspita(mainFrm));
-        }
-
         private void frmProvjeraZnanja_Load(object sender, EventArgs e)
         {
             Osvjezi();
@@ -123,18 +118,23 @@ namespace e_Dnevnik
 
         private void btnIzbrisi_Click(object sender, EventArgs e)
         {
-            //var izabraniDatum = dgvProvjereZnanja.CurrentRow.Cells["Datum_provjere"].Value.ToString();
-            //var izabranaPitanja = dgvProvjereZnanja.CurrentRow.Cells["Pitanja"].Value.ToString();
-
-            //var upitDogadaj = from p in entities.ProvjeraZnanja.Local
-            //                  where p.datumprovjere.ToString().Equals(izabraniDatum) && p.pitanja.Equals(izabranaPitanja)
-            //                  select p.Dogadjaj_idDogadjaj;
-            //var IdDog = upitDogadaj.First();
-            //MessageBox.Show(upitDogadaj.First().ToString());
             try
             {
                 var izabraniDatum = dgvProvjereZnanja.CurrentRow.Cells["Datum_provjere"].Value.ToString();
                 var izabranaPitanja = dgvProvjereZnanja.CurrentRow.Cells["Pitanja"].Value.ToString();
+
+                var upitDogadaj = from p in entities.ProvjeraZnanja.Local
+                                  where p.datumprovjere.ToString().Equals(izabraniDatum) && p.pitanja.Equals(izabranaPitanja)
+                                  select p.Dogadjaj_idDogadjaj;
+
+                var IdDog = upitDogadaj.First();
+
+                var updateDogadaj = entities.Dogadjaj.SingleOrDefault(x => x.idDogadjaj == IdDog);
+                if (updateDogadaj != null)
+                {
+                    updateDogadaj.statusdogadjaja = "Novi rok";
+                    entities.SaveChanges();
+                }
 
                 var upit = from p in entities.ProvjeraZnanja.Local
                            where p.datumprovjere.ToString() == izabraniDatum && p.pitanja == izabranaPitanja
@@ -145,21 +145,9 @@ namespace e_Dnevnik
                 if (deleteProvjera != null)
                 {
                     entities.ProvjeraZnanja.Remove(deleteProvjera);
-                    //entities.SaveChanges();
-                }
-
-                var upitDogadaj = from p in entities.ProvjeraZnanja.Local
-                                  where p.datumprovjere.ToString().Equals(izabraniDatum) && p.pitanja.Equals(izabranaPitanja)
-                                  select p.Dogadjaj_idDogadjaj;
-                var IdDog = upitDogadaj.First();
-
-                var updateDogadaj = entities.Dogadjaj.SingleOrDefault(x => x.idDogadjaj == IdDog);
-                if (updateDogadaj != null)
-                {
-                    updateDogadaj.statusdogadjaja = "Novi rok";
                     entities.SaveChanges();
                 }
-
+                
                 Osvjezi();
             }
             catch

@@ -14,8 +14,10 @@ namespace e_Dnevnik
     public partial class frmDodajProvjeruZnanja : Form
     {
         PI2205_DBEntities entities = new PI2205_DBEntities();
-        public frmDodajProvjeruZnanja(MainForm mainFrm)
+        private MainForm mainFrm;
+        public frmDodajProvjeruZnanja(MainForm mainForm)
         {
+            this.mainFrm = mainForm;
             InitializeComponent();
             entities.Korisnik.Load();
             entities.Dogadjaj.Load();
@@ -24,7 +26,8 @@ namespace e_Dnevnik
 
         private void btnOdustani_Click(object sender, EventArgs e)
         {
-            this.Close();
+            //this.Close();
+            mainFrm.ucitajFormu(new frmProvjeraZnanja(mainFrm));
         }
 
         private void btnDodaj_Click(object sender, EventArgs e)
@@ -78,7 +81,8 @@ namespace e_Dnevnik
                     entities.SaveChanges();
                 }
 
-                this.Close();
+                //this.Close();
+                mainFrm.ucitajFormu(new frmProvjeraZnanja(mainFrm));
             }
             catch
             {

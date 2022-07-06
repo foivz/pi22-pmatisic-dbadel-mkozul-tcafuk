@@ -78,6 +78,7 @@
             this.btnDodaj.TabIndex = 15;
             this.btnDodaj.Text = "Dodaj bilješku";
             this.btnDodaj.UseVisualStyleBackColor = false;
+            this.btnDodaj.Click += new System.EventHandler(this.btnDodaj_Click);
             // 
             // dgvBiljeske
             // 
@@ -109,6 +110,7 @@
             this.btnObrisi.TabIndex = 13;
             this.btnObrisi.Text = "Obriši bilješku";
             this.btnObrisi.UseVisualStyleBackColor = false;
+            this.btnObrisi.Click += new System.EventHandler(this.btnObrisi_Click);
             // 
             // frmBiljeske
             // 

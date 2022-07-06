@@ -20,6 +20,7 @@ namespace e_Dnevnik
             btnProvjereZnanja.Enabled = false;
             dgvDogađaji.DataSource = GetProvjereZnanja();
             btnDetaljno.Enabled = false;
+            dgvDogađaji.AutoResizeColumns();
         }
 
         private void frmDogadaji_Load(object sender, EventArgs e)
@@ -157,7 +158,7 @@ namespace e_Dnevnik
         private void btnDetaljno_Click(object sender, EventArgs e)
         {
             
-            //mainForm.ucitajFormu(new frmSlucajBolesnika((int)dgvDogađaji.CurrentRow.Cells[0].Value,mainForm));
+            mainForm.ucitajFormu(new frmSlucajBolesnika((int)dgvDogađaji.CurrentRow.Cells[0].Value,mainForm));
         }
 
         private void dgvDogađaji_CellContentClick(object sender, DataGridViewCellEventArgs e)

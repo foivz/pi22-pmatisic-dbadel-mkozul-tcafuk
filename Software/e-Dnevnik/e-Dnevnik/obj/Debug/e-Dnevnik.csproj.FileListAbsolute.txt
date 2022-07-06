@@ -86,3 +86,4 @@ C:\Users\Dorian\Desktop\PI-proj\pi22-pmatisic-dbadel-mkozul-tcafuk\Software\e-Dn
 C:\Users\Dorian\Desktop\PI-proj\pi22-pmatisic-dbadel-mkozul-tcafuk\Software\e-Dnevnik\e-Dnevnik\bin\Debug\EntityFramework.xml
 C:\Users\Dorian\Desktop\PI-proj\pi22-pmatisic-dbadel-mkozul-tcafuk\Software\e-Dnevnik\e-Dnevnik\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\Dorian\Desktop\PI-proj\pi22-pmatisic-dbadel-mkozul-tcafuk\Software\e-Dnevnik\e-Dnevnik\obj\Debug\e-Dnevnik.csproj.CopyComplete
+C:\Users\Dorian\Desktop\PI-proj\pi22-pmatisic-dbadel-mkozul-tcafuk\Software\e-Dnevnik\e-Dnevnik\obj\Debug\e_Dnevnik.frmSlucajBolesnika.resources

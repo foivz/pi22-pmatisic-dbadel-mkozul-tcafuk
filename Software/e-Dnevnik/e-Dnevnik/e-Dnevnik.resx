@@ -360,6 +360,39 @@
   <data name="&gt;&gt;pboxHamburger.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
+  <data name="btnProgramSpecijalizacije.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="btnProgramSpecijalizacije.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Mongolian Baiti, 13.875pt</value>
+  </data>
+  <data name="btnProgramSpecijalizacije.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btnProgramSpecijalizacije.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 247</value>
+  </data>
+  <data name="btnProgramSpecijalizacije.Size" type="System.Drawing.Size, System.Drawing">
+    <value>295, 142</value>
+  </data>
+  <data name="btnProgramSpecijalizacije.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="btnProgramSpecijalizacije.Text" xml:space="preserve">
+    <value>Pregled programa specijalizacije</value>
+  </data>
+  <data name="&gt;&gt;btnProgramSpecijalizacije.Name" xml:space="preserve">
+    <value>btnProgramSpecijalizacije</value>
+  </data>
+  <data name="&gt;&gt;btnProgramSpecijalizacije.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnProgramSpecijalizacije.Parent" xml:space="preserve">
+    <value>panelSideBar</value>
+  </data>
+  <data name="&gt;&gt;btnProgramSpecijalizacije.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <data name="btnIspisDnevnika.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
   </data>
@@ -370,7 +403,7 @@
     <value>NoControl</value>
   </data>
   <data name="btnIspisDnevnika.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 521</value>
+    <value>0, 429</value>
   </data>
   <data name="btnIspisDnevnika.Size" type="System.Drawing.Size, System.Drawing">
     <value>295, 58</value>
@@ -391,7 +424,7 @@
     <value>panelSideBar</value>
   </data>
   <data name="&gt;&gt;btnIspisDnevnika.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>1</value>
   </data>
   <data name="btnSpecijalizantiMentori.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
@@ -427,7 +460,7 @@
     <value>panelSideBar</value>
   </data>
   <data name="&gt;&gt;btnSpecijalizantiMentori.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="btnPregledDogadaja.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
@@ -463,7 +496,7 @@
     <value>panelSideBar</value>
   </data>
   <data name="&gt;&gt;btnPregledDogadaja.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
   <data name="btnStrucniRadovi.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
@@ -475,7 +508,7 @@
     <value>NoControl</value>
   </data>
   <data name="btnStrucniRadovi.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 345</value>
+    <value>-3, 247</value>
   </data>
   <data name="btnStrucniRadovi.Size" type="System.Drawing.Size, System.Drawing">
     <value>295, 92</value>
@@ -496,7 +529,7 @@
     <value>panelSideBar</value>
   </data>
   <data name="&gt;&gt;btnStrucniRadovi.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>4</value>
   </data>
   <data name="btnProvjereZnanja.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
@@ -508,7 +541,7 @@
     <value>NoControl</value>
   </data>
   <data name="btnProvjereZnanja.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 247</value>
+    <value>3, 384</value>
   </data>
   <data name="btnProvjereZnanja.Size" type="System.Drawing.Size, System.Drawing">
     <value>295, 92</value>
@@ -529,7 +562,7 @@
     <value>panelSideBar</value>
   </data>
   <data name="&gt;&gt;btnProvjereZnanja.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>5</value>
   </data>
   <data name="bntSlucajeviBolesnika.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
@@ -562,7 +595,7 @@
     <value>panelSideBar</value>
   </data>
   <data name="&gt;&gt;bntSlucajeviBolesnika.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>6</value>
   </data>
   <data name="btnDnevnikAktivnosti.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
@@ -598,7 +631,7 @@
     <value>panelSideBar</value>
   </data>
   <data name="&gt;&gt;btnDnevnikAktivnosti.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>7</value>
   </data>
   <data name="btnBiljeske.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
@@ -610,7 +643,7 @@
     <value>NoControl</value>
   </data>
   <data name="btnBiljeske.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 443</value>
+    <value>0, 345</value>
   </data>
   <data name="btnBiljeske.Size" type="System.Drawing.Size, System.Drawing">
     <value>295, 58</value>
@@ -631,7 +664,7 @@
     <value>panelSideBar</value>
   </data>
   <data name="&gt;&gt;btnBiljeske.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>8</value>
   </data>
   <data name="btnProfil.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Bottom, Left</value>
@@ -667,7 +700,7 @@
     <value>panelSideBar</value>
   </data>
   <data name="&gt;&gt;btnProfil.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>9</value>
   </data>
   <data name="btnOdjava.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Bottom, Left</value>
@@ -703,7 +736,7 @@
     <value>panelSideBar</value>
   </data>
   <data name="&gt;&gt;btnOdjava.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>10</value>
   </data>
   <data name="panelSideBar.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Left</value>
@@ -1766,6 +1799,9 @@
   </metadata>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
+  </metadata>
+  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>25</value>
   </metadata>
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
     <value>22, 42</value>

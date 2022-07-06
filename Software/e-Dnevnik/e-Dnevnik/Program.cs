@@ -11,12 +11,18 @@ namespace e_Dnevnik
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
+        //Validation flag
+        public static bool ValidLogin = false;
         [STAThread]
         static void Main()
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmEDnevnik());
+            Application.Run(new frmPrijava());
+            if (ValidLogin)
+            {
+                Application.Run(new frmEDnevnik());
+            }
         }
     }
 }

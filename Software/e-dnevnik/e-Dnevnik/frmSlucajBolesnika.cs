@@ -13,12 +13,14 @@ namespace e_Dnevnik
     public partial class frmSlucajBolesnika : Form
     {
         MainForm mainForm;
+        public int ID_slucaja;
         public frmSlucajBolesnika(int ID_slucaja, MainForm mainForm)
         {
             this.mainForm = mainForm;
+            this.ID_slucaja = ID_slucaja;
             InitializeComponent();
 
-            var query = getSlucaj(ID_slucaja);
+            var query = getSlucaj();
             
         }
 
@@ -26,14 +28,14 @@ namespace e_Dnevnik
         {
         }
 
-        private object getSlucaj(int ID)
+        private object getSlucaj()
         {
             using (var context = new PI2205_DBEntities())
             {
                 var upit = from sb in context.SlucajBolesnika
                            from d in context.Dogadjaj
                            from k in context.Korisnik
-                           where sb.idSlucajBolesnika == ID
+                           where sb.idSlucajBolesnika == ID_slucaja
                            && d.idDogadjaj == sb.Dogadjaj_idDogadjaj
                            && k.idKorisnik == d.Korisnik_idKorisnik
                            select new
@@ -67,7 +69,21 @@ namespace e_Dnevnik
 
         private void btnDetaljno_Click(object sender, EventArgs e)
         {
-            mainForm.ucitajFormu(new frmDogadaji(mainForm));
+            using (var context = new PI2205_DBEntities())
+            {
+
+                /*ProvjeraZnanja provjera = new ProvjeraZnanja
+                {
+                    datumprovjere = datum,
+                    pitanja = pitanja,
+                    ocjena = ocjena,
+                    Dogadjaj_idDogadjaj = IdDogadaja
+                };
+
+                entities.ProvjeraZnanja.Add(provjera);
+                entities.SaveChanges();
+                mainForm.ucitajFormu(new frmDogadaji(mainForm));*/
+            }
         }
     }
 

@@ -75,6 +75,7 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.timerZatvoriMeni = new System.Windows.Forms.Timer(this.components);
+            this.btnPrijaviIspit = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnHome)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pboxResize)).BeginInit();
@@ -161,6 +162,7 @@
             // panelSideBar
             // 
             this.panelSideBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(37)))), ((int)(((byte)(44)))));
+            this.panelSideBar.Controls.Add(this.btnPrijaviIspit);
             this.panelSideBar.Controls.Add(this.btnProgramSpecijalizacije);
             this.panelSideBar.Controls.Add(this.btnIspisDnevnika);
             this.panelSideBar.Controls.Add(this.btnSpecijalizantiMentori);
@@ -465,6 +467,15 @@
             this.timerZatvoriMeni.Interval = 10;
             this.timerZatvoriMeni.Tick += new System.EventHandler(this.timerZatvoriMeni_Tick);
             // 
+            // btnPrijaviIspit
+            // 
+            this.btnPrijaviIspit.FlatAppearance.BorderSize = 0;
+            resources.ApplyResources(this.btnPrijaviIspit, "btnPrijaviIspit");
+            this.btnPrijaviIspit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(53)))), ((int)(((byte)(53)))));
+            this.btnPrijaviIspit.Name = "btnPrijaviIspit";
+            this.btnPrijaviIspit.UseVisualStyleBackColor = true;
+            this.btnPrijaviIspit.Click += new System.EventHandler(this.btnPrijaviIspit_Click);
+            // 
             // frmEDnevnik
             // 
             resources.ApplyResources(this, "$this");
@@ -563,6 +574,7 @@
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Button btnIspisDnevnika;
         private System.Windows.Forms.Button btnProgramSpecijalizacije;
+        private System.Windows.Forms.Button btnPrijaviIspit;
     }
 }
 

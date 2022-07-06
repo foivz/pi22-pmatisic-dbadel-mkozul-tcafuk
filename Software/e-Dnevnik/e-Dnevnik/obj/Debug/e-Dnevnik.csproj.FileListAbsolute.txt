@@ -43,3 +43,4 @@ C:\Users\Mihael\Desktop\pi22-pmatisic-dbadel-mkozul-tcafuk\Software\e-dnevnik\e-
 C:\Users\Mihael\Desktop\pi22-pmatisic-dbadel-mkozul-tcafuk\Software\e-dnevnik\e-Dnevnik\obj\Debug\e_Dnevnik.frmDodajBiljesku.resources
 C:\Users\Mihael\Desktop\pi22-pmatisic-dbadel-mkozul-tcafuk\Software\e-dnevnik\e-Dnevnik\obj\Debug\e_Dnevnik.frmPrijavaIspita.resources
 C:\Users\Mihael\Desktop\pi22-pmatisic-dbadel-mkozul-tcafuk\Software\e-dnevnik\e-Dnevnik\obj\Debug\e_Dnevnik.frmProvjeraZnanja.resources
+C:\Users\Mihael\Desktop\pi22-pmatisic-dbadel-mkozul-tcafuk\Software\e-dnevnik\e-Dnevnik\obj\Debug\e_Dnevnik.frmDodajProvjeruZnanja.resources

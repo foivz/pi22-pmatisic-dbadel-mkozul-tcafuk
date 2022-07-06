@@ -110,6 +110,12 @@
     <Compile Include="frmDodajBiljesku.Designer.cs">
       <DependentUpon>frmDodajBiljesku.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmDodajProvjeruZnanja.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDodajProvjeruZnanja.Designer.cs">
+      <DependentUpon>frmDodajProvjeruZnanja.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmDogadaji.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -143,6 +149,7 @@
     <Compile Include="Korisnik.cs">
       <DependentUpon>EDnevnikModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="KorisnikExt.cs" />
     <Compile Include="MainForm.cs" />
     <Compile Include="PrijavaIspita.cs">
       <DependentUpon>EDnevnikModel.tt</DependentUpon>
@@ -184,6 +191,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmDodajBiljesku.resx">
       <DependentUpon>frmDodajBiljesku.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDodajProvjeruZnanja.resx">
+      <DependentUpon>frmDodajProvjeruZnanja.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmDogadaji.resx">
       <DependentUpon>frmDogadaji.cs</DependentUpon>

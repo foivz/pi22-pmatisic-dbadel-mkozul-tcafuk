@@ -27,14 +27,25 @@ namespace e_Dnevnik
             entities.Biljeske.Load();
             entities.Korisnik.Load();
 
-            dgvBiljeske.DataSource = entities.Biljeske.Local;
-            dgvBiljeske.Columns["idBiljeske"].ReadOnly = true;
-            //dgvBiljeske.Columns["idBiljeske"].HeaderText = "ID bilješke";
-            dgvBiljeske.Columns["idBiljeske"].Visible = false;
-            dgvBiljeske.Columns["datumbiljeske"].HeaderText = "Datum bilješke";
-            dgvBiljeske.Columns["biljeska"].HeaderText = "Bilješka";
-            dgvBiljeske.Columns["Korisnik_idKorisnik"].Visible = false;
-            dgvBiljeske.Columns["Korisnik"].HeaderText = "ID i ime korisnika";
+            var upit = from b in entities.Biljeske.Local
+                       join k in entities.Korisnik.Local on b.Korisnik_idKorisnik equals k.idKorisnik
+                       where b.Korisnik_idKorisnik == 2
+                       select new
+                       {
+                           Datum_biljeske = b.datumbiljeske,
+                           Biljeska = b.biljeska,
+                           ID_i_ime_korisnika = b.Korisnik_idKorisnik + " " + k.PunoIme
+                       };
+            dgvBiljeske.DataSource = upit.ToList();
+
+            //dgvBiljeske.DataSource = entities.Biljeske.Local;
+            //dgvBiljeske.Columns["idBiljeske"].ReadOnly = true;
+            ////dgvBiljeske.Columns["idBiljeske"].HeaderText = "ID bilješke";
+            //dgvBiljeske.Columns["idBiljeske"].Visible = false;
+            //dgvBiljeske.Columns["datumbiljeske"].HeaderText = "Datum bilješke";
+            //dgvBiljeske.Columns["biljeska"].HeaderText = "Bilješka";
+            //dgvBiljeske.Columns["Korisnik_idKorisnik"].Visible = false;
+            //dgvBiljeske.Columns["Korisnik"].HeaderText = "ID i ime korisnika";
             dgvBiljeske.AutoResizeColumns();
         }
 

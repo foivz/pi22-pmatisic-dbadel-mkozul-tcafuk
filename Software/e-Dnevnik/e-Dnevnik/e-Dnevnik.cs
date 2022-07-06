@@ -107,10 +107,12 @@ namespace e_Dnevnik
                 btnStrucniRadovi.Visible = true;
                 bntSlucajeviBolesnika.Visible = true;
                 btnIspisDnevnika.Visible = true;
+                btnPrijaviIspit.Visible = true;
                 btnPregledDogadaja.Visible = false;
                 btnSpecijalizantiMentori.Visible = false;
                 btnProgramSpecijalizacije.Visible = false;
                 btnProvjereZnanja.Visible = false;
+                
             }
             else
             {
@@ -122,6 +124,7 @@ namespace e_Dnevnik
                 btnStrucniRadovi.Visible = false;
                 bntSlucajeviBolesnika.Visible = false;
                 btnIspisDnevnika.Visible = false;
+                btnPrijaviIspit.Visible = false;
                 btnPregledDogadaja.Visible = true;
                 btnSpecijalizantiMentori.Visible = true;
                 btnProgramSpecijalizacije.Visible = true;
@@ -176,12 +179,27 @@ namespace e_Dnevnik
 
         private void btnProvjereZnanja_Click(object sender, EventArgs e)
         {
-
+            mainForm.ucitajFormu(new frmProvjeraZnanja(mainForm));
         }
 
         private void btnOdjava_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void btnIspisDnevnika_Click_1(object sender, EventArgs e)
+        {
+            mainForm.ucitajFormu(new frmDnevnik());
+        }
+
+        private void btnBiljeske_Click_1(object sender, EventArgs e)
+        {
+            mainForm.ucitajFormu(new frmBiljeske(mainForm));
+        }
+
+        private void btnPrijaviIspit_Click(object sender, EventArgs e)
+        {
+            mainForm.ucitajFormu(new frmPrijavaIspita());
         }
     }
 }

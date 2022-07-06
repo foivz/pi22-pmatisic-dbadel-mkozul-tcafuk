@@ -12,7 +12,7 @@ namespace e_Dnevnik
 {
     public partial class frmPrijavaIspita : Form
     {
-        public frmPrijavaIspita(MainForm mainFrm)
+        public frmPrijavaIspita()
         {
             InitializeComponent();
         }

@@ -378,6 +378,42 @@
   <data name="&gt;&gt;pboxHamburger.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
+  <data name="btnPrijaviIspit.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="btnPrijaviIspit.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Mongolian Baiti, 13.875pt</value>
+  </data>
+  <data name="btnPrijaviIspit.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btnPrijaviIspit.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 294</value>
+  </data>
+  <data name="btnPrijaviIspit.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 2, 2, 2</value>
+  </data>
+  <data name="btnPrijaviIspit.Size" type="System.Drawing.Size, System.Drawing">
+    <value>148, 33</value>
+  </data>
+  <data name="btnPrijaviIspit.TabIndex" type="System.Int32, mscorlib">
+    <value>13</value>
+  </data>
+  <data name="btnPrijaviIspit.Text" xml:space="preserve">
+    <value>Prijavi ispit</value>
+  </data>
+  <data name="&gt;&gt;btnPrijaviIspit.Name" xml:space="preserve">
+    <value>btnPrijaviIspit</value>
+  </data>
+  <data name="&gt;&gt;btnPrijaviIspit.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnPrijaviIspit.Parent" xml:space="preserve">
+    <value>panelSideBar</value>
+  </data>
+  <data name="&gt;&gt;btnPrijaviIspit.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <data name="btnProgramSpecijalizacije.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
   </data>
@@ -412,7 +448,7 @@
     <value>panelSideBar</value>
   </data>
   <data name="&gt;&gt;btnProgramSpecijalizacije.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>1</value>
   </data>
   <data name="btnIspisDnevnika.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
@@ -448,7 +484,7 @@
     <value>panelSideBar</value>
   </data>
   <data name="&gt;&gt;btnIspisDnevnika.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="btnSpecijalizantiMentori.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
@@ -487,7 +523,7 @@
     <value>panelSideBar</value>
   </data>
   <data name="&gt;&gt;btnSpecijalizantiMentori.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
   <data name="btnPregledDogadaja.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
@@ -526,7 +562,7 @@
     <value>panelSideBar</value>
   </data>
   <data name="&gt;&gt;btnPregledDogadaja.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>4</value>
   </data>
   <data name="btnStrucniRadovi.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
@@ -562,7 +598,7 @@
     <value>panelSideBar</value>
   </data>
   <data name="&gt;&gt;btnStrucniRadovi.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>5</value>
   </data>
   <data name="btnProvjereZnanja.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
@@ -598,7 +634,7 @@
     <value>panelSideBar</value>
   </data>
   <data name="&gt;&gt;btnProvjereZnanja.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>6</value>
   </data>
   <data name="bntSlucajeviBolesnika.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
@@ -634,7 +670,7 @@
     <value>panelSideBar</value>
   </data>
   <data name="&gt;&gt;bntSlucajeviBolesnika.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>7</value>
   </data>
   <data name="btnDnevnikAktivnosti.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
@@ -673,7 +709,7 @@
     <value>panelSideBar</value>
   </data>
   <data name="&gt;&gt;btnDnevnikAktivnosti.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>8</value>
   </data>
   <data name="btnBiljeske.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
@@ -709,7 +745,7 @@
     <value>panelSideBar</value>
   </data>
   <data name="&gt;&gt;btnBiljeske.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>9</value>
   </data>
   <data name="btnProfil.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Bottom, Left</value>
@@ -748,7 +784,7 @@
     <value>panelSideBar</value>
   </data>
   <data name="&gt;&gt;btnProfil.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>10</value>
   </data>
   <data name="btnOdjava.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Bottom, Left</value>
@@ -787,7 +823,7 @@
     <value>panelSideBar</value>
   </data>
   <data name="&gt;&gt;btnOdjava.ZOrder" xml:space="preserve">
-    <value>10</value>
+    <value>11</value>
   </data>
   <data name="panelSideBar.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Left</value>

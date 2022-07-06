@@ -64,9 +64,11 @@
     <Compile Include="DnevnaAktivnost.cs">
       <DependentUpon>EDnevnikModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Dogadaji.cs" />
     <Compile Include="Dogadjaj.cs">
       <DependentUpon>EDnevnikModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="DogadjajExt.cs" />
     <Compile Include="e-Dnevnik.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -88,11 +90,35 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>EDnevnikModel.edmx</DependentUpon>
     </Compile>
+    <Compile Include="frmBiljeske.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBiljeske.Designer.cs">
+      <DependentUpon>frmBiljeske.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDnevnik.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDnevnik.Designer.cs">
+      <DependentUpon>frmDnevnik.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmDnevnikAktivnosti.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmDnevnikAktivnosti.Designer.cs">
       <DependentUpon>frmDnevnikAktivnosti.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDodajBiljesku.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDodajBiljesku.Designer.cs">
+      <DependentUpon>frmDodajBiljesku.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDodajProvjeruZnanja.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDodajProvjeruZnanja.Designer.cs">
+      <DependentUpon>frmDodajProvjeruZnanja.cs</DependentUpon>
     </Compile>
     <Compile Include="frmDogadaji.cs">
       <SubType>Form</SubType>
@@ -118,6 +144,24 @@
     <Compile Include="frmPrijava.Designer.cs">
       <DependentUpon>frmPrijava.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmPrijavaIspita.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPrijavaIspita.Designer.cs">
+      <DependentUpon>frmPrijavaIspita.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmProvjeraZnanja.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmProvjeraZnanja.Designer.cs">
+      <DependentUpon>frmProvjeraZnanja.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSlucajBolesnika.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSlucajBolesnika.Designer.cs">
+      <DependentUpon>frmSlucajBolesnika.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmZaboravljenaLozinka.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -129,6 +173,7 @@
     <Compile Include="Korisnik.cs">
       <DependentUpon>EDnevnikModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="KorisnikExt.cs" />
     <Compile Include="MainForm.cs" />
     <Compile Include="PrijavaIspita.cs">
       <DependentUpon>EDnevnikModel.tt</DependentUpon>
@@ -159,8 +204,20 @@
     <EmbeddedResource Include="e-Dnevnik.resx">
       <DependentUpon>e-Dnevnik.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmBiljeske.resx">
+      <DependentUpon>frmBiljeske.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDnevnik.resx">
+      <DependentUpon>frmDnevnik.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmDnevnikAktivnosti.resx">
       <DependentUpon>frmDnevnikAktivnosti.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDodajBiljesku.resx">
+      <DependentUpon>frmDodajBiljesku.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDodajProvjeruZnanja.resx">
+      <DependentUpon>frmDodajProvjeruZnanja.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmDogadaji.resx">
       <DependentUpon>frmDogadaji.cs</DependentUpon>
@@ -173,6 +230,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmPrijava.resx">
       <DependentUpon>frmPrijava.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPrijavaIspita.resx">
+      <DependentUpon>frmPrijavaIspita.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmProvjeraZnanja.resx">
+      <DependentUpon>frmProvjeraZnanja.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSlucajBolesnika.resx">
+      <DependentUpon>frmSlucajBolesnika.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmZaboravljenaLozinka.resx">
       <DependentUpon>frmZaboravljenaLozinka.cs</DependentUpon>

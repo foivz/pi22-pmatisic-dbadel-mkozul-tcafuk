@@ -37,6 +37,7 @@
             this.btnZatvori = new System.Windows.Forms.Button();
             this.pboxHamburger = new System.Windows.Forms.PictureBox();
             this.panelSideBar = new System.Windows.Forms.Panel();
+            this.btnProgramSpecijalizacije = new System.Windows.Forms.Button();
             this.btnIspisDnevnika = new System.Windows.Forms.Button();
             this.btnSpecijalizantiMentori = new System.Windows.Forms.Button();
             this.btnPregledDogadaja = new System.Windows.Forms.Button();
@@ -74,7 +75,6 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.timerZatvoriMeni = new System.Windows.Forms.Timer(this.components);
-            this.btnProgramSpecijalizacije = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnHome)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pboxResize)).BeginInit();
@@ -175,6 +175,14 @@
             resources.ApplyResources(this.panelSideBar, "panelSideBar");
             this.panelSideBar.Name = "panelSideBar";
             // 
+            // btnProgramSpecijalizacije
+            // 
+            this.btnProgramSpecijalizacije.FlatAppearance.BorderSize = 0;
+            resources.ApplyResources(this.btnProgramSpecijalizacije, "btnProgramSpecijalizacije");
+            this.btnProgramSpecijalizacije.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(53)))), ((int)(((byte)(53)))));
+            this.btnProgramSpecijalizacije.Name = "btnProgramSpecijalizacije";
+            this.btnProgramSpecijalizacije.UseVisualStyleBackColor = true;
+            // 
             // btnIspisDnevnika
             // 
             this.btnIspisDnevnika.FlatAppearance.BorderSize = 0;
@@ -182,6 +190,7 @@
             this.btnIspisDnevnika.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(53)))), ((int)(((byte)(53)))));
             this.btnIspisDnevnika.Name = "btnIspisDnevnika";
             this.btnIspisDnevnika.UseVisualStyleBackColor = true;
+            this.btnIspisDnevnika.Click += new System.EventHandler(this.btnIspisDnevnika_Click_1);
             // 
             // btnSpecijalizantiMentori
             // 
@@ -242,6 +251,7 @@
             this.btnBiljeske.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(53)))), ((int)(((byte)(53)))));
             this.btnBiljeske.Name = "btnBiljeske";
             this.btnBiljeske.UseVisualStyleBackColor = true;
+            this.btnBiljeske.Click += new System.EventHandler(this.btnBiljeske_Click_1);
             // 
             // btnProfil
             // 
@@ -454,14 +464,6 @@
             // 
             this.timerZatvoriMeni.Interval = 10;
             this.timerZatvoriMeni.Tick += new System.EventHandler(this.timerZatvoriMeni_Tick);
-            // 
-            // btnProgramSpecijalizacije
-            // 
-            this.btnProgramSpecijalizacije.FlatAppearance.BorderSize = 0;
-            resources.ApplyResources(this.btnProgramSpecijalizacije, "btnProgramSpecijalizacije");
-            this.btnProgramSpecijalizacije.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(53)))), ((int)(((byte)(53)))));
-            this.btnProgramSpecijalizacije.Name = "btnProgramSpecijalizacije";
-            this.btnProgramSpecijalizacije.UseVisualStyleBackColor = true;
             // 
             // frmEDnevnik
             // 

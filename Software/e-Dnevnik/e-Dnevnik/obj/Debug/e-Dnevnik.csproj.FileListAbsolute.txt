@@ -87,3 +87,14 @@ C:\Users\Dorian\Desktop\PI-proj\pi22-pmatisic-dbadel-mkozul-tcafuk\Software\e-Dn
 C:\Users\Dorian\Desktop\PI-proj\pi22-pmatisic-dbadel-mkozul-tcafuk\Software\e-Dnevnik\e-Dnevnik\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\Dorian\Desktop\PI-proj\pi22-pmatisic-dbadel-mkozul-tcafuk\Software\e-Dnevnik\e-Dnevnik\obj\Debug\e-Dnevnik.csproj.CopyComplete
 C:\Users\Dorian\Desktop\PI-proj\pi22-pmatisic-dbadel-mkozul-tcafuk\Software\e-Dnevnik\e-Dnevnik\obj\Debug\e_Dnevnik.frmSlucajBolesnika.resources
+C:\Users\Mihael\Desktop\pi22-pmatisic-dbadel-mkozul-tcafuk\Software\e-dnevnik\e-Dnevnik\obj\Debug\e_Dnevnik.frmPrijava.resources
+C:\Users\Mihael\Desktop\pi22-pmatisic-dbadel-mkozul-tcafuk\Software\e-dnevnik\e-Dnevnik\obj\Debug\e_Dnevnik.frmSlucajBolesnika.resources
+C:\Users\Mihael\Desktop\pi22-pmatisic-dbadel-mkozul-tcafuk\Software\e-dnevnik\e-Dnevnik\obj\Debug\e_Dnevnik.frmZaboravljenaLozinka.resources
+C:\Users\Mihael\Desktop\pi22-pmatisic-dbadel-mkozul-tcafuk\Software\e-dnevnik\e-Dnevnik\bin\Debug\Database Access.dll
+C:\Users\Mihael\Desktop\pi22-pmatisic-dbadel-mkozul-tcafuk\Software\e-dnevnik\e-Dnevnik\bin\Debug\Database Access.pdb
+C:\Users\Mihael\Desktop\pi22-pmatisic-dbadel-mkozul-tcafuk\Software\e-dnevnik\e-Dnevnik\obj\Debug\e_Dnevnik.frmBiljeske.resources
+C:\Users\Mihael\Desktop\pi22-pmatisic-dbadel-mkozul-tcafuk\Software\e-dnevnik\e-Dnevnik\obj\Debug\e_Dnevnik.frmDnevnik.resources
+C:\Users\Mihael\Desktop\pi22-pmatisic-dbadel-mkozul-tcafuk\Software\e-dnevnik\e-Dnevnik\obj\Debug\e_Dnevnik.frmDodajBiljesku.resources
+C:\Users\Mihael\Desktop\pi22-pmatisic-dbadel-mkozul-tcafuk\Software\e-dnevnik\e-Dnevnik\obj\Debug\e_Dnevnik.frmDodajProvjeruZnanja.resources
+C:\Users\Mihael\Desktop\pi22-pmatisic-dbadel-mkozul-tcafuk\Software\e-dnevnik\e-Dnevnik\obj\Debug\e_Dnevnik.frmPrijavaIspita.resources
+C:\Users\Mihael\Desktop\pi22-pmatisic-dbadel-mkozul-tcafuk\Software\e-dnevnik\e-Dnevnik\obj\Debug\e_Dnevnik.frmProvjeraZnanja.resources

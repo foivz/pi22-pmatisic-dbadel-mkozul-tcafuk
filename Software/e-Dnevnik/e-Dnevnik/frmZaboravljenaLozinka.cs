@@ -86,15 +86,5 @@ namespace e_Dnevnik
         {
             this.Close();
         }
-
-        //private void FormZaboravljenaLozinka_KeyDown(object sender, KeyEventArgs e)
-        //{
-        //    if (e.KeyCode == Keys.F1)
-        //    {
-        //        Controler controler = new Controler();
-
-        //        controler.OtvoriUserHelp(this, "ZaboravljenaLozinka.htm");
-        //    }
-        //}
     }
 }

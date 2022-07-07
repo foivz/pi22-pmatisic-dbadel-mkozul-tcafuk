@@ -53,9 +53,12 @@ namespace e_Dnevnik.Klase
                     ProgramSpecijalizacije = (int)dataReader["ProgramSpecijalizacije_idProgramSpecijalizacije"],
                     ImeKorisnika = dataReader["ime"].ToString(),
                     PrezimeKorisnika = dataReader["prezime"].ToString(),
+                    AdresaKorisnika = dataReader["adresa"].ToString(),
+                    KontaktTelefonKorisnika = dataReader["telefon"].ToString(),
                     EmailKorisnika = dataReader["email"].ToString(),
                     KorisnickoImeKorisnika = dataReader["korime"].ToString(),
                     LozinkaKorisnika = dataReader["lozinka"].ToString()
+                    //slika ne treba
                 };
                 dataReader.Close();
                 Database.Instance.Disconnect();
@@ -132,6 +135,21 @@ namespace e_Dnevnik.Klase
 
             string sql = $"UPDATE Korisnik SET lozinka = '{lozinka}' " +
                 $"WHERE email = '{email}';";
+
+            int numAffectedRows = Database.Instance.ExecuteCommand(sql);
+
+            Database.Instance.Disconnect();
+
+            return numAffectedRows;
+        }
+
+        internal static int AzurirajKorisnika(int Id, Korisnik korisnik)
+        {
+            Database.Instance.Connect();
+
+            string sql = $"UPDATE Korisnik SET ime = '{korisnik.ImeKorisnika}', prezime = '{korisnik.PrezimeKorisnika}', adresa = '{korisnik.AdresaKorisnika}', telefon = '{korisnik.KontaktTelefonKorisnika}', " +
+                $"email = '{korisnik.EmailKorisnika}', korime = '{korisnik.KorisnickoImeKorisnika}' " +
+                $"WHERE idKorisnik = {Id};";
 
             int numAffectedRows = Database.Instance.ExecuteCommand(sql);
 

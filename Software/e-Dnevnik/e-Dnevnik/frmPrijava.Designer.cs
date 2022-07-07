@@ -42,17 +42,20 @@
             // 
             // labelPrijava
             // 
+            this.labelPrijava.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.labelPrijava.AutoSize = true;
-            this.labelPrijava.Location = new System.Drawing.Point(351, 92);
+            this.labelPrijava.Font = new System.Drawing.Font("Mongolian Baiti", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelPrijava.Location = new System.Drawing.Point(349, 73);
             this.labelPrijava.Name = "labelPrijava";
-            this.labelPrijava.Size = new System.Drawing.Size(39, 13);
+            this.labelPrijava.Size = new System.Drawing.Size(98, 29);
             this.labelPrijava.TabIndex = 0;
             this.labelPrijava.Text = "Prijava";
             // 
             // labelKorime
             // 
+            this.labelKorime.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.labelKorime.AutoSize = true;
-            this.labelKorime.Location = new System.Drawing.Point(199, 139);
+            this.labelKorime.Location = new System.Drawing.Point(230, 151);
             this.labelKorime.Name = "labelKorime";
             this.labelKorime.Size = new System.Drawing.Size(78, 13);
             this.labelKorime.TabIndex = 1;
@@ -60,8 +63,9 @@
             // 
             // labelLozinka
             // 
+            this.labelLozinka.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.labelLozinka.AutoSize = true;
-            this.labelLozinka.Location = new System.Drawing.Point(199, 171);
+            this.labelLozinka.Location = new System.Drawing.Point(230, 183);
             this.labelLozinka.Name = "labelLozinka";
             this.labelLozinka.Size = new System.Drawing.Size(47, 13);
             this.labelLozinka.TabIndex = 2;
@@ -69,8 +73,9 @@
             // 
             // linkLabelZabLozinka
             // 
+            this.linkLabelZabLozinka.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.linkLabelZabLozinka.AutoSize = true;
-            this.linkLabelZabLozinka.Location = new System.Drawing.Point(318, 223);
+            this.linkLabelZabLozinka.Location = new System.Drawing.Point(349, 235);
             this.linkLabelZabLozinka.Name = "linkLabelZabLozinka";
             this.linkLabelZabLozinka.Size = new System.Drawing.Size(111, 13);
             this.linkLabelZabLozinka.TabIndex = 3;
@@ -80,21 +85,24 @@
             // 
             // textBoxKorime
             // 
-            this.textBoxKorime.Location = new System.Drawing.Point(323, 136);
+            this.textBoxKorime.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.textBoxKorime.Location = new System.Drawing.Point(354, 148);
             this.textBoxKorime.Name = "textBoxKorime";
             this.textBoxKorime.Size = new System.Drawing.Size(100, 20);
             this.textBoxKorime.TabIndex = 4;
             // 
             // textBoxLozinka
             // 
-            this.textBoxLozinka.Location = new System.Drawing.Point(323, 168);
+            this.textBoxLozinka.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.textBoxLozinka.Location = new System.Drawing.Point(354, 180);
             this.textBoxLozinka.Name = "textBoxLozinka";
             this.textBoxLozinka.Size = new System.Drawing.Size(100, 20);
             this.textBoxLozinka.TabIndex = 5;
             // 
             // buttonPrijaviSe
             // 
-            this.buttonPrijaviSe.Location = new System.Drawing.Point(237, 260);
+            this.buttonPrijaviSe.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.buttonPrijaviSe.Location = new System.Drawing.Point(268, 272);
             this.buttonPrijaviSe.Name = "buttonPrijaviSe";
             this.buttonPrijaviSe.Size = new System.Drawing.Size(75, 23);
             this.buttonPrijaviSe.TabIndex = 6;
@@ -104,7 +112,8 @@
             // 
             // buttonNatrag
             // 
-            this.buttonNatrag.Location = new System.Drawing.Point(435, 260);
+            this.buttonNatrag.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.buttonNatrag.Location = new System.Drawing.Point(466, 272);
             this.buttonNatrag.Name = "buttonNatrag";
             this.buttonNatrag.Size = new System.Drawing.Size(75, 23);
             this.buttonNatrag.TabIndex = 7;
@@ -114,10 +123,11 @@
             // 
             // buttonSakrij
             // 
+            this.buttonSakrij.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.buttonSakrij.Image = ((System.Drawing.Image)(resources.GetObject("buttonSakrij.Image")));
-            this.buttonSakrij.Location = new System.Drawing.Point(430, 168);
+            this.buttonSakrij.Location = new System.Drawing.Point(460, 180);
             this.buttonSakrij.Name = "buttonSakrij";
-            this.buttonSakrij.Size = new System.Drawing.Size(20, 20);
+            this.buttonSakrij.Size = new System.Drawing.Size(24, 20);
             this.buttonSakrij.TabIndex = 8;
             this.buttonSakrij.UseVisualStyleBackColor = true;
             this.buttonSakrij.Click += new System.EventHandler(this.buttonSakrij_Click);
@@ -137,6 +147,7 @@
             this.Controls.Add(this.labelKorime);
             this.Controls.Add(this.labelPrijava);
             this.Name = "frmPrijava";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmPrijava";
             this.ResumeLayout(false);
             this.PerformLayout();

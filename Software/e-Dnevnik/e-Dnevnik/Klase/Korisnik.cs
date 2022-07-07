@@ -18,6 +18,8 @@ namespace e_Dnevnik.Klase
         public int KorisnikId { get; set; }
         public string ImeKorisnika { get; set; }
         public string PrezimeKorisnika { get; set; }
+        public string AdresaKorisnika { get; set; }
+        public string KontaktTelefonKorisnika { get; set; }
         public string EmailKorisnika { get; set; }
         public string KorisnickoImeKorisnika { get; set; }
         public string LozinkaKorisnika { get; set; }

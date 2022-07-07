@@ -156,6 +156,12 @@
     <Compile Include="frmPrijavaIspita.Designer.cs">
       <DependentUpon>frmPrijavaIspita.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmProgramSpecijalizacije.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmProgramSpecijalizacije.Designer.cs">
+      <DependentUpon>frmProgramSpecijalizacije.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmPromjenaLozinke.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -248,6 +254,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmPrijavaIspita.resx">
       <DependentUpon>frmPrijavaIspita.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmProgramSpecijalizacije.resx">
+      <DependentUpon>frmProgramSpecijalizacije.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmPromjenaLozinke.resx">
       <DependentUpon>frmPromjenaLozinke.cs</DependentUpon>

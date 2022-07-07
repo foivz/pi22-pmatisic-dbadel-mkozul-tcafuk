@@ -120,6 +120,12 @@
     <Compile Include="frmDodajProvjeruZnanja.Designer.cs">
       <DependentUpon>frmDodajProvjeruZnanja.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmDogadajDnevnaAktivnost.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDogadajDnevnaAktivnost.Designer.cs">
+      <DependentUpon>frmDogadajDnevnaAktivnost.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmDogadaji.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -131,6 +137,18 @@
     </Compile>
     <Compile Include="frmKorisnickiRacun.Designer.cs">
       <DependentUpon>frmKorisnickiRacun.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDogadajProvjeraZnanja.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDogadajProvjeraZnanja.Designer.cs">
+      <DependentUpon>frmDogadajProvjeraZnanja.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmKorisnickiRacunMentora.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmKorisnickiRacunMentora.Designer.cs">
+      <DependentUpon>frmKorisnickiRacunMentora.cs</DependentUpon>
     </Compile>
     <Compile Include="frmMentorSpecijalizant.cs">
       <SubType>Form</SubType>
@@ -237,11 +255,20 @@
     <EmbeddedResource Include="frmDodajProvjeruZnanja.resx">
       <DependentUpon>frmDodajProvjeruZnanja.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmDogadajDnevnaAktivnost.resx">
+      <DependentUpon>frmDogadajDnevnaAktivnost.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmDogadaji.resx">
       <DependentUpon>frmDogadaji.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmKorisnickiRacun.resx">
       <DependentUpon>frmKorisnickiRacun.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDogadajProvjeraZnanja.resx">
+      <DependentUpon>frmDogadajProvjeraZnanja.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmKorisnickiRacunMentora.resx">
+      <DependentUpon>frmKorisnickiRacunMentora.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmMentorSpecijalizant.resx">
       <DependentUpon>frmMentorSpecijalizant.cs</DependentUpon>

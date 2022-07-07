@@ -94,15 +94,15 @@ namespace e_Dnevnik
         private void frmDodajProvjeruZnanja_Load(object sender, EventArgs e)
         {
             var cbUpit = (from d in entities.Dogadjaj.Local
-                         where d.statusdogadjaja.Contains("Novi rok")
-                         select d.nazivdogadjaja).Distinct();
+                            where d.statusdogadjaja.Contains("Novi rok")
+                            select d.nazivdogadjaja).Distinct();
 
             cbDogadaj.DataSource = cbUpit.Distinct().ToList();
 
             var upit = (from d in entities.Dogadjaj.Local
-                       join k in entities.Korisnik.Local on d.Korisnik_idKorisnik equals k.idKorisnik
-                       where d.statusdogadjaja.Contains("Novi rok")
-                       select k.PunoIme).Distinct();
+                        join k in entities.Korisnik.Local on d.Korisnik_idKorisnik equals k.idKorisnik
+                        where d.statusdogadjaja.Contains("Novi rok")
+                        select k.PunoIme).Distinct();
             cbSpecijalizant.DataSource = upit.ToList();
         }
 

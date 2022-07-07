@@ -33,7 +33,7 @@
             this.pnlFilter = new System.Windows.Forms.Panel();
             this.cboxFilter = new System.Windows.Forms.ComboBox();
             this.lblFilter = new System.Windows.Forms.Label();
-            this.btnDodaj = new System.Windows.Forms.Button();
+            this.btnPogledajDogađaje = new System.Windows.Forms.Button();
             this.dgvMentoriSpecijalizanti = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
             this.pnlFilter.SuspendLayout();
@@ -44,7 +44,7 @@
             // 
             this.panel1.Controls.Add(this.lblTitle);
             this.panel1.Controls.Add(this.pnlFilter);
-            this.panel1.Controls.Add(this.btnDodaj);
+            this.panel1.Controls.Add(this.btnPogledajDogađaje);
             this.panel1.Controls.Add(this.dgvMentoriSpecijalizanti);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -107,22 +107,23 @@
             this.lblFilter.Text = "Filtriraj:";
             this.lblFilter.Click += new System.EventHandler(this.lblFilter_Click);
             // 
-            // btnDodaj
+            // btnPogledajDogađaje
             // 
-            this.btnDodaj.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnDodaj.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(101)))), ((int)(((byte)(101)))));
-            this.btnDodaj.FlatAppearance.BorderSize = 0;
-            this.btnDodaj.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDodaj.Font = new System.Drawing.Font("Mongolian Baiti", 13F);
-            this.btnDodaj.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(37)))), ((int)(((byte)(44)))));
-            this.btnDodaj.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnDodaj.Location = new System.Drawing.Point(1964, 1012);
-            this.btnDodaj.Margin = new System.Windows.Forms.Padding(4);
-            this.btnDodaj.Name = "btnDodaj";
-            this.btnDodaj.Size = new System.Drawing.Size(170, 40);
-            this.btnDodaj.TabIndex = 15;
-            this.btnDodaj.Text = "Pogledaj događaje";
-            this.btnDodaj.UseVisualStyleBackColor = false;
+            this.btnPogledajDogađaje.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnPogledajDogađaje.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(101)))), ((int)(((byte)(101)))));
+            this.btnPogledajDogađaje.FlatAppearance.BorderSize = 0;
+            this.btnPogledajDogađaje.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPogledajDogađaje.Font = new System.Drawing.Font("Mongolian Baiti", 13F);
+            this.btnPogledajDogađaje.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(37)))), ((int)(((byte)(44)))));
+            this.btnPogledajDogađaje.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.btnPogledajDogađaje.Location = new System.Drawing.Point(1964, 1012);
+            this.btnPogledajDogađaje.Margin = new System.Windows.Forms.Padding(4);
+            this.btnPogledajDogađaje.Name = "btnPogledajDogađaje";
+            this.btnPogledajDogađaje.Size = new System.Drawing.Size(170, 40);
+            this.btnPogledajDogađaje.TabIndex = 15;
+            this.btnPogledajDogađaje.Text = "Pogledaj događaje";
+            this.btnPogledajDogađaje.UseVisualStyleBackColor = false;
+            this.btnPogledajDogađaje.Click += new System.EventHandler(this.btnDodaj_Click);
             // 
             // dgvMentoriSpecijalizanti
             // 
@@ -161,7 +162,7 @@
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label lblTitle;
-        private System.Windows.Forms.Button btnDodaj;
+        private System.Windows.Forms.Button btnPogledajDogađaje;
         private System.Windows.Forms.DataGridView dgvMentoriSpecijalizanti;
         private System.Windows.Forms.ComboBox cboxFilter;
         private System.Windows.Forms.Label lblFilter;

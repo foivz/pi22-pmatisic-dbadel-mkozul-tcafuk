@@ -10,72 +10,65 @@ using System.Windows.Forms;
 
 namespace e_Dnevnik
 {
-    public partial class frmSlucajBolesnika : Form
+    public partial class frmDogadajDnevnaAktivnost : Form
     {
-        MainForm mainForm;
-        public int ID_slucaja;
-        public frmSlucajBolesnika(int ID_slucaja, MainForm mainForm)
+        private MainForm mainFrm;
+        private int ID_aktivnosti = -1;
+        public frmDogadajDnevnaAktivnost(int ID_aktivnosti, MainForm mainForm)
         {
-            this.mainForm = mainForm;
-            this.ID_slucaja = ID_slucaja;
+            this.mainFrm = mainForm;
+            this.ID_aktivnosti = ID_aktivnosti;
             InitializeComponent();
-
-            getSlucaj();
-            
+            getAktivnost();
         }
 
-        private void textBox10_TextChanged(object sender, EventArgs e)
-        {
-        }
-
-        private void getSlucaj()
+        private void getAktivnost()
         {
             using (var context = new PI2205_DBEntities())
             {
-                var upit = from sb in context.SlucajBolesnika
+                var upit = from da in context.DnevnaAktivnost
                            from d in context.Dogadjaj
                            from k in context.Korisnik
-                           where sb.idSlucajBolesnika == ID_slucaja
-                           && d.idDogadjaj == sb.Dogadjaj_idDogadjaj
+                           where da.idDnevnaAktivnost == ID_aktivnosti
+                           && d.idDogadjaj == da.Dogadjaj_idDogadjaj
                            && k.idKorisnik == d.Korisnik_idKorisnik
                            select new
                            {
                                Korisnik = k.korime,
-                               Dijagnoza = sb.dijagnoza,
-                               Vrsta = sb.vrstaosobe,
-                               Datum = sb.datumpregleda,
-                               Opis = sb.opisslucaja,
+
+                               Naziv = da.nazivaktivnosti,
+                               Opis = da.opisaktivnosti,
+                               BrojS = da.brojsamostalnihzahvata,
+                               BrojUz = da.brojzahvatauznadzor,
+                               Datum = da.datumobavljeneaktivnosti,
                                Status = d.statusdogadjaja
                            };
 
                 foreach (var s in upit)
                 {
                     tbKorisnik.Text = s.Korisnik;
-                    tbVrsta.Text = s.Vrsta;
+                    dtpDatum.Value = s.Datum;
+                    tbNaziv.Text = s.Naziv;
                     tbOpis.Text = s.Opis;
-                    tbDatum.Text = s.Datum.ToString();
-                    tbDijagnoza.Text = s.Dijagnoza;
+                    tbBrojSolo.Text = s.BrojS.ToString();
+                    tbBrojUzNadzor.Text = s.BrojUz.ToString();
 
-                    if(s.Status != "")
+                    if (s.Status != "")
                     {
-                        tbDatumCom.Enabled = false;
-                        tbDijagnozaCom.Enabled = false;
+                        tbNazivCom.Enabled = false;
                         tbOpisCom.Enabled = false;
-                        tbDatumCom.Enabled = false;
-                        tbVrstaCom.Enabled = false;
-                        btnDetaljno.Enabled = false;
+                        tbBrojSoloCom.Enabled = false;
+                        tbBrojUzNadCom.Enabled = false;
                         btnDetaljno.Visible = false;
-                        button1.Text = "Izađi";
+                        btnOstaviKomentar.Text = "Izađi";
                     }
                 }
-
-                
             }
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            mainForm.ucitajFormu(new frmPocetnaModerator(mainForm));
+            mainFrm.ucitajFormu(new frmPocetnaModerator(mainFrm));
         }
 
         private void btnDetaljno_Click(object sender, EventArgs e)
@@ -84,9 +77,9 @@ namespace e_Dnevnik
             {
 
                 var upitDogadaj = from d in context.Dogadjaj
-                                  from sb in context.SlucajBolesnika
-                                  where sb.idSlucajBolesnika == ID_slucaja
-                                  && d.idDogadjaj == sb.Dogadjaj_idDogadjaj
+                                  from da in context.DnevnaAktivnost
+                                  where da.idDnevnaAktivnost == ID_aktivnosti
+                                  && d.idDogadjaj == da.Dogadjaj_idDogadjaj
                                   select d.idDogadjaj;
 
                 var IdDog = upitDogadaj.First();
@@ -98,8 +91,7 @@ namespace e_Dnevnik
                     context.SaveChanges();
                 }
             }
-            mainForm.ucitajFormu(new frmDogadaji(mainForm));
+            mainFrm.ucitajFormu(new frmDogadaji(mainFrm));
         }
     }
-
 }

@@ -338,24 +338,30 @@
             // 
             // pictureBox5
             // 
+            this.pictureBox5.Cursor = System.Windows.Forms.Cursors.Hand;
             resources.ApplyResources(this.pictureBox5, "pictureBox5");
             this.pictureBox5.Image = global::e_Dnevnik.Properties.Resources.biljeske;
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.TabStop = false;
+            this.pictureBox5.Click += new System.EventHandler(this.btnBiljeske_Click_1);
             // 
             // panel11
             // 
             this.panel11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(37)))), ((int)(((byte)(44)))));
             this.panel11.Controls.Add(this.label5);
+            this.panel11.Cursor = System.Windows.Forms.Cursors.Hand;
             resources.ApplyResources(this.panel11, "panel11");
             this.panel11.Name = "panel11";
+            this.panel11.Click += new System.EventHandler(this.btnBiljeske_Click_1);
             // 
             // label5
             // 
             resources.ApplyResources(this.label5, "label5");
             this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label5.ForeColor = System.Drawing.Color.White;
             this.label5.Name = "label5";
+            this.label5.Click += new System.EventHandler(this.btnBiljeske_Click_1);
             // 
             // panel8
             // 
@@ -394,24 +400,30 @@
             // 
             // pictureBox3
             // 
+            this.pictureBox3.Cursor = System.Windows.Forms.Cursors.Hand;
             resources.ApplyResources(this.pictureBox3, "pictureBox3");
             this.pictureBox3.Image = global::e_Dnevnik.Properties.Resources.provjere_znanja;
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.TabStop = false;
+            this.pictureBox3.Click += new System.EventHandler(this.btnPrijaviIspit_Click);
             // 
             // panel7
             // 
             this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(37)))), ((int)(((byte)(44)))));
             this.panel7.Controls.Add(this.label3);
+            this.panel7.Cursor = System.Windows.Forms.Cursors.Hand;
             resources.ApplyResources(this.panel7, "panel7");
             this.panel7.Name = "panel7";
+            this.panel7.Click += new System.EventHandler(this.btnPrijaviIspit_Click);
             // 
             // label3
             // 
             resources.ApplyResources(this.label3, "label3");
             this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label3.ForeColor = System.Drawing.Color.White;
             this.label3.Name = "label3";
+            this.label3.Click += new System.EventHandler(this.btnPrijaviIspit_Click);
             // 
             // panel4
             // 

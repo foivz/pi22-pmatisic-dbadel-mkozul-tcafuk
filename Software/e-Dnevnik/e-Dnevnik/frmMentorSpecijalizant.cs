@@ -30,7 +30,9 @@ namespace e_Dnevnik
 
         private void frmMentorSpecijalizant_Load(object sender, EventArgs e)
         {
+            cboxFilter.SelectedIndex = 0;
             dgvMentoriSpecijalizanti.DataSource = GetMentoriSpecijalizanti();
+            dgvMentoriSpecijalizanti.AutoResizeColumns();
         }
 
         private void cboxFilter_SelectedIndexChanged(object sender, EventArgs e)
@@ -46,6 +48,7 @@ namespace e_Dnevnik
                 popis = GetSpecificno(cboxFilter.Text);
             }
             dgvMentoriSpecijalizanti.DataSource = popis;
+            dgvMentoriSpecijalizanti.AutoResizeColumns();
 
         }
 
@@ -62,6 +65,7 @@ namespace e_Dnevnik
                            && k.ProgramSpecijalizacije_idProgramSpecijalizacije == mainForm.programSpecijalizacije
                            select new
                            {
+                               ID = k.idKorisnik,
                                Ime = k.ime,
                                Korisnicko_ime = k.korime,
                                Uloga = u.nazivuloge,
@@ -79,6 +83,7 @@ namespace e_Dnevnik
                            && k.ProgramSpecijalizacije_idProgramSpecijalizacije == mainForm.programSpecijalizacije
                            select new
                            {
+                               ID = k.idKorisnik,
                                Ime = k.ime,
                                Korisnicko_ime = k.korime,
                                Uloga = u.nazivuloge,
@@ -109,6 +114,7 @@ namespace e_Dnevnik
                            && k.ProgramSpecijalizacije_idProgramSpecijalizacije == mainForm.programSpecijalizacije
                            select new
                            {
+                               ID = k.idKorisnik,
                                Ime = k.ime,
                                Korisnicko_ime = k.korime,
                                Uloga = u.nazivuloge,
@@ -117,6 +123,19 @@ namespace e_Dnevnik
 
                 return upit.ToList();
             }
+        }
+
+        private void btnDodaj_Click(object sender, EventArgs e)
+        {
+            if (dgvMentoriSpecijalizanti.CurrentRow.Cells[3].Value.ToString() != "Mentor")
+            {
+                mainForm.ucitajFormu(new frmDogadaji((int)dgvMentoriSpecijalizanti.CurrentRow.Cells[0].Value, mainForm));
+            }
+            else
+            {
+
+            }
+
         }
     }
 }

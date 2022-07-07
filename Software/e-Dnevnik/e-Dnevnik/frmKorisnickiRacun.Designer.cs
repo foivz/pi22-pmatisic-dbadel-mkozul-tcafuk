@@ -37,6 +37,10 @@
             this.buttonPromjeni = new System.Windows.Forms.Button();
             this.buttonIzmjeni = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.panel9 = new System.Windows.Forms.Panel();
+            this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
+            this.tbLozinka = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
             this.panel8 = new System.Windows.Forms.Panel();
             this.label8 = new System.Windows.Forms.Label();
             this.slikaSlika = new System.Windows.Forms.PictureBox();
@@ -60,13 +64,11 @@
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tbPrezime = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.panel9 = new System.Windows.Forms.Panel();
-            this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
-            this.tbLozinka = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             this.tableLayoutPanel10.SuspendLayout();
             this.panel1.SuspendLayout();
+            this.panel9.SuspendLayout();
+            this.tableLayoutPanel6.SuspendLayout();
             this.panel8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.slikaSlika)).BeginInit();
             this.panel7.SuspendLayout();
@@ -79,8 +81,6 @@
             this.tableLayoutPanel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
-            this.panel9.SuspendLayout();
-            this.tableLayoutPanel6.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel2
@@ -111,7 +111,6 @@
             // 
             // tbIme
             // 
-            this.tbIme.Enabled = false;
             this.tbIme.Location = new System.Drawing.Point(159, 2);
             this.tbIme.Margin = new System.Windows.Forms.Padding(2);
             this.tbIme.Name = "tbIme";
@@ -176,6 +175,7 @@
             this.buttonIzmjeni.TabIndex = 21;
             this.buttonIzmjeni.Text = "Izmjeni informacije";
             this.buttonIzmjeni.UseVisualStyleBackColor = false;
+            this.buttonIzmjeni.Click += new System.EventHandler(this.buttonIzmjeni_Click);
             // 
             // panel1
             // 
@@ -196,6 +196,53 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(800, 450);
             this.panel1.TabIndex = 26;
+            // 
+            // panel9
+            // 
+            this.panel9.Controls.Add(this.tableLayoutPanel6);
+            this.panel9.Location = new System.Drawing.Point(20, 294);
+            this.panel9.Margin = new System.Windows.Forms.Padding(2);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(394, 23);
+            this.panel9.TabIndex = 35;
+            // 
+            // tableLayoutPanel6
+            // 
+            this.tableLayoutPanel6.ColumnCount = 2;
+            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 40F));
+            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 60F));
+            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 10F));
+            this.tableLayoutPanel6.Controls.Add(this.tbLozinka, 1, 0);
+            this.tableLayoutPanel6.Controls.Add(this.label9, 0, 0);
+            this.tableLayoutPanel6.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel6.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel6.Margin = new System.Windows.Forms.Padding(2);
+            this.tableLayoutPanel6.Name = "tableLayoutPanel6";
+            this.tableLayoutPanel6.RowCount = 1;
+            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel6.Size = new System.Drawing.Size(394, 23);
+            this.tableLayoutPanel6.TabIndex = 1;
+            // 
+            // tbLozinka
+            // 
+            this.tbLozinka.Enabled = false;
+            this.tbLozinka.Location = new System.Drawing.Point(159, 2);
+            this.tbLozinka.Margin = new System.Windows.Forms.Padding(2);
+            this.tbLozinka.Name = "tbLozinka";
+            this.tbLozinka.Size = new System.Drawing.Size(233, 20);
+            this.tbLozinka.TabIndex = 26;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Mongolian Baiti", 13F);
+            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(53)))), ((int)(((byte)(53)))));
+            this.label9.Location = new System.Drawing.Point(2, 0);
+            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(73, 19);
+            this.label9.TabIndex = 27;
+            this.label9.Text = "Lozinka:";
             // 
             // panel8
             // 
@@ -257,7 +304,6 @@
             // 
             // tbKorime
             // 
-            this.tbKorime.Enabled = false;
             this.tbKorime.Location = new System.Drawing.Point(159, 2);
             this.tbKorime.Margin = new System.Windows.Forms.Padding(2);
             this.tbKorime.Name = "tbKorime";
@@ -304,7 +350,6 @@
             // 
             // tbEmail
             // 
-            this.tbEmail.Enabled = false;
             this.tbEmail.Location = new System.Drawing.Point(159, 2);
             this.tbEmail.Margin = new System.Windows.Forms.Padding(2);
             this.tbEmail.Name = "tbEmail";
@@ -351,7 +396,6 @@
             // 
             // tbTelefon
             // 
-            this.tbTelefon.Enabled = false;
             this.tbTelefon.Location = new System.Drawing.Point(159, 2);
             this.tbTelefon.Margin = new System.Windows.Forms.Padding(2);
             this.tbTelefon.Name = "tbTelefon";
@@ -398,7 +442,6 @@
             // 
             // tbAdresa
             // 
-            this.tbAdresa.Enabled = false;
             this.tbAdresa.Location = new System.Drawing.Point(159, 2);
             this.tbAdresa.Margin = new System.Windows.Forms.Padding(2);
             this.tbAdresa.Name = "tbAdresa";
@@ -445,7 +488,6 @@
             // 
             // tbPrezime
             // 
-            this.tbPrezime.Enabled = false;
             this.tbPrezime.Location = new System.Drawing.Point(159, 2);
             this.tbPrezime.Margin = new System.Windows.Forms.Padding(2);
             this.tbPrezime.Name = "tbPrezime";
@@ -464,53 +506,6 @@
             this.label1.TabIndex = 27;
             this.label1.Text = "Prezime:";
             // 
-            // panel9
-            // 
-            this.panel9.Controls.Add(this.tableLayoutPanel6);
-            this.panel9.Location = new System.Drawing.Point(20, 294);
-            this.panel9.Margin = new System.Windows.Forms.Padding(2);
-            this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(394, 23);
-            this.panel9.TabIndex = 35;
-            // 
-            // tableLayoutPanel6
-            // 
-            this.tableLayoutPanel6.ColumnCount = 2;
-            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 40F));
-            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 60F));
-            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 10F));
-            this.tableLayoutPanel6.Controls.Add(this.tbLozinka, 1, 0);
-            this.tableLayoutPanel6.Controls.Add(this.label9, 0, 0);
-            this.tableLayoutPanel6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel6.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel6.Margin = new System.Windows.Forms.Padding(2);
-            this.tableLayoutPanel6.Name = "tableLayoutPanel6";
-            this.tableLayoutPanel6.RowCount = 1;
-            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel6.Size = new System.Drawing.Size(394, 23);
-            this.tableLayoutPanel6.TabIndex = 1;
-            // 
-            // tbLozinka
-            // 
-            this.tbLozinka.Enabled = false;
-            this.tbLozinka.Location = new System.Drawing.Point(159, 2);
-            this.tbLozinka.Margin = new System.Windows.Forms.Padding(2);
-            this.tbLozinka.Name = "tbLozinka";
-            this.tbLozinka.Size = new System.Drawing.Size(233, 20);
-            this.tbLozinka.TabIndex = 26;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Mongolian Baiti", 13F);
-            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(53)))), ((int)(((byte)(53)))));
-            this.label9.Location = new System.Drawing.Point(2, 0);
-            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(73, 19);
-            this.label9.TabIndex = 27;
-            this.label9.Text = "Lozinka:";
-            // 
             // frmKorisnickiRacun
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -525,6 +520,9 @@
             this.tableLayoutPanel10.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.panel9.ResumeLayout(false);
+            this.tableLayoutPanel6.ResumeLayout(false);
+            this.tableLayoutPanel6.PerformLayout();
             this.panel8.ResumeLayout(false);
             this.panel8.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.slikaSlika)).EndInit();
@@ -543,9 +541,6 @@
             this.panel3.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
-            this.panel9.ResumeLayout(false);
-            this.tableLayoutPanel6.ResumeLayout(false);
-            this.tableLayoutPanel6.PerformLayout();
             this.ResumeLayout(false);
 
         }

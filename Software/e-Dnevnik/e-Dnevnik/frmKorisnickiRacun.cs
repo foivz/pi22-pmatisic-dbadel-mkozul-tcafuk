@@ -1,4 +1,5 @@
-﻿using System;
+﻿using e_Dnevnik.Klase;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -50,6 +51,23 @@ namespace e_Dnevnik
                 tbEmail.Text = item.email;
                 tbKorime.Text = item.korime;
                 tbLozinka.Text = item.lozinka;
+            }
+        }
+
+        private void buttonIzmjeni_Click(object sender, EventArgs e)
+        {
+            Klase.RepozitorijHLK.prijavljeniKorisnik.ImeKorisnika = tbIme.Text;
+            Klase.RepozitorijHLK.prijavljeniKorisnik.PrezimeKorisnika = tbPrezime.Text;
+            Klase.RepozitorijHLK.prijavljeniKorisnik.AdresaKorisnika = tbAdresa.Text;
+            Klase.RepozitorijHLK.prijavljeniKorisnik.KontaktTelefonKorisnika = tbTelefon.Text;
+            Klase.RepozitorijHLK.prijavljeniKorisnik.EmailKorisnika = tbEmail.Text;
+            Klase.RepozitorijHLK.prijavljeniKorisnik.KorisnickoImeKorisnika = tbKorime.Text;
+
+            int numAffectedRows = Klase.RepozitorijHLK.AzurirajKorisnika(Klase.RepozitorijHLK.prijavljeniKorisnik.KorisnikId, Klase.RepozitorijHLK.prijavljeniKorisnik);
+            if (numAffectedRows > 0)
+            {
+                MessageBox.Show("Uspješno ste ažurirali podatke! ");
+
             }
         }
     }

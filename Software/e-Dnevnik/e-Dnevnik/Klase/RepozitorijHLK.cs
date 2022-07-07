@@ -142,5 +142,20 @@ namespace e_Dnevnik.Klase
 
             return numAffectedRows;
         }
+
+        internal static int AzurirajKorisnika(int Id, Korisnik korisnik)
+        {
+            Database.Instance.Connect();
+
+            string sql = $"UPDATE Korisnik SET ime = '{korisnik.ImeKorisnika}', prezime = '{korisnik.PrezimeKorisnika}', adresa = '{korisnik.AdresaKorisnika}', telefon = '{korisnik.KontaktTelefonKorisnika}', " +
+                $"email = '{korisnik.EmailKorisnika}', korime = '{korisnik.KorisnickoImeKorisnika}' " +
+                $"WHERE idKorisnik = {Id};";
+
+            int numAffectedRows = Database.Instance.ExecuteCommand(sql);
+
+            Database.Instance.Disconnect();
+
+            return numAffectedRows;
+        }
     }
 }

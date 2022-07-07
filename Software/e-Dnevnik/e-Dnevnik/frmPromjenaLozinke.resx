@@ -118,20 +118,20 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="buttonSakrij2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="buttonSakrij.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAA
-        lgAAAJYBBkHOZgAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAADBSURBVDhPpZIx
+        kgAAAJIB+bxJdAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAADBSURBVDhPpZIx
         DsIwDEUtoS49UMVUztG16o1YOABXYOQqSB0Yeorwv2qDk3og7fCk5Pt/K04iKaVDhGINoVjDVhBpwABu
         4KlwTa3Z+LONyATegBsyK7ZnbcoyGmzBHZjxBbqvSeQMfCN6W63JCTyAFUkHOMqocN0D72GGWbmqYMza
         mUHTRtUWpxFmjzeIRuDM5QgX4D3rCNq5vEReWM+a1hn2r/O7RDOpsXxGHtkfO37GTFiPu+8j7SEUawjF
         /0nyAQ655cfjJrQIAAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="buttonSakrij.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="buttonSakrij2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAA
-        lgAAAJYBBkHOZgAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAADBSURBVDhPpZIx
+        kwAAAJMBK/urkAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAADBSURBVDhPpZIx
         DsIwDEUtoS49UMVUztG16o1YOABXYOQqSB0Yeorwv2qDk3og7fCk5Pt/K04iKaVDhGINoVjDVhBpwABu
         4KlwTa3Z+LONyATegBsyK7ZnbcoyGmzBHZjxBbqvSeQMfCN6W63JCTyAFUkHOMqocN0D72GGWbmqYMza
         mUHTRtUWpxFmjzeIRuDM5QgX4D3rCNq5vEReWM+a1hn2r/O7RDOpsXxGHtkfO37GTFiPu+8j7SEUawjF

@@ -42,6 +42,7 @@
             // 
             // labelPrijava
             // 
+            this.labelPrijava.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.labelPrijava.AutoSize = true;
             this.labelPrijava.Font = new System.Drawing.Font("Mongolian Baiti", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelPrijava.Location = new System.Drawing.Point(349, 73);
@@ -52,6 +53,7 @@
             // 
             // labelKorime
             // 
+            this.labelKorime.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.labelKorime.AutoSize = true;
             this.labelKorime.Location = new System.Drawing.Point(230, 151);
             this.labelKorime.Name = "labelKorime";
@@ -61,6 +63,7 @@
             // 
             // labelLozinka
             // 
+            this.labelLozinka.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.labelLozinka.AutoSize = true;
             this.labelLozinka.Location = new System.Drawing.Point(230, 183);
             this.labelLozinka.Name = "labelLozinka";
@@ -70,6 +73,7 @@
             // 
             // linkLabelZabLozinka
             // 
+            this.linkLabelZabLozinka.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.linkLabelZabLozinka.AutoSize = true;
             this.linkLabelZabLozinka.Location = new System.Drawing.Point(349, 235);
             this.linkLabelZabLozinka.Name = "linkLabelZabLozinka";
@@ -81,6 +85,7 @@
             // 
             // textBoxKorime
             // 
+            this.textBoxKorime.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBoxKorime.Location = new System.Drawing.Point(354, 148);
             this.textBoxKorime.Name = "textBoxKorime";
             this.textBoxKorime.Size = new System.Drawing.Size(100, 20);
@@ -88,6 +93,7 @@
             // 
             // textBoxLozinka
             // 
+            this.textBoxLozinka.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBoxLozinka.Location = new System.Drawing.Point(354, 180);
             this.textBoxLozinka.Name = "textBoxLozinka";
             this.textBoxLozinka.Size = new System.Drawing.Size(100, 20);
@@ -95,6 +101,7 @@
             // 
             // buttonPrijaviSe
             // 
+            this.buttonPrijaviSe.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.buttonPrijaviSe.Location = new System.Drawing.Point(268, 272);
             this.buttonPrijaviSe.Name = "buttonPrijaviSe";
             this.buttonPrijaviSe.Size = new System.Drawing.Size(75, 23);
@@ -105,6 +112,7 @@
             // 
             // buttonNatrag
             // 
+            this.buttonNatrag.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.buttonNatrag.Location = new System.Drawing.Point(466, 272);
             this.buttonNatrag.Name = "buttonNatrag";
             this.buttonNatrag.Size = new System.Drawing.Size(75, 23);
@@ -115,6 +123,7 @@
             // 
             // buttonSakrij
             // 
+            this.buttonSakrij.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.buttonSakrij.Image = ((System.Drawing.Image)(resources.GetObject("buttonSakrij.Image")));
             this.buttonSakrij.Location = new System.Drawing.Point(460, 180);
             this.buttonSakrij.Name = "buttonSakrij";

@@ -107,3 +107,4 @@ C:\Users\stident\Documents\pi22-pmatisic-dbadel-mkozul-tcafuk\Software\e-dnevnik
 C:\Users\stident\Documents\pi22-pmatisic-dbadel-mkozul-tcafuk\Software\e-dnevnik\e-Dnevnik\obj\Debug\e_Dnevnik.frmSlucajBolesnika.resources
 C:\Users\stident\Documents\pi22-pmatisic-dbadel-mkozul-tcafuk\Software\e-dnevnik\e-Dnevnik\obj\Debug\e_Dnevnik.frmPromjenaLozinke.resources
 C:\Users\stident\Documents\pi22-pmatisic-dbadel-mkozul-tcafuk\Software\e-dnevnik\e-Dnevnik\obj\Debug\e_Dnevnik.frmKorisnickiRacun.resources
+C:\Users\stident\Documents\pi22-pmatisic-dbadel-mkozul-tcafuk\Software\e-dnevnik\e-Dnevnik\obj\Debug\e_Dnevnik.frmProgramSpecijalizacije.resources

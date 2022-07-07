@@ -15,7 +15,7 @@ namespace e_Dnevnik
     public partial class frmKorisnickiRacun : Form
     {
         PI2205_DBEntities entities = new PI2205_DBEntities();
-        MainForm mainFrm;
+        private MainForm mainFrm;
         public frmKorisnickiRacun(MainForm mainForm)
         {
             entities.Korisnik.Load();

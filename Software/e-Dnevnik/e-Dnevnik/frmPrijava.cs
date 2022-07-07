@@ -78,7 +78,7 @@ namespace e_Dnevnik
         private void linkLabelZabLozinka_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             frmZaboravljenaLozinka form = new frmZaboravljenaLozinka();
-            form.ShowDialog();
+            form.Show();
         }
 
         //private void frmPrijava_KeyDown(object sender, KeyEventArgs e)

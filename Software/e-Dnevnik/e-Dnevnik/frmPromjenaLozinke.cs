@@ -79,15 +79,5 @@ namespace e_Dnevnik
                 seePassword2 = true;
             }
         }
-
-        //private void FormLozinka_KeyDown(object sender, KeyEventArgs e)
-        //{
-        //    if (e.KeyCode == Keys.F1)
-        //    {
-        //        Controler controler = new Controler();
-
-        //        controler.OtvoriUserHelp(this, "PromjenaLozinke.htm");
-        //    }
-        //}
     }
 }

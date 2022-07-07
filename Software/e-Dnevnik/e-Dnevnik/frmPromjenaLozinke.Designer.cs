@@ -52,10 +52,10 @@
             // 
             // textBoxLozinka
             // 
-            this.textBoxLozinka.Location = new System.Drawing.Point(160, 2);
+            this.textBoxLozinka.Location = new System.Drawing.Point(159, 2);
             this.textBoxLozinka.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxLozinka.Name = "textBoxLozinka";
-            this.textBoxLozinka.Size = new System.Drawing.Size(202, 20);
+            this.textBoxLozinka.Size = new System.Drawing.Size(233, 20);
             this.textBoxLozinka.TabIndex = 26;
             // 
             // label7
@@ -85,7 +85,7 @@
             this.tableLayoutPanel10.RowCount = 1;
             this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 23F));
-            this.tableLayoutPanel10.Size = new System.Drawing.Size(396, 23);
+            this.tableLayoutPanel10.Size = new System.Drawing.Size(394, 23);
             this.tableLayoutPanel10.TabIndex = 1;
             // 
             // panel2
@@ -94,7 +94,7 @@
             this.panel2.Location = new System.Drawing.Point(189, 118);
             this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(396, 23);
+            this.panel2.Size = new System.Drawing.Size(394, 23);
             this.panel2.TabIndex = 28;
             // 
             // label0
@@ -118,10 +118,10 @@
             this.buttonPotvrdi.Font = new System.Drawing.Font("Mongolian Baiti", 13F);
             this.buttonPotvrdi.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(37)))), ((int)(((byte)(44)))));
             this.buttonPotvrdi.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.buttonPotvrdi.Location = new System.Drawing.Point(238, 249);
+            this.buttonPotvrdi.Location = new System.Drawing.Point(403, 366);
             this.buttonPotvrdi.Margin = new System.Windows.Forms.Padding(2);
             this.buttonPotvrdi.Name = "buttonPotvrdi";
-            this.buttonPotvrdi.Size = new System.Drawing.Size(106, 36);
+            this.buttonPotvrdi.Size = new System.Drawing.Size(92, 28);
             this.buttonPotvrdi.TabIndex = 21;
             this.buttonPotvrdi.Text = "Potvrdi";
             this.buttonPotvrdi.UseVisualStyleBackColor = false;
@@ -136,10 +136,10 @@
             this.buttonNatrag.Font = new System.Drawing.Font("Mongolian Baiti", 13F);
             this.buttonNatrag.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(37)))), ((int)(((byte)(44)))));
             this.buttonNatrag.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.buttonNatrag.Location = new System.Drawing.Point(410, 249);
+            this.buttonNatrag.Location = new System.Drawing.Point(522, 366);
             this.buttonNatrag.Margin = new System.Windows.Forms.Padding(2);
             this.buttonNatrag.Name = "buttonNatrag";
-            this.buttonNatrag.Size = new System.Drawing.Size(106, 36);
+            this.buttonNatrag.Size = new System.Drawing.Size(92, 28);
             this.buttonNatrag.TabIndex = 22;
             this.buttonNatrag.Text = "Natrag";
             this.buttonNatrag.UseVisualStyleBackColor = false;
@@ -166,7 +166,7 @@
             this.buttonSakrij2.Image = ((System.Drawing.Image)(resources.GetObject("buttonSakrij2.Image")));
             this.buttonSakrij2.Location = new System.Drawing.Point(590, 171);
             this.buttonSakrij2.Name = "buttonSakrij2";
-            this.buttonSakrij2.Size = new System.Drawing.Size(20, 20);
+            this.buttonSakrij2.Size = new System.Drawing.Size(24, 20);
             this.buttonSakrij2.TabIndex = 31;
             this.buttonSakrij2.UseVisualStyleBackColor = true;
             this.buttonSakrij2.Click += new System.EventHandler(this.buttonSakrij2_Click);
@@ -176,7 +176,7 @@
             this.buttonSakrij.Image = ((System.Drawing.Image)(resources.GetObject("buttonSakrij.Image")));
             this.buttonSakrij.Location = new System.Drawing.Point(590, 120);
             this.buttonSakrij.Name = "buttonSakrij";
-            this.buttonSakrij.Size = new System.Drawing.Size(20, 20);
+            this.buttonSakrij.Size = new System.Drawing.Size(24, 20);
             this.buttonSakrij.TabIndex = 30;
             this.buttonSakrij.UseVisualStyleBackColor = true;
             this.buttonSakrij.Click += new System.EventHandler(this.buttonSakrij_Click);
@@ -212,7 +212,7 @@
             this.textBoxPonovljena.Location = new System.Drawing.Point(159, 2);
             this.textBoxPonovljena.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxPonovljena.Name = "textBoxPonovljena";
-            this.textBoxPonovljena.Size = new System.Drawing.Size(202, 20);
+            this.textBoxPonovljena.Size = new System.Drawing.Size(233, 20);
             this.textBoxPonovljena.TabIndex = 26;
             // 
             // label1

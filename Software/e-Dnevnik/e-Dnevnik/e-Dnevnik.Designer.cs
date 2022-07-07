@@ -193,6 +193,7 @@
             this.btnProgramSpecijalizacije.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(53)))), ((int)(((byte)(53)))));
             this.btnProgramSpecijalizacije.Name = "btnProgramSpecijalizacije";
             this.btnProgramSpecijalizacije.UseVisualStyleBackColor = true;
+            this.btnProgramSpecijalizacije.Click += new System.EventHandler(this.btnProgramSpecijalizacije_Click);
             // 
             // btnIspisDnevnika
             // 

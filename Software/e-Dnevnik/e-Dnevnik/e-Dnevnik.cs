@@ -206,5 +206,10 @@ namespace e_Dnevnik
         {
             mainForm.ucitajFormu(new frmKorisnickiRacun(mainForm));
         }
+
+        private void btnProgramSpecijalizacije_Click(object sender, EventArgs e)
+        {
+            mainForm.ucitajFormu(new frmProgramSpecijalizacije(mainForm));
+        }
     }
 }

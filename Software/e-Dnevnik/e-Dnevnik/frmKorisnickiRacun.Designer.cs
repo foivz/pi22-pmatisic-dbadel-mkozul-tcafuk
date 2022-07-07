@@ -150,10 +150,10 @@
             this.buttonPromjeni.Font = new System.Drawing.Font("Mongolian Baiti", 13F);
             this.buttonPromjeni.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(37)))), ((int)(((byte)(44)))));
             this.buttonPromjeni.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.buttonPromjeni.Location = new System.Drawing.Point(179, 342);
+            this.buttonPromjeni.Location = new System.Drawing.Point(503, 366);
             this.buttonPromjeni.Margin = new System.Windows.Forms.Padding(2);
             this.buttonPromjeni.Name = "buttonPromjeni";
-            this.buttonPromjeni.Size = new System.Drawing.Size(164, 36);
+            this.buttonPromjeni.Size = new System.Drawing.Size(93, 29);
             this.buttonPromjeni.TabIndex = 22;
             this.buttonPromjeni.Text = "Promjeni lozinku";
             this.buttonPromjeni.UseVisualStyleBackColor = false;
@@ -168,10 +168,10 @@
             this.buttonIzmjeni.Font = new System.Drawing.Font("Mongolian Baiti", 13F);
             this.buttonIzmjeni.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(37)))), ((int)(((byte)(44)))));
             this.buttonIzmjeni.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.buttonIzmjeni.Location = new System.Drawing.Point(411, 342);
+            this.buttonIzmjeni.Location = new System.Drawing.Point(626, 366);
             this.buttonIzmjeni.Margin = new System.Windows.Forms.Padding(2);
             this.buttonIzmjeni.Name = "buttonIzmjeni";
-            this.buttonIzmjeni.Size = new System.Drawing.Size(164, 36);
+            this.buttonIzmjeni.Size = new System.Drawing.Size(93, 29);
             this.buttonIzmjeni.TabIndex = 21;
             this.buttonIzmjeni.Text = "Izmjeni informacije";
             this.buttonIzmjeni.UseVisualStyleBackColor = false;

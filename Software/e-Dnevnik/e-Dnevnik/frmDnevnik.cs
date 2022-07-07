@@ -44,6 +44,12 @@ namespace e_Dnevnik
                        };
             dgvEvidencijaDnevnihAktivnosti.DataSource = upitAktivnost.Distinct().ToList();
 
+            dgvEvidencijaDnevnihAktivnosti.Columns["Naziv_aktivnosti"].HeaderText = "Naziv aktivnosti";
+            dgvEvidencijaDnevnihAktivnosti.Columns["Opis_aktivnosti"].HeaderText = "Opis aktivnosti";
+            dgvEvidencijaDnevnihAktivnosti.Columns["Datum_obavljene_aktivnosti"].HeaderText = "Datum obavljene aktivnosti";
+            dgvEvidencijaDnevnihAktivnosti.Columns["Broj_samostalnih_zahvata"].HeaderText = "Broj samostalnih aktivnosti";
+            dgvEvidencijaDnevnihAktivnosti.Columns["Broj_zahvata_uz_nadzor"].HeaderText = "Broj zahvata uz nadzor";
+
             var upitProvjera = from p in entities.ProvjeraZnanja.Local
                                 join d in entities.Dogadjaj.Local on p.Dogadjaj_idDogadjaj equals d.idDogadjaj
                                 join k in entities.Korisnik.Local on d.Korisnik_idKorisnik equals korisnikID
@@ -57,6 +63,10 @@ namespace e_Dnevnik
                                 };
             dgvEvidencijaProvjeraZnanja.DataSource = upitProvjera.Distinct().ToList();
 
+            dgvEvidencijaProvjeraZnanja.Columns["Naziv_aktivnosti"].HeaderText = "Naziv aktivnosti";
+            dgvEvidencijaProvjeraZnanja.Columns["Naziv_dogadaja"].HeaderText = "Naziv događaja";
+            dgvEvidencijaProvjeraZnanja.Columns["Status_dogadaja"].HeaderText = "Status događaja";
+
             var upitBiljeske = from b in entities.Biljeske.Local
                                where b.Korisnik_idKorisnik == korisnikID
                                select new
@@ -66,14 +76,12 @@ namespace e_Dnevnik
                                };
             dgvEvidencijaBiljeski.DataSource = upitBiljeske.Distinct().ToList();
 
+            dgvEvidencijaBiljeski.Columns["Datum_biljeske"].HeaderText = "Datum bilješke";
+            dgvEvidencijaBiljeski.Columns["Biljeska"].HeaderText = "Bilješka";
+
             dgvEvidencijaDnevnihAktivnosti.AutoResizeColumns();
             dgvEvidencijaProvjeraZnanja.AutoResizeColumns();
             dgvEvidencijaBiljeski.AutoResizeColumns();
-        }
-
-        private void btnIspisi_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

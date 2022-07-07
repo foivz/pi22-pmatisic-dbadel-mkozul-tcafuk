@@ -22,7 +22,7 @@ namespace e_Dnevnik
             this.mainFrm = mainForm;
             InitializeComponent();
         }
-
+                
         public void Osvjezi()
         {
             //entities = new PI2205_DBEntities();

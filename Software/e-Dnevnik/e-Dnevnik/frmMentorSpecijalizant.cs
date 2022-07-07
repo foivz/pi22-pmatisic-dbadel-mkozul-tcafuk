@@ -133,7 +133,7 @@ namespace e_Dnevnik
             }
             else
             {
-
+                mainForm.ucitajFormu(new frmKorisnickiRacunMentora((int)dgvMentoriSpecijalizanti.CurrentRow.Cells[0].Value, mainForm));
             }
 
         }

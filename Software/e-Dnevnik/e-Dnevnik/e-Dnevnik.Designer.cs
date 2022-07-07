@@ -314,6 +314,7 @@
             this.pictureBox6.Image = global::e_Dnevnik.Properties.Resources.profile;
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.TabStop = false;
+            this.pictureBox6.Click += new System.EventHandler(this.btnProfil_Click);
             // 
             // panel13
             // 
@@ -321,6 +322,7 @@
             this.panel13.Controls.Add(this.label6);
             resources.ApplyResources(this.panel13, "panel13");
             this.panel13.Name = "panel13";
+            this.panel13.Click += new System.EventHandler(this.btnProfil_Click);
             // 
             // label6
             // 
@@ -328,6 +330,7 @@
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.ForeColor = System.Drawing.Color.White;
             this.label6.Name = "label6";
+            this.label6.Click += new System.EventHandler(this.btnProfil_Click);
             // 
             // panel10
             // 

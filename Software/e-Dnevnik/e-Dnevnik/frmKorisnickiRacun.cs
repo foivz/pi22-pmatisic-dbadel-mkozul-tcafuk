@@ -31,18 +31,18 @@ namespace e_Dnevnik
         private void frmKorisnickiRacun_Load(object sender, EventArgs e)
         {
             var upit = from k in entities.Korisnik.Local
-                       where Klase.RepozitorijHLK.prijavljeniKorisnik.KorisnikId == k.idKorisnik
-                       select new
-                       {
-                           k.ime,
-                           k.prezime,
-                           k.adresa,
-                           k.telefon,
-                           k.email,
-                           k.korime,
-                           k.lozinka
-                       };
-            foreach(var item in upit)
+                        where Klase.RepozitorijHLK.prijavljeniKorisnik.KorisnikId == k.idKorisnik
+                        select new
+                        {
+                            k.ime,
+                            k.prezime,
+                            k.adresa,
+                            k.telefon,
+                            k.email,
+                            k.korime,
+                            k.lozinka
+                        };
+            foreach (var item in upit)
             {
                 tbIme.Text = item.ime;
                 tbPrezime.Text = item.prezime;
@@ -52,6 +52,7 @@ namespace e_Dnevnik
                 tbKorime.Text = item.korime;
                 tbLozinka.Text = item.lozinka;
             }
+
         }
 
         private void buttonIzmjeni_Click(object sender, EventArgs e)

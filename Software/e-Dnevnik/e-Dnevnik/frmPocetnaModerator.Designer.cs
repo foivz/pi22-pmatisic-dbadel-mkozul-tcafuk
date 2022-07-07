@@ -181,6 +181,7 @@
             // 
             // pictureBox3
             // 
+            this.pictureBox3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox3.Image = global::e_Dnevnik.Properties.Resources.specijalizani_img;
             this.pictureBox3.Location = new System.Drawing.Point(0, 0);
@@ -194,6 +195,7 @@
             // 
             this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(37)))), ((int)(((byte)(44)))));
             this.panel7.Controls.Add(this.lblMentori);
+            this.panel7.Cursor = System.Windows.Forms.Cursors.Hand;
             this.panel7.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel7.Location = new System.Drawing.Point(0, 63);
             this.panel7.Margin = new System.Windows.Forms.Padding(4);
@@ -206,6 +208,7 @@
             // 
             this.lblMentori.AutoSize = true;
             this.lblMentori.BackColor = System.Drawing.Color.Transparent;
+            this.lblMentori.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblMentori.ForeColor = System.Drawing.Color.White;
             this.lblMentori.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.lblMentori.Location = new System.Drawing.Point(20, 21);
@@ -229,6 +232,7 @@
             // 
             // pictureBox2
             // 
+            this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox2.Image = global::e_Dnevnik.Properties.Resources.provjere_znanja_img;
             this.pictureBox2.Location = new System.Drawing.Point(0, 0);
@@ -243,6 +247,7 @@
             // 
             this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(37)))), ((int)(((byte)(44)))));
             this.panel5.Controls.Add(this.label2);
+            this.panel5.Cursor = System.Windows.Forms.Cursors.Hand;
             this.panel5.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel5.Location = new System.Drawing.Point(0, 63);
             this.panel5.Margin = new System.Windows.Forms.Padding(4);
@@ -255,6 +260,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.label2.Location = new System.Drawing.Point(20, 21);
@@ -278,6 +284,7 @@
             // 
             // pictureBox1
             // 
+            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox1.Image = global::e_Dnevnik.Properties.Resources.dogadaji_img;
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
@@ -304,6 +311,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.label1.Location = new System.Drawing.Point(20, 21);
@@ -317,6 +325,7 @@
             // btnProfilDnevnik2
             // 
             this.btnProfilDnevnik2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(37)))), ((int)(((byte)(44)))));
+            this.btnProfilDnevnik2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnProfilDnevnik2.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.btnProfilDnevnik2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnProfilDnevnik2.ImeMode = System.Windows.Forms.ImeMode.NoControl;

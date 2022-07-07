@@ -61,7 +61,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.btnDetaljno = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnOstaviKomentar = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.tableLayoutPanel11.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -84,7 +84,7 @@
             this.panel1.Controls.Add(this.tableLayoutPanel1);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.btnDetaljno);
-            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.btnOstaviKomentar);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
@@ -121,6 +121,7 @@
             // 
             // dtpDatum
             // 
+            this.dtpDatum.Enabled = false;
             this.dtpDatum.Location = new System.Drawing.Point(143, 3);
             this.dtpDatum.Name = "dtpDatum";
             this.dtpDatum.Size = new System.Drawing.Size(200, 31);
@@ -175,6 +176,7 @@
             this.tableLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.tableLayoutPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(37)))), ((int)(((byte)(44)))));
             this.tableLayoutPanel1.ColumnCount = 2;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -500,23 +502,23 @@
             this.btnDetaljno.UseVisualStyleBackColor = false;
             this.btnDetaljno.Click += new System.EventHandler(this.btnDetaljno_Click);
             // 
-            // button1
+            // btnOstaviKomentar
             // 
-            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(101)))), ((int)(((byte)(101)))));
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Mongolian Baiti", 13F);
-            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(37)))), ((int)(((byte)(44)))));
-            this.button1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.button1.Location = new System.Drawing.Point(899, 617);
-            this.button1.Margin = new System.Windows.Forms.Padding(4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(213, 69);
-            this.button1.TabIndex = 22;
-            this.button1.Text = "Ostavi komentar";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnOstaviKomentar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnOstaviKomentar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(101)))), ((int)(((byte)(101)))));
+            this.btnOstaviKomentar.FlatAppearance.BorderSize = 0;
+            this.btnOstaviKomentar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnOstaviKomentar.Font = new System.Drawing.Font("Mongolian Baiti", 13F);
+            this.btnOstaviKomentar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(37)))), ((int)(((byte)(44)))));
+            this.btnOstaviKomentar.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.btnOstaviKomentar.Location = new System.Drawing.Point(899, 617);
+            this.btnOstaviKomentar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnOstaviKomentar.Name = "btnOstaviKomentar";
+            this.btnOstaviKomentar.Size = new System.Drawing.Size(213, 69);
+            this.btnOstaviKomentar.TabIndex = 22;
+            this.btnOstaviKomentar.Text = "Ostavi komentar";
+            this.btnOstaviKomentar.UseVisualStyleBackColor = false;
+            this.btnOstaviKomentar.Click += new System.EventHandler(this.button1_Click);
             // 
             // frmDogadajDnevnaAktivnost
             // 
@@ -587,7 +589,7 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btnDetaljno;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnOstaviKomentar;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel11;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.DateTimePicker dtpDatum;

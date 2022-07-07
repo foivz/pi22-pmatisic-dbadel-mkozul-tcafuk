@@ -14,6 +14,7 @@ namespace e_Dnevnik
     {
         MainForm mainForm;
         int selected;
+        int ID_korisnika = -1;
         public frmDogadaji(MainForm mainForm)
         {
             this.mainForm = mainForm;
@@ -29,15 +30,103 @@ namespace e_Dnevnik
             dgvDogađaji.AutoResizeColumns();
         }
 
+        public frmDogadaji(int ID_korisnika,MainForm mainForm)
+        {
+            this.ID_korisnika = ID_korisnika;
+            this.mainForm = mainForm;
+
+            InitializeComponent();
+
+            btnProvjereZnanja.Enabled = false;
+            btnDetaljno.Enabled = false;
+            selected = 1;
+
+            dgvDogađaji.DataSource = GetProvjereZnanja();
+        }
+
         private void frmDogadaji_Load(object sender, EventArgs e)
         {
             paintRows();
+
+            dgvDogađaji.AutoResizeColumns();
         }
+
+        private void btnSlucajeviBolesnika_Click(object sender, EventArgs e)
+        {
+            btnProvjereZnanja.Enabled = true;
+            btnDnevneAktivnosti.Enabled = true;
+            btnSlucajeviBolesnika.Enabled = false;
+
+            dgvDogađaji.DataSource = GetSlucajeviBolesnika();
+
+            selected = 2;
+            paintRows();
+
+        }
+
+        private void btnDnevneAktivnosti_Click(object sender, EventArgs e)
+        {
+            btnProvjereZnanja.Enabled = true;
+            btnDnevneAktivnosti.Enabled = false;
+            btnSlucajeviBolesnika.Enabled = true;
+
+            dgvDogađaji.DataSource = GetDnevnikAktivnosti();
+
+            dgvDogađaji.AutoResizeColumns();
+
+            selected = 3;
+            paintRows();
+        }
+
+        private void btnProvjereZnanja_Click(object sender, EventArgs e)
+        {
+            btnProvjereZnanja.Enabled = false;
+            btnDnevneAktivnosti.Enabled = true;
+            btnSlucajeviBolesnika.Enabled = true;
+
+            dgvDogađaji.DataSource = GetProvjereZnanja();
+
+            dgvDogađaji.AutoResizeColumns();
+
+            selected = 1;
+            paintRows();
+        }
+
 
         private object GetProvjereZnanja()
         {
+            if (ID_korisnika != -1)
+            {
+                using (var context = new PI2205_DBEntities())
+                {
+                    var upit =
+                          from d in context.Dogadjaj
+                          where d.Korisnik_idKorisnik == ID_korisnika
+                          && d.TipDogadjaja_idTipDogadjaja == 1
 
-            using(var context = new PI2205_DBEntities())
+                          from pz in context.ProvjeraZnanja
+                          where pz.Dogadjaj_idDogadjaj == d.idDogadjaj
+
+                          from t in context.TipDogadjaja
+                          where t.idTipDogadjaja == d.TipDogadjaja_idTipDogadjaja
+
+                          from k in context.Korisnik
+                          where k.idKorisnik == ID_korisnika
+
+                          select new
+                          {
+                              ID_dnevne = pz.idProvjeraZnanja,
+                              Naziv_dogadaja = d.nazivdogadjaja,
+                              Status = d.statusdogadjaja,
+                              Tip = t.nazivtipa,
+                              Korisnik = k.korime
+                          };
+                    return upit.ToList();
+                }
+
+            }
+
+            using (var context = new PI2205_DBEntities())
             {
                 var upit = from pz in context.ProvjeraZnanja
                            from d in context.Dogadjaj
@@ -60,33 +149,42 @@ namespace e_Dnevnik
             }
         }
 
-        private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void btnSlucajeviBolesnika_Click(object sender, EventArgs e)
-        {
-            btnProvjereZnanja.Enabled = true;
-            btnDnevneAktivnosti.Enabled = true;
-            btnSlucajeviBolesnika.Enabled = false;
-
-            dgvDogađaji.DataSource = GetSlucajeviBolesnika();
-
-            selected = 2;
-            paintRows();
-
-        }
-
         private object GetSlucajeviBolesnika()
         {
+            if (ID_korisnika != -1)
+            {
+                using (var context = new PI2205_DBEntities())
+                {
+                    var upit =
+                          from d in context.Dogadjaj
+                          where d.Korisnik_idKorisnik == ID_korisnika
+                          && d.TipDogadjaja_idTipDogadjaja == 2
+
+                          from sb in context.SlucajBolesnika
+                          where sb.Dogadjaj_idDogadjaj == d.idDogadjaj
+
+                          from t in context.TipDogadjaja
+                          where t.idTipDogadjaja == d.TipDogadjaja_idTipDogadjaja
+
+                          from k in context.Korisnik
+                          where k.idKorisnik == ID_korisnika
+
+                          select new
+                          {
+                              ID_dnevne = sb.idSlucajBolesnika,
+                              Naziv_dogadaja = d.nazivdogadjaja,
+                              Status = d.statusdogadjaja,
+                              Tip = t.nazivtipa,
+                              Korisnik = k.korime
+                          };
+                    return upit.ToList();
+                }
+
+            }
+
             using (var context = new PI2205_DBEntities())
             {
+
                 var upit = from sb in context.SlucajBolesnika
                            from d in context.Dogadjaj
                            from t in context.TipDogadjaja
@@ -105,24 +203,43 @@ namespace e_Dnevnik
                                Tip = t.nazivtipa,
                                Korisnik = k.korime
                            };
+
                 return upit.ToList();
             }
         }
 
-        private void btnDnevneAktivnosti_Click(object sender, EventArgs e)
-        {
-            btnProvjereZnanja.Enabled = true;
-            btnDnevneAktivnosti.Enabled = false;
-            btnSlucajeviBolesnika.Enabled = true;
-
-            dgvDogađaji.DataSource = GetDnevnikAktivnosti();
-
-            selected = 3;
-            paintRows();
-        }
-
         private object GetDnevnikAktivnosti()
         {
+            if (ID_korisnika != -1)
+            {
+                using (var context = new PI2205_DBEntities())
+                {
+                    var upit = 
+                          from d in context.Dogadjaj
+                            where d.Korisnik_idKorisnik == ID_korisnika
+                            && d.TipDogadjaja_idTipDogadjaja == 3
+
+                          from da in context.DnevnaAktivnost
+                            where da.Dogadjaj_idDogadjaj == d.idDogadjaj
+
+                          from t in context.TipDogadjaja
+                             where t.idTipDogadjaja == d.TipDogadjaja_idTipDogadjaja
+
+                          from k in context.Korisnik
+                            where k.idKorisnik == ID_korisnika
+
+                      select new
+                      {
+                          ID_dnevne = da.idDnevnaAktivnost,
+                          Naziv_dogadaja = d.nazivdogadjaja,
+                          Status = d.statusdogadjaja,
+                          Tip = t.nazivtipa,
+                          Korisnik = k.korime
+                      };
+                    return upit.ToList();
+                }
+                    
+            }
             using (var context = new PI2205_DBEntities())
             {
                 var upit = from da in context.DnevnaAktivnost
@@ -146,19 +263,6 @@ namespace e_Dnevnik
                 return upit.ToList();
             }
         }
-
-        private void btnProvjereZnanja_Click(object sender, EventArgs e)
-        {
-            btnProvjereZnanja.Enabled = false;
-            btnDnevneAktivnosti.Enabled = true;
-            btnSlucajeviBolesnika.Enabled = true;
-
-            dgvDogađaji.DataSource = GetProvjereZnanja();
-
-            selected = 1;
-            paintRows();
-        }
-
         private void paintRows()
         {
             foreach (DataGridViewRow row in dgvDogađaji.Rows)

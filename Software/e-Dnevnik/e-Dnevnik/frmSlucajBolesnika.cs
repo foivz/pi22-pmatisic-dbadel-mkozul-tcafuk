@@ -64,6 +64,8 @@ namespace e_Dnevnik
                         tbDatumCom.Enabled = false;
                         tbVrstaCom.Enabled = false;
                         btnDetaljno.Enabled = false;
+                        btnDetaljno.Visible = false;
+                        button1.Text = "Izađi";
                     }
                 }
 

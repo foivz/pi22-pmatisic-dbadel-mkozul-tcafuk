@@ -59,6 +59,8 @@ namespace e_Dnevnik
                         tbOpisCom.Enabled = false;
                         tbBrojSoloCom.Enabled = false;
                         tbBrojUzNadCom.Enabled = false;
+                        btnDetaljno.Visible = false;
+                        btnOstaviKomentar.Text = "Izađi";
                     }
                 }
             }

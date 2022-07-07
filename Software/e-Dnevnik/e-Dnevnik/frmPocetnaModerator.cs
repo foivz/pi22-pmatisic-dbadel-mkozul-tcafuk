@@ -112,7 +112,7 @@ namespace e_Dnevnik
                 case 2:
                     mainFrm.ucitajFormu(new frmSlucajBolesnika((int)dgvPocetnaAktivnosti.CurrentRow.Cells[0].Value, mainFrm));
                 break;
-                case 3: break;
+                case 3: mainFrm.ucitajFormu(new frmDogadajDnevnaAktivnost((int)dgvPocetnaAktivnosti.CurrentRow.Cells[0].Value, mainFrm)); break;
             }
         }
 

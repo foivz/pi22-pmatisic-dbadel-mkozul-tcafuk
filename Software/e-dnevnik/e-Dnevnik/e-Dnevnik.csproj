@@ -310,9 +310,6 @@
       <DependentUpon>EDnevnikModel.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
-    <None Include="Properties\DataSources\Biljeske.datasource" />
-    <None Include="Properties\DataSources\DnevnaAktivnost.datasource" />
-    <None Include="Properties\DataSources\ProvjeraZnanja.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

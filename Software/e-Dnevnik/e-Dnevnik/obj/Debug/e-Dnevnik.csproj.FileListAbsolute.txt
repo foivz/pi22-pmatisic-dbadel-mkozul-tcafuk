@@ -150,3 +150,6 @@ C:\Users\Mihael\Desktop\pi22-pmatisic-dbadel-mkozul-tcafuk\Software\e-dnevnik\e-
 C:\Users\Mihael\Desktop\pi22-pmatisic-dbadel-mkozul-tcafuk\Software\e-dnevnik\e-Dnevnik\bin\Debug\ru\Microsoft.ReportViewer.WinForms.resources.dll
 C:\Users\Mihael\Desktop\pi22-pmatisic-dbadel-mkozul-tcafuk\Software\e-dnevnik\e-Dnevnik\bin\Debug\zh-CHS\Microsoft.ReportViewer.WinForms.resources.dll
 C:\Users\Mihael\Desktop\pi22-pmatisic-dbadel-mkozul-tcafuk\Software\e-dnevnik\e-Dnevnik\bin\Debug\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\Mihael\Desktop\pi22-pmatisic-dbadel-mkozul-tcafuk\Software\e-dnevnik\e-Dnevnik\obj\Debug\e_Dnevnik.Reports.frmEvidencijaAktivnosti.resources
+C:\Users\Mihael\Desktop\pi22-pmatisic-dbadel-mkozul-tcafuk\Software\e-dnevnik\e-Dnevnik\obj\Debug\e_Dnevnik.Reports.frmEvidencijaProvjera.resources
+C:\Users\Mihael\Desktop\pi22-pmatisic-dbadel-mkozul-tcafuk\Software\e-dnevnik\e-Dnevnik\obj\Debug\e_Dnevnik.Reports.frmEvidencijaBiljeski.resources

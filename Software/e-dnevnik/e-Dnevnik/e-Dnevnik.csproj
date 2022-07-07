@@ -204,6 +204,24 @@
     <Compile Include="ProvjeraZnanja.cs">
       <DependentUpon>EDnevnikModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Reports\frmEvidencijaAktivnosti.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\frmEvidencijaAktivnosti.Designer.cs">
+      <DependentUpon>frmEvidencijaAktivnosti.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\frmEvidencijaBiljeski.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\frmEvidencijaBiljeski.Designer.cs">
+      <DependentUpon>frmEvidencijaBiljeski.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\frmEvidencijaProvjera.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\frmEvidencijaProvjera.Designer.cs">
+      <DependentUpon>frmEvidencijaProvjera.cs</DependentUpon>
+    </Compile>
     <Compile Include="SlucajBolesnika.cs">
       <DependentUpon>EDnevnikModel.tt</DependentUpon>
     </Compile>
@@ -272,6 +290,18 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Reports\AktivnostiReport.rdlc" />
+    <EmbeddedResource Include="Reports\BiljeskeReport.rdlc" />
+    <EmbeddedResource Include="Reports\frmEvidencijaAktivnosti.resx">
+      <DependentUpon>frmEvidencijaAktivnosti.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\frmEvidencijaBiljeski.resx">
+      <DependentUpon>frmEvidencijaBiljeski.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\frmEvidencijaProvjera.resx">
+      <DependentUpon>frmEvidencijaProvjera.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\ProvjereReport.rdlc" />
     <EntityDeploy Include="EDnevnikModel.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>EDnevnikModel.Designer.cs</LastGenOutput>
@@ -280,6 +310,9 @@
       <DependentUpon>EDnevnikModel.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\Biljeske.datasource" />
+    <None Include="Properties\DataSources\DnevnaAktivnost.datasource" />
+    <None Include="Properties\DataSources\ProvjeraZnanja.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

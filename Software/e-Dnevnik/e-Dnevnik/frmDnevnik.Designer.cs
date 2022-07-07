@@ -80,6 +80,7 @@
             this.btnIspisiAktivnosti.TabIndex = 25;
             this.btnIspisiAktivnosti.Text = "Ispiši aktivnosti";
             this.btnIspisiAktivnosti.UseVisualStyleBackColor = false;
+            this.btnIspisiAktivnosti.Click += new System.EventHandler(this.btnIspisiAktivnosti_Click);
             // 
             // dgvEvidencijaProvjeraZnanja
             // 
@@ -109,6 +110,7 @@
             this.btnIspisiProvjere.TabIndex = 30;
             this.btnIspisiProvjere.Text = "Ispiši provjere";
             this.btnIspisiProvjere.UseVisualStyleBackColor = false;
+            this.btnIspisiProvjere.Click += new System.EventHandler(this.btnIspisiProvjere_Click);
             // 
             // btnIspisiBiljeske
             // 
@@ -126,6 +128,7 @@
             this.btnIspisiBiljeske.TabIndex = 31;
             this.btnIspisiBiljeske.Text = "Ispiši bilješke";
             this.btnIspisiBiljeske.UseVisualStyleBackColor = false;
+            this.btnIspisiBiljeske.Click += new System.EventHandler(this.btnIspisiBiljeske_Click);
             // 
             // dgvEvidencijaBiljeski
             // 

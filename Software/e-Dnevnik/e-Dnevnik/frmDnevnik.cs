@@ -1,4 +1,5 @@
-﻿using System;
+﻿using e_Dnevnik.Reports;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -34,6 +35,7 @@ namespace e_Dnevnik
             var upitAktivnost = from a in entities.DnevnaAktivnost.Local
                        join d in entities.Dogadjaj.Local on a.Dogadjaj_idDogadjaj equals d.idDogadjaj
                        join k in entities.Korisnik.Local on d.Korisnik_idKorisnik equals korisnikID
+                       orderby a.datumobavljeneaktivnosti ascending
                        select new
                        {
                            Naziv_aktivnosti = a.nazivaktivnosti,
@@ -53,6 +55,7 @@ namespace e_Dnevnik
             var upitProvjera = from p in entities.ProvjeraZnanja.Local
                                 join d in entities.Dogadjaj.Local on p.Dogadjaj_idDogadjaj equals d.idDogadjaj
                                 join k in entities.Korisnik.Local on d.Korisnik_idKorisnik equals korisnikID
+                                orderby p.datumprovjere ascending
                                 select new
                                 {
                                     Naziv_aktivnosti = p.datumprovjere,
@@ -69,6 +72,7 @@ namespace e_Dnevnik
 
             var upitBiljeske = from b in entities.Biljeske.Local
                                where b.Korisnik_idKorisnik == korisnikID
+                               orderby b.datumbiljeske ascending
                                select new
                                {
                                    Datum_biljeske = b.datumbiljeske,
@@ -82,6 +86,24 @@ namespace e_Dnevnik
             dgvEvidencijaDnevnihAktivnosti.AutoResizeColumns();
             dgvEvidencijaProvjeraZnanja.AutoResizeColumns();
             dgvEvidencijaBiljeski.AutoResizeColumns();
+        }
+
+        private void btnIspisiAktivnosti_Click(object sender, EventArgs e)
+        {
+            frmEvidencijaAktivnosti reportAktivnosti = new frmEvidencijaAktivnosti();
+            reportAktivnosti.ShowDialog();
+        }
+
+        private void btnIspisiProvjere_Click(object sender, EventArgs e)
+        {
+            frmEvidencijaProvjera reportProvjere = new frmEvidencijaProvjera();
+            reportProvjere.ShowDialog();
+        }
+
+        private void btnIspisiBiljeske_Click(object sender, EventArgs e)
+        {
+            frmEvidencijaBiljeski reportBiljeske = new frmEvidencijaBiljeski();
+            reportBiljeske.ShowDialog();
         }
     }
 }

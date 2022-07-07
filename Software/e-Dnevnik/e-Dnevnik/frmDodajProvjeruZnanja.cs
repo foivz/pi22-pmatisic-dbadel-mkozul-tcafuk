@@ -39,7 +39,7 @@ namespace e_Dnevnik
                 var ocjena = int.Parse(cbOcjene.Text.Substring(0, 1));
                 var dogadaj = cbDogadaj.Text;
                 var specijalizant = cbSpecijalizant.Text;
-                var statusDogadaja = "Novi rok";
+                var statusDogadaja = "Prijavljeno";
 
                 var upit = from d in entities.Dogadjaj.Local
                            join k in entities.Korisnik.Local on d.Korisnik_idKorisnik equals k.idKorisnik
@@ -94,14 +94,14 @@ namespace e_Dnevnik
         private void frmDodajProvjeruZnanja_Load(object sender, EventArgs e)
         {
             var cbUpit = (from d in entities.Dogadjaj.Local
-                         where d.statusdogadjaja.Contains("Novi rok")
+                         where d.statusdogadjaja.Contains("Prijavljeno")
                          select d.nazivdogadjaja).Distinct();
 
             cbDogadaj.DataSource = cbUpit.Distinct().ToList();
 
             var upit = (from d in entities.Dogadjaj.Local
                        join k in entities.Korisnik.Local on d.Korisnik_idKorisnik equals k.idKorisnik
-                       where d.statusdogadjaja.Contains("Novi rok")
+                       where d.statusdogadjaja.Contains("Prijavljeno")
                        select k.PunoIme).Distinct();
             cbSpecijalizant.DataSource = upit.ToList();
         }
@@ -110,7 +110,7 @@ namespace e_Dnevnik
         {
             var upit = (from d in entities.Dogadjaj.Local
                         join k in entities.Korisnik.Local on d.Korisnik_idKorisnik equals k.idKorisnik
-                        where d.statusdogadjaja.Contains("Novi rok") && d.nazivdogadjaja.Contains(cbDogadaj.SelectedValue.ToString())
+                        where d.statusdogadjaja.Contains("Prijavljeno") && d.nazivdogadjaja.Contains(cbDogadaj.SelectedValue.ToString())
                         select k.PunoIme).Distinct();
             cbSpecijalizant.DataSource = upit.ToList();
         }

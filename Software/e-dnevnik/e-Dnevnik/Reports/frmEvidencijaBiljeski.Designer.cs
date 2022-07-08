@@ -31,10 +31,14 @@
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmEvidencijaBiljeski));
-            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.biljeskeBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             ((System.ComponentModel.ISupportInitialize)(this.biljeskeBindingSource)).BeginInit();
             this.SuspendLayout();
+            // 
+            // biljeskeBindingSource
+            // 
+            this.biljeskeBindingSource.DataSource = typeof(e_Dnevnik.Biljeske);
             // 
             // reportViewer1
             // 
@@ -48,10 +52,6 @@
             this.reportViewer1.ServerReport.BearerToken = null;
             this.reportViewer1.Size = new System.Drawing.Size(800, 450);
             this.reportViewer1.TabIndex = 0;
-            // 
-            // biljeskeBindingSource
-            // 
-            this.biljeskeBindingSource.DataSource = typeof(e_Dnevnik.Biljeske);
             // 
             // frmEvidencijaBiljeski
             // 

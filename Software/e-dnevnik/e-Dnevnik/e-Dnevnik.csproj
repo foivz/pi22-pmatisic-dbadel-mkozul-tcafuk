@@ -306,9 +306,11 @@
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>EDnevnikModel.Designer.cs</LastGenOutput>
     </EntityDeploy>
+    <None Include="DnevnaAktivnost.datasource" />
     <None Include="EDnevnikModel.edmx.diagram">
       <DependentUpon>EDnevnikModel.edmx</DependentUpon>
     </None>
+    <None Include="frmDnevnikAktivnosti.datasource" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

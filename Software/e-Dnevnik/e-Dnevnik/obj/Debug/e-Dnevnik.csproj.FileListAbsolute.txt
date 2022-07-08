@@ -227,3 +227,4 @@ C:\Users\stident\Documents\pi22-pmatisic-dbadel-mkozul-tcafuk\Software\e-dnevnik
 C:\Users\stident\Documents\pi22-pmatisic-dbadel-mkozul-tcafuk\Software\e-dnevnik\e-Dnevnik\obj\Debug\e_Dnevnik.Reports.frmEvidencijaAktivnosti.resources
 C:\Users\stident\Documents\pi22-pmatisic-dbadel-mkozul-tcafuk\Software\e-dnevnik\e-Dnevnik\obj\Debug\e_Dnevnik.Reports.frmEvidencijaBiljeski.resources
 C:\Users\stident\Documents\pi22-pmatisic-dbadel-mkozul-tcafuk\Software\e-dnevnik\e-Dnevnik\obj\Debug\e_Dnevnik.Reports.frmEvidencijaProvjera.resources
+C:\Users\Mihael\Desktop\pi22-pmatisic-dbadel-mkozul-tcafuk\Software\e-Dnevnik\e-Dnevnik\obj\Debug\e_Dnevnik.Reports.frmAktivnost.resources

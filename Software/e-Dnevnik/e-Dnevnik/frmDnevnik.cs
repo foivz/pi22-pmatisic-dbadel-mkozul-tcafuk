@@ -90,7 +90,7 @@ namespace e_Dnevnik
 
         private void btnIspisiAktivnosti_Click(object sender, EventArgs e)
         {
-            frmEvidencijaAktivnosti reportAktivnosti = new frmEvidencijaAktivnosti();
+            frmAktivnost reportAktivnosti = new frmAktivnost();
             reportAktivnosti.ShowDialog();
         }
 

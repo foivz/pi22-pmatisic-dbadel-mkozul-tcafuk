@@ -34,7 +34,6 @@ namespace e_Dnevnik
                           select d.nazivdogadjaja).Distinct();
 
             cbProvjeraZnanja.DataSource = cbUpit.ToList();
-            
 
             var upit = from k in entities.Korisnik.Local
                        join d in entities.Dogadjaj.Local on k.idKorisnik equals d.Korisnik_idKorisnik
@@ -53,6 +52,7 @@ namespace e_Dnevnik
                        };
 
             dgvProvjereZnanja.DataSource = upit.ToList();
+            NaziviStupaca();
             //dgvProvjereZnanja.Columns[0].Visible = false;
 
 
@@ -65,6 +65,7 @@ namespace e_Dnevnik
             dgvProvjereZnanja.AutoResizeColumns();
             double Avg = entities.ProvjeraZnanja.Average(x => x.ocjena);
             tbProsjecnaOcjena.Text = Math.Round(Avg, 2).ToString();
+            ObojajRedove();
         }
 
         private void frmProvjeraZnanja_Load(object sender, EventArgs e)
@@ -98,6 +99,8 @@ namespace e_Dnevnik
                 dgvProvjereZnanja.AutoResizeColumns();
 
                 tbProsjecnaOcjena.Text = Math.Round(prosjek, 2).ToString();
+                ObojajRedove();
+                NaziviStupaca();
             }
             catch
             {
@@ -154,6 +157,28 @@ namespace e_Dnevnik
             {
                 MessageBox.Show("Došlo je do greške.");
             }
+        }
+
+        private void ObojajRedove()
+        {
+            foreach (DataGridViewRow red in dgvProvjereZnanja.Rows)
+            {
+                if (red.Cells[3].Value.ToString() == "Pao rok")
+                {
+                    red.DefaultCellStyle.BackColor = Color.LightPink;
+                }
+                else if(red.Cells[3].Value.ToString() == "Novi rok")
+                {
+                    red.DefaultCellStyle.BackColor = Color.LightGreen;
+                }
+            }
+        }
+
+        private void NaziviStupaca()
+        {
+            dgvProvjereZnanja.Columns["Naziv_dogadaja"].HeaderText = "Naziv događaja";
+            dgvProvjereZnanja.Columns["Status_dogadaja"].HeaderText = "Status događaja";
+            dgvProvjereZnanja.Columns["Datum_provjere"].HeaderText = "Datum provjere";
         }
     }
 }

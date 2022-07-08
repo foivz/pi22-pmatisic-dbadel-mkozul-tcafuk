@@ -29,15 +29,15 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lblCrtica = new System.Windows.Forms.Label();
+            this.dtpKraj = new System.Windows.Forms.DateTimePicker();
+            this.dtpPocetak = new System.Windows.Forms.DateTimePicker();
+            this.btnOsvjezi = new System.Windows.Forms.Button();
+            this.btnSortiraj = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.btnDodaj = new System.Windows.Forms.Button();
             this.dgvBiljeske = new System.Windows.Forms.DataGridView();
             this.btnObrisi = new System.Windows.Forms.Button();
-            this.btnSortiraj = new System.Windows.Forms.Button();
-            this.btnOsvjezi = new System.Windows.Forms.Button();
-            this.dtpPocetak = new System.Windows.Forms.DateTimePicker();
-            this.dtpKraj = new System.Windows.Forms.DateTimePicker();
-            this.lblCrtica = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBiljeske)).BeginInit();
             this.SuspendLayout();
@@ -59,6 +59,63 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(800, 450);
             this.panel1.TabIndex = 18;
+            // 
+            // lblCrtica
+            // 
+            this.lblCrtica.AutoSize = true;
+            this.lblCrtica.Location = new System.Drawing.Point(168, 97);
+            this.lblCrtica.Name = "lblCrtica";
+            this.lblCrtica.Size = new System.Drawing.Size(10, 13);
+            this.lblCrtica.TabIndex = 21;
+            this.lblCrtica.Text = "-";
+            // 
+            // dtpKraj
+            // 
+            this.dtpKraj.Location = new System.Drawing.Point(184, 94);
+            this.dtpKraj.Name = "dtpKraj";
+            this.dtpKraj.Size = new System.Drawing.Size(132, 20);
+            this.dtpKraj.TabIndex = 20;
+            // 
+            // dtpPocetak
+            // 
+            this.dtpPocetak.Location = new System.Drawing.Point(31, 94);
+            this.dtpPocetak.Name = "dtpPocetak";
+            this.dtpPocetak.Size = new System.Drawing.Size(131, 20);
+            this.dtpPocetak.TabIndex = 20;
+            // 
+            // btnOsvjezi
+            // 
+            this.btnOsvjezi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(101)))), ((int)(((byte)(101)))));
+            this.btnOsvjezi.FlatAppearance.BorderSize = 0;
+            this.btnOsvjezi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnOsvjezi.Font = new System.Drawing.Font("Mongolian Baiti", 13F);
+            this.btnOsvjezi.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(37)))), ((int)(((byte)(44)))));
+            this.btnOsvjezi.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.btnOsvjezi.Location = new System.Drawing.Point(419, 93);
+            this.btnOsvjezi.Margin = new System.Windows.Forms.Padding(2);
+            this.btnOsvjezi.Name = "btnOsvjezi";
+            this.btnOsvjezi.Size = new System.Drawing.Size(85, 21);
+            this.btnOsvjezi.TabIndex = 19;
+            this.btnOsvjezi.Text = "Osvježi";
+            this.btnOsvjezi.UseVisualStyleBackColor = false;
+            this.btnOsvjezi.Click += new System.EventHandler(this.btnOsvjezi_Click);
+            // 
+            // btnSortiraj
+            // 
+            this.btnSortiraj.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(101)))), ((int)(((byte)(101)))));
+            this.btnSortiraj.FlatAppearance.BorderSize = 0;
+            this.btnSortiraj.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSortiraj.Font = new System.Drawing.Font("Mongolian Baiti", 13F);
+            this.btnSortiraj.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(37)))), ((int)(((byte)(44)))));
+            this.btnSortiraj.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.btnSortiraj.Location = new System.Drawing.Point(330, 93);
+            this.btnSortiraj.Margin = new System.Windows.Forms.Padding(2);
+            this.btnSortiraj.Name = "btnSortiraj";
+            this.btnSortiraj.Size = new System.Drawing.Size(85, 21);
+            this.btnSortiraj.TabIndex = 18;
+            this.btnSortiraj.Text = "Sortiraj";
+            this.btnSortiraj.UseVisualStyleBackColor = false;
+            this.btnSortiraj.Click += new System.EventHandler(this.btnSortiraj_Click);
             // 
             // label1
             // 
@@ -121,63 +178,6 @@
             this.btnObrisi.Text = "Obriši bilješku";
             this.btnObrisi.UseVisualStyleBackColor = false;
             this.btnObrisi.Click += new System.EventHandler(this.btnObrisi_Click);
-            // 
-            // btnSortiraj
-            // 
-            this.btnSortiraj.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(101)))), ((int)(((byte)(101)))));
-            this.btnSortiraj.FlatAppearance.BorderSize = 0;
-            this.btnSortiraj.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSortiraj.Font = new System.Drawing.Font("Mongolian Baiti", 13F);
-            this.btnSortiraj.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(37)))), ((int)(((byte)(44)))));
-            this.btnSortiraj.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnSortiraj.Location = new System.Drawing.Point(458, 93);
-            this.btnSortiraj.Margin = new System.Windows.Forms.Padding(2);
-            this.btnSortiraj.Name = "btnSortiraj";
-            this.btnSortiraj.Size = new System.Drawing.Size(85, 21);
-            this.btnSortiraj.TabIndex = 18;
-            this.btnSortiraj.Text = "Sortiraj";
-            this.btnSortiraj.UseVisualStyleBackColor = false;
-            this.btnSortiraj.Click += new System.EventHandler(this.btnSortiraj_Click);
-            // 
-            // btnOsvjezi
-            // 
-            this.btnOsvjezi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(101)))), ((int)(((byte)(101)))));
-            this.btnOsvjezi.FlatAppearance.BorderSize = 0;
-            this.btnOsvjezi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnOsvjezi.Font = new System.Drawing.Font("Mongolian Baiti", 13F);
-            this.btnOsvjezi.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(37)))), ((int)(((byte)(44)))));
-            this.btnOsvjezi.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnOsvjezi.Location = new System.Drawing.Point(547, 93);
-            this.btnOsvjezi.Margin = new System.Windows.Forms.Padding(2);
-            this.btnOsvjezi.Name = "btnOsvjezi";
-            this.btnOsvjezi.Size = new System.Drawing.Size(85, 21);
-            this.btnOsvjezi.TabIndex = 19;
-            this.btnOsvjezi.Text = "Osvježi";
-            this.btnOsvjezi.UseVisualStyleBackColor = false;
-            this.btnOsvjezi.Click += new System.EventHandler(this.btnOsvjezi_Click);
-            // 
-            // dtpPocetak
-            // 
-            this.dtpPocetak.Location = new System.Drawing.Point(31, 94);
-            this.dtpPocetak.Name = "dtpPocetak";
-            this.dtpPocetak.Size = new System.Drawing.Size(200, 20);
-            this.dtpPocetak.TabIndex = 20;
-            // 
-            // dtpKraj
-            // 
-            this.dtpKraj.Location = new System.Drawing.Point(253, 94);
-            this.dtpKraj.Name = "dtpKraj";
-            this.dtpKraj.Size = new System.Drawing.Size(200, 20);
-            this.dtpKraj.TabIndex = 20;
-            // 
-            // lblCrtica
-            // 
-            this.lblCrtica.AutoSize = true;
-            this.lblCrtica.Location = new System.Drawing.Point(237, 97);
-            this.lblCrtica.Name = "lblCrtica";
-            this.lblCrtica.Size = new System.Drawing.Size(10, 13);
-            this.lblCrtica.TabIndex = 21;
-            this.lblCrtica.Text = "-";
             // 
             // frmBiljeske
             // 

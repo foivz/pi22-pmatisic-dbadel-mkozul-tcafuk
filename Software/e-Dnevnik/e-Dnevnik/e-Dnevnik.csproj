@@ -42,6 +42,24 @@
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1484.0\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1484.0\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1484.0\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1484.0\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1484.0\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
@@ -138,11 +156,17 @@
     <Compile Include="frmKorisnickiRacun.Designer.cs">
       <DependentUpon>frmKorisnickiRacun.cs</DependentUpon>
     </Compile>
-      <Compile Include="frmDogadajProvjeraZnanja.cs">
-        <SubType>Form</SubType>
-      </Compile>
-      <Compile Include="frmDogadajProvjeraZnanja.Designer.cs">
-        <DependentUpon>frmDogadajProvjeraZnanja.cs</DependentUpon>
+    <Compile Include="frmDogadajProvjeraZnanja.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDogadajProvjeraZnanja.Designer.cs">
+      <DependentUpon>frmDogadajProvjeraZnanja.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmKorisnickiRacunMentora.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmKorisnickiRacunMentora.Designer.cs">
+      <DependentUpon>frmKorisnickiRacunMentora.cs</DependentUpon>
     </Compile>
     <Compile Include="frmMentorSpecijalizant.cs">
       <SubType>Form</SubType>
@@ -216,9 +240,28 @@
     <Compile Include="ProvjeraZnanja.cs">
       <DependentUpon>EDnevnikModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Reports\frmEvidencijaAktivnosti.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\frmEvidencijaAktivnosti.Designer.cs">
+      <DependentUpon>frmEvidencijaAktivnosti.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\frmEvidencijaBiljeski.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\frmEvidencijaBiljeski.Designer.cs">
+      <DependentUpon>frmEvidencijaBiljeski.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\frmEvidencijaProvjera.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\frmEvidencijaProvjera.Designer.cs">
+      <DependentUpon>frmEvidencijaProvjera.cs</DependentUpon>
+    </Compile>
     <Compile Include="SlucajBolesnika.cs">
       <DependentUpon>EDnevnikModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="SqlServerTypes\Loader.cs" />
     <Compile Include="StrucniRad.cs">
       <DependentUpon>EDnevnikModel.tt</DependentUpon>
     </Compile>
@@ -261,6 +304,9 @@
     <EmbeddedResource Include="frmDogadajProvjeraZnanja.resx">
       <DependentUpon>frmDogadajProvjeraZnanja.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmKorisnickiRacunMentora.resx">
+      <DependentUpon>frmKorisnickiRacunMentora.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmMentorSpecijalizant.resx">
       <DependentUpon>frmMentorSpecijalizant.cs</DependentUpon>
     </EmbeddedResource>
@@ -298,6 +344,18 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Reports\AktivnostiReport.rdlc" />
+    <EmbeddedResource Include="Reports\BiljeskeReport.rdlc" />
+    <EmbeddedResource Include="Reports\frmEvidencijaAktivnosti.resx">
+      <DependentUpon>frmEvidencijaAktivnosti.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\frmEvidencijaBiljeski.resx">
+      <DependentUpon>frmEvidencijaBiljeski.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\frmEvidencijaProvjera.resx">
+      <DependentUpon>frmEvidencijaProvjera.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\ProvjereReport.rdlc" />
     <EntityDeploy Include="EDnevnikModel.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>EDnevnikModel.Designer.cs</LastGenOutput>
@@ -326,6 +384,11 @@
     <None Include="Resources\window_decrease.png" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll" />
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll" />
+    <Content Include="SqlServerTypes\x86\msvcr120.dll" />
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll" />
     <None Include="Resources\logo-ednevnik.png" />
     <None Include="Resources\dnevnik-aktivnosti-img.png" />
     <None Include="Resources\slucaj-bolesnika.jpg" />

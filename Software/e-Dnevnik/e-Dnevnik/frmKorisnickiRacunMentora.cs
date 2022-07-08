@@ -50,5 +50,10 @@ namespace e_Dnevnik
                 }
             }
         }
+
+        private void btnIzlaz_Click(object sender, EventArgs e)
+        {
+            mainFrm.ucitajFormu(new frmMentorSpecijalizant(mainFrm));
+        }
     }
 }

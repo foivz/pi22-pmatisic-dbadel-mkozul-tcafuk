@@ -48,6 +48,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.tbLozinka = new System.Windows.Forms.TextBox();
             this.panel8 = new System.Windows.Forms.Panel();
+            this.slikaSlika = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel10 = new System.Windows.Forms.TableLayoutPanel();
             this.tbIme = new System.Windows.Forms.TextBox();
@@ -65,7 +66,6 @@
             this.tbPrezime = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panel9 = new System.Windows.Forms.Panel();
-            this.slikaSlika = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel2.SuspendLayout();
             this.panel5.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
@@ -75,6 +75,7 @@
             this.panel6.SuspendLayout();
             this.tableLayoutPanel4.SuspendLayout();
             this.panel8.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.slikaSlika)).BeginInit();
             this.panel2.SuspendLayout();
             this.tableLayoutPanel10.SuspendLayout();
             this.tableLayoutPanel6.SuspendLayout();
@@ -85,7 +86,6 @@
             this.panel3.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel9.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.slikaSlika)).BeginInit();
             this.SuspendLayout();
             // 
             // label8
@@ -329,6 +329,17 @@
             this.panel8.Size = new System.Drawing.Size(792, 541);
             this.panel8.TabIndex = 34;
             // 
+            // slikaSlika
+            // 
+            this.slikaSlika.Image = ((System.Drawing.Image)(resources.GetObject("slikaSlika.Image")));
+            this.slikaSlika.Location = new System.Drawing.Point(148, 0);
+            this.slikaSlika.Margin = new System.Windows.Forms.Padding(6);
+            this.slikaSlika.Name = "slikaSlika";
+            this.slikaSlika.Size = new System.Drawing.Size(284, 254);
+            this.slikaSlika.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.slikaSlika.TabIndex = 28;
+            this.slikaSlika.TabStop = false;
+            // 
             // panel2
             // 
             this.panel2.Controls.Add(this.tableLayoutPanel10);
@@ -409,6 +420,7 @@
             this.btnIzlaz.TabIndex = 21;
             this.btnIzlaz.Text = "Izađi";
             this.btnIzlaz.UseVisualStyleBackColor = false;
+            this.btnIzlaz.Click += new System.EventHandler(this.btnIzlaz_Click);
             // 
             // tableLayoutPanel6
             // 
@@ -561,17 +573,6 @@
             this.panel9.Size = new System.Drawing.Size(788, 44);
             this.panel9.TabIndex = 35;
             // 
-            // slikaSlika
-            // 
-            this.slikaSlika.Image = ((System.Drawing.Image)(resources.GetObject("slikaSlika.Image")));
-            this.slikaSlika.Location = new System.Drawing.Point(148, 0);
-            this.slikaSlika.Margin = new System.Windows.Forms.Padding(6);
-            this.slikaSlika.Name = "slikaSlika";
-            this.slikaSlika.Size = new System.Drawing.Size(284, 254);
-            this.slikaSlika.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.slikaSlika.TabIndex = 28;
-            this.slikaSlika.TabStop = false;
-            // 
             // frmKorisnickiRacunMentora
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
@@ -595,6 +596,7 @@
             this.tableLayoutPanel4.PerformLayout();
             this.panel8.ResumeLayout(false);
             this.panel8.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.slikaSlika)).EndInit();
             this.panel2.ResumeLayout(false);
             this.tableLayoutPanel10.ResumeLayout(false);
             this.tableLayoutPanel10.PerformLayout();
@@ -608,7 +610,6 @@
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.panel9.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.slikaSlika)).EndInit();
             this.ResumeLayout(false);
 
         }

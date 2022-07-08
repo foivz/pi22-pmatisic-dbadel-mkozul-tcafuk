@@ -38,7 +38,7 @@ namespace e_Dnevnik
 
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
-
+            paintRows();
         }
 
         private void frmPocetnaModerator_Load(object sender, EventArgs e)
@@ -66,6 +66,7 @@ namespace e_Dnevnik
             btnSlucajeviBolesnika.Enabled = true;
             dgvPocetnaAktivnosti.DataSource = dogadaj.GetProvjereZnanja();
 
+            paintRows();
             dgvPocetnaAktivnosti.AutoResizeColumns();
             selected = 1;
 
@@ -78,7 +79,7 @@ namespace e_Dnevnik
             btnSlucajeviBolesnika.Enabled = false;
             dgvPocetnaAktivnosti.DataSource = dogadaj.GetSlucajeviBolesnika();
 
-
+            paintRows();
             dgvPocetnaAktivnosti.AutoResizeColumns();
             selected = 2;
 
@@ -91,7 +92,7 @@ namespace e_Dnevnik
             btnSlucajeviBolesnika.Enabled = true;
             dgvPocetnaAktivnosti.DataSource = dogadaj.GetDnevnikAktivnosti();
 
-
+            paintRows();
             dgvPocetnaAktivnosti.AutoResizeColumns();
             selected = 3;
         }
@@ -119,6 +120,17 @@ namespace e_Dnevnik
         private void btnProvjereZnanjaBody_Click(object sender, EventArgs e)
         {
             mainFrm.ucitajFormu(new frmProvjeraZnanja(mainFrm));
+        }
+
+        private void paintRows()
+        {
+            foreach (DataGridViewRow row in dgvPocetnaAktivnosti.Rows)
+            {
+                if (row.Cells[2].Value.ToString() == "Pao rok" || row.Cells[2].Value.ToString() == "")
+                {
+                    row.DefaultCellStyle.BackColor = Color.LightGray;
+                }
+            }
         }
     }
 }

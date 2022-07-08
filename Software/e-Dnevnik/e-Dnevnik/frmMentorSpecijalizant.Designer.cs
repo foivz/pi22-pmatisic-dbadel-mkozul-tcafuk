@@ -121,7 +121,7 @@
             this.btnPogledajDogađaje.Name = "btnPogledajDogađaje";
             this.btnPogledajDogađaje.Size = new System.Drawing.Size(170, 40);
             this.btnPogledajDogađaje.TabIndex = 15;
-            this.btnPogledajDogađaje.Text = "Pogledaj događaje";
+            this.btnPogledajDogađaje.Text = "Više";
             this.btnPogledajDogađaje.UseVisualStyleBackColor = false;
             this.btnPogledajDogađaje.Click += new System.EventHandler(this.btnDodaj_Click);
             // 

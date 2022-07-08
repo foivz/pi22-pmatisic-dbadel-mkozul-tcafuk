@@ -16,6 +16,7 @@ namespace e_Dnevnik
     {
         PI2205_DBEntities entities = new PI2205_DBEntities();
         private MainForm mainFrm;
+
         public frmKorisnickiRacun(MainForm mainForm)
         {
             entities.Korisnik.Load();

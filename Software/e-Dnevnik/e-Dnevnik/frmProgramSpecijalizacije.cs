@@ -15,6 +15,7 @@ namespace e_Dnevnik
     {
         PI2205_DBEntities entities = new PI2205_DBEntities();
         private MainForm mainFrm;
+
         public frmProgramSpecijalizacije(MainForm mainForm)
         {
             this.mainFrm = mainForm;
@@ -36,7 +37,8 @@ namespace e_Dnevnik
             var upit = from ps in entities.ProgramSpecijalizacije.Local
                        join k in entities.Korisnik.Local on ps.idProgramSpecijalizacije equals k.ProgramSpecijalizacije_idProgramSpecijalizacije
                        join pi in entities.PrijavaIspita.Local on k.idKorisnik equals pi.Korisnik_idKorisnik
-                       group new { ps, k, pi } by new { ps.nazivps, k.idKorisnik, pi.idPrijavaIspita }
+                       where k.Uloga_idUloga == 3
+                       group new { ps, k, pi } by new { ps.nazivps }
                        into grp
                        select new
                        {
@@ -50,8 +52,8 @@ namespace e_Dnevnik
                         from u in entities.Uloga.Local
                         from ps in entities.ProgramSpecijalizacije.Local
                         from pi in entities.PrijavaIspita.Local
-                        where k.Uloga_idUloga == u.idUloga && k.ProgramSpecijalizacije_idProgramSpecijalizacije == ps.idProgramSpecijalizacije && pi.Korisnik_idKorisnik == k.idKorisnik
-                        orderby pi.nazivispitivaca
+                        where k.Uloga_idUloga == u.idUloga && k.ProgramSpecijalizacije_idProgramSpecijalizacije == ps.idProgramSpecijalizacije && pi.Korisnik_idKorisnik == k.idKorisnik 
+                        orderby k.ime
                         select new
                         {
                             Ime = k.ime,
@@ -83,7 +85,7 @@ namespace e_Dnevnik
                            join k in entities.Korisnik.Local on ps.idProgramSpecijalizacije equals k.ProgramSpecijalizacije_idProgramSpecijalizacije
                            join pi in entities.PrijavaIspita.Local on k.idKorisnik equals pi.Korisnik_idKorisnik
                            where ps.nazivps == cbPS.SelectedValue.ToString()
-                           group new { ps, k, pi } by new { ps.nazivps, k.idKorisnik, pi.idPrijavaIspita }
+                           group new { ps, k, pi } by new { ps.nazivps }
                            into grp
                            select new
                            {
@@ -93,6 +95,29 @@ namespace e_Dnevnik
                            };
                 dgvPS1.DataSource = upit.ToList();
                 dgvPS1.AutoResizeColumns();
+
+                var upit2 = from k in entities.Korisnik.Local
+                            from u in entities.Uloga.Local
+                            from ps in entities.ProgramSpecijalizacije.Local
+                            from pi in entities.PrijavaIspita.Local
+                            where k.Uloga_idUloga == u.idUloga && k.ProgramSpecijalizacije_idProgramSpecijalizacije == ps.idProgramSpecijalizacije && pi.Korisnik_idKorisnik == k.idKorisnik
+                            where ps.nazivps == cbPS.SelectedValue.ToString()
+                            orderby k.ime
+                            select new
+                            {
+                                Ime = k.ime,
+                                Prezime = k.prezime,
+                                Email = k.email,
+                                Naziv_uloge = u.nazivuloge,
+                                Naziv_programa_specijalizacije = ps.nazivps,
+                                Duljina_programa_specijalizacije = ps.duljinaps,
+                                Naziv_ispitivaca = pi.nazivispitivaca,
+                                Datum_ispita = pi.datumispita,
+                                Polozio = pi.polozen
+                            };
+                dgvPS2.DataSource = upit2.ToList();
+                dgvPS2.AutoResizeColumns();
+
             }
             catch
             {

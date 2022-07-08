@@ -1,0 +1,420 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{9AEA91B4-6F91-460C-B89B-34352DFDB246}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>e_Dnevnik</RootNamespace>
+    <AssemblyName>e-Dnevnik</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Database Access">
+      <HintPath>..\Database Access\bin\Debug\Database Access.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1484.0\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1484.0\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1484.0\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1484.0\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1484.0\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Biljeske.cs">
+      <DependentUpon>EDnevnikModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DnevnaAktivnost.cs">
+      <DependentUpon>EDnevnikModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Dogadaji.cs" />
+    <Compile Include="Dogadjaj.cs">
+      <DependentUpon>EDnevnikModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DogadjajExt.cs" />
+    <Compile Include="e-Dnevnik.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="e-Dnevnik.Designer.cs">
+      <DependentUpon>e-Dnevnik.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EDnevnikModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EDnevnikModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EDnevnikModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EDnevnikModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EDnevnikModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EDnevnikModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="frmBiljeske.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBiljeske.Designer.cs">
+      <DependentUpon>frmBiljeske.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDnevnik.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDnevnik.Designer.cs">
+      <DependentUpon>frmDnevnik.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDnevnikAktivnosti.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDnevnikAktivnosti.Designer.cs">
+      <DependentUpon>frmDnevnikAktivnosti.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDodajBiljesku.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDodajBiljesku.Designer.cs">
+      <DependentUpon>frmDodajBiljesku.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDodajProvjeruZnanja.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDodajProvjeruZnanja.Designer.cs">
+      <DependentUpon>frmDodajProvjeruZnanja.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDogadajDnevnaAktivnost.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDogadajDnevnaAktivnost.Designer.cs">
+      <DependentUpon>frmDogadajDnevnaAktivnost.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDogadaji.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDogadaji.Designer.cs">
+      <DependentUpon>frmDogadaji.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmKorisnickiRacun.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmKorisnickiRacun.Designer.cs">
+      <DependentUpon>frmKorisnickiRacun.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDogadajProvjeraZnanja.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDogadajProvjeraZnanja.Designer.cs">
+      <DependentUpon>frmDogadajProvjeraZnanja.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmKorisnickiRacunMentora.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmKorisnickiRacunMentora.Designer.cs">
+      <DependentUpon>frmKorisnickiRacunMentora.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMentorSpecijalizant.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMentorSpecijalizant.Designer.cs">
+      <DependentUpon>frmMentorSpecijalizant.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPocetnaModerator.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPocetnaModerator.Designer.cs">
+      <DependentUpon>frmPocetnaModerator.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPrijava.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPrijava.Designer.cs">
+      <DependentUpon>frmPrijava.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPrijavaIspita.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPrijavaIspita.Designer.cs">
+      <DependentUpon>frmPrijavaIspita.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmProgramSpecijalizacije.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmProgramSpecijalizacije.Designer.cs">
+      <DependentUpon>frmProgramSpecijalizacije.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPromjenaLozinke.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPromjenaLozinke.Designer.cs">
+      <DependentUpon>frmPromjenaLozinke.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmProvjeraZnanja.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmProvjeraZnanja.Designer.cs">
+      <DependentUpon>frmProvjeraZnanja.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSlucajBolesnika.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSlucajBolesnika.Designer.cs">
+      <DependentUpon>frmSlucajBolesnika.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmZaboravljenaLozinka.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmZaboravljenaLozinka.Designer.cs">
+      <DependentUpon>frmZaboravljenaLozinka.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Klase\Korisnik.cs" />
+    <Compile Include="Klase\RepozitorijHLK.cs" />
+    <Compile Include="Korisnik.cs">
+      <DependentUpon>EDnevnikModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="KorisnikExt.cs" />
+    <Compile Include="MainForm.cs" />
+    <Compile Include="PrijavaIspita.cs">
+      <DependentUpon>EDnevnikModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="ProgramSpecijalizacije.cs">
+      <DependentUpon>EDnevnikModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ProvjeraZnanja.cs">
+      <DependentUpon>EDnevnikModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\frmEvidencijaAktivnosti.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\frmEvidencijaAktivnosti.Designer.cs">
+      <DependentUpon>frmEvidencijaAktivnosti.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\frmEvidencijaBiljeski.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\frmEvidencijaBiljeski.Designer.cs">
+      <DependentUpon>frmEvidencijaBiljeski.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\frmEvidencijaProvjera.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\frmEvidencijaProvjera.Designer.cs">
+      <DependentUpon>frmEvidencijaProvjera.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SlucajBolesnika.cs">
+      <DependentUpon>EDnevnikModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SqlServerTypes\Loader.cs" />
+    <Compile Include="StrucniRad.cs">
+      <DependentUpon>EDnevnikModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sysdiagrams.cs">
+      <DependentUpon>EDnevnikModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TipDogadjaja.cs">
+      <DependentUpon>EDnevnikModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Uloga.cs">
+      <DependentUpon>EDnevnikModel.tt</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="e-Dnevnik.resx">
+      <DependentUpon>e-Dnevnik.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBiljeske.resx">
+      <DependentUpon>frmBiljeske.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDnevnik.resx">
+      <DependentUpon>frmDnevnik.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDnevnikAktivnosti.resx">
+      <DependentUpon>frmDnevnikAktivnosti.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDodajBiljesku.resx">
+      <DependentUpon>frmDodajBiljesku.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDodajProvjeruZnanja.resx">
+      <DependentUpon>frmDodajProvjeruZnanja.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDogadajDnevnaAktivnost.resx">
+      <DependentUpon>frmDogadajDnevnaAktivnost.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDogadaji.resx">
+      <DependentUpon>frmDogadaji.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmKorisnickiRacun.resx">
+      <DependentUpon>frmKorisnickiRacun.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDogadajProvjeraZnanja.resx">
+      <DependentUpon>frmDogadajProvjeraZnanja.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmKorisnickiRacunMentora.resx">
+      <DependentUpon>frmKorisnickiRacunMentora.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMentorSpecijalizant.resx">
+      <DependentUpon>frmMentorSpecijalizant.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPocetnaModerator.resx">
+      <DependentUpon>frmPocetnaModerator.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPrijava.resx">
+      <DependentUpon>frmPrijava.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPrijavaIspita.resx">
+      <DependentUpon>frmPrijavaIspita.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmProgramSpecijalizacije.resx">
+      <DependentUpon>frmProgramSpecijalizacije.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPromjenaLozinke.resx">
+      <DependentUpon>frmPromjenaLozinke.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmProvjeraZnanja.resx">
+      <DependentUpon>frmProvjeraZnanja.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSlucajBolesnika.resx">
+      <DependentUpon>frmSlucajBolesnika.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmZaboravljenaLozinka.resx">
+      <DependentUpon>frmZaboravljenaLozinka.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Reports\AktivnostiReport.rdlc" />
+    <EmbeddedResource Include="Reports\BiljeskeReport.rdlc" />
+    <EmbeddedResource Include="Reports\frmEvidencijaAktivnosti.resx">
+      <DependentUpon>frmEvidencijaAktivnosti.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\frmEvidencijaBiljeski.resx">
+      <DependentUpon>frmEvidencijaBiljeski.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\frmEvidencijaProvjera.resx">
+      <DependentUpon>frmEvidencijaProvjera.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\ProvjereReport.rdlc" />
+    <EntityDeploy Include="EDnevnikModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>EDnevnikModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="EDnevnikModel.edmx.diagram">
+      <DependentUpon>EDnevnikModel.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\menu-regular-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\window_decrease.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll" />
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll" />
+    <Content Include="SqlServerTypes\x86\msvcr120.dll" />
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll" />
+    <None Include="Resources\logo-ednevnik.png" />
+    <None Include="Resources\dnevnik-aktivnosti-img.png" />
+    <None Include="Resources\slucaj-bolesnika.jpg" />
+    <None Include="Resources\provjere-znanja.jpg" />
+    <None Include="Resources\strucni-radovi.jpg" />
+    <None Include="Resources\biljeske.jpg" />
+    <None Include="Resources\profile.jpg" />
+    <None Include="Resources\dogadaji-img.jpg" />
+    <None Include="Resources\provjere-znanja-img.jpg" />
+    <None Include="Resources\specijalizani.jpg" />
+    <None Include="Resources\specijalizani-img.jpg" />
+    <Content Include="EDnevnikModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>EDnevnikModel.Context.cs</LastGenOutput>
+      <DependentUpon>EDnevnikModel.edmx</DependentUpon>
+    </Content>
+    <Content Include="EDnevnikModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>EDnevnikModel.edmx</DependentUpon>
+      <LastGenOutput>EDnevnikModel.cs</LastGenOutput>
+    </Content>
+    <Content Include="Resources\window_increase1.png" />
+    <Content Include="Resources\window_increase.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

@@ -240,6 +240,12 @@
     <Compile Include="ProvjeraZnanja.cs">
       <DependentUpon>EDnevnikModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Reports\frmAktivnost.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\frmAktivnost.Designer.cs">
+      <DependentUpon>frmAktivnost.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reports\frmEvidencijaAktivnosti.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -344,8 +350,12 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Reports\aktivnost.rdlc" />
     <EmbeddedResource Include="Reports\AktivnostiReport.rdlc" />
     <EmbeddedResource Include="Reports\BiljeskeReport.rdlc" />
+    <EmbeddedResource Include="Reports\frmAktivnost.resx">
+      <DependentUpon>frmAktivnost.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reports\frmEvidencijaAktivnosti.resx">
       <DependentUpon>frmEvidencijaAktivnosti.cs</DependentUpon>
     </EmbeddedResource>
@@ -364,6 +374,7 @@
       <DependentUpon>EDnevnikModel.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\DnevnaAktivnost.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

@@ -135,7 +135,7 @@ namespace e_Dnevnik
                 var updateDogadaj = entities.Dogadjaj.SingleOrDefault(x => x.idDogadjaj == IdDog);
                 if (updateDogadaj != null)
                 {
-                    updateDogadaj.statusdogadjaja = "Novi rok";
+                    updateDogadaj.statusdogadjaja = "Prijavljeno";
                     entities.SaveChanges();
                 }
 
